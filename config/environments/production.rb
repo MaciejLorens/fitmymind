@@ -93,4 +93,16 @@ Rails.application.configure do
   config.active_record.dump_schema_after_migration = false
 
   config.action_mailer.default_url_options = { host: 'aleksandrakucharczyk.pl', port: 3000 }
+
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :preserve_files => true,
+    :s3_host_name => 's3-eu-west-1.amazonaws.com',
+    :s3_credentials => {
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
+      :s3_region => 'eu-west-1'
+    },
+    :bucket => 'aleksandrakucharczyk'
+  }
 end

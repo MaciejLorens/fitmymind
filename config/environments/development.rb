@@ -60,4 +60,16 @@ Rails.application.configure do
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  config.paperclip_defaults = {
+    :storage => :s3,
+    :preserve_files => true,
+    :s3_host_name => 's3-eu-west-1.amazonaws.com',
+    :s3_credentials => {
+      :access_key_id => ENV['AWS_ACCESS_KEY_ID'],
+      :secret_access_key => ENV['AWS_SECRET_ACCESS_KEY'],
+      :s3_region => 'eu-west-1'
+    },
+    :bucket => 'aleksandrakucharczyk'
+  }
 end
