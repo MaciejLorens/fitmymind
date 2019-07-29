@@ -1,11 +1,12 @@
 Rails.application.routes.draw do
 
-  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
-  resources :posts
-  devise_for :users
   root to: 'home#index'
 
-  get 'home/index'
+  mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-  get 'bootstrap_parent_modal', to: 'home#bootstrap_parent_modal'
+  devise_for :users
+
+  resources :posts
+
+  get 'home/index'
 end
