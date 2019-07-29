@@ -1,0 +1,81 @@
+<section class="divider" data-bg-img="assets/template/spa/bg/bg10.jpg" >
+  <div class="container-fluid pt-0 pb-0">
+    <div class="section-content">
+      <div class="row">
+        <div class="col-md-5 pt-100 pb-100"></div>
+        <div class="col-md-7 bg-lighter">
+          <div class="pt-40 pr-50 pb-70 pl-60 p-md-30">
+            <h3 class="title letter-space-4">HealthZone Spa<span class="text-uppercase text-black-333 font-weight-300">funfact </span></h3>
+            <p class="mb-40">Nam liber tempor cum soluta nobis<br> eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.</p>
+            <div class="row">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 hvr-wobble-vertical sm-text-center">
+                <div class="funfact ml-md-0">
+                  <a href="#"><i class="pe-7s-date"></i></a>
+                  <h3 class="animate-number font-28 font-weight-500 mt-15 mb-10" data-value="12" data-animation-duration="2500">0</h3>
+                  <h5 class="title text-gray font-weight-300 font-16">Years of Experience</h5>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 hvr-wobble-vertical sm-text-center ml-50 ml-md-0">
+                <div class="funfact">
+                  <a href="#"><i class="pe-7s-smile"></i></a>
+                  <h3 class="animate-number font-28 font-weight-500 mt-15 mb-10" data-value="1921" data-animation-duration="2500">0</h3>
+                  <h5 class="title text-gray font-weight-300 font-16">Happy Clients</h5>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-30">
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 hvr-wobble-vertical sm-text-center">
+                <div class="funfact">
+                  <a href="#"><i class="pe-7s-smile"></i></a>
+                  <h3 class="animate-number font-28 font-weight-500 mt-15 mb-10" data-value="24" data-animation-duration="2500">0</h3>
+                  <h5 class="title text-gray font-weight-300 font-16">Awards</h5>
+                </div>
+              </div>
+              <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 hvr-wobble-vertical sm-text-center ml-50 ml-md-0">
+                <div class="funfact">
+                  <a href="#"><i class="pe-7s-like2"></i></a>
+                  <h3 class="animate-number font-28 font-weight-500 mt-15 mb-10" data-value="26892" data-animation-duration="2500">0</h3>
+                  <h5 class="title text-gray font-weight-300 font-16">People Likes</h5>
+                </div>
+              </div>
+            </div>
+            <div class="row mt-30">
+              <div class="col-md-8">
+                <h3 class="font-weight-300">Subscribe to our Newsletter</h3>
+                <form id="mailchimp-subscription-form1" class="newsletter-form">
+                  <div class="input-group">
+                    <input type="email" value="" name="EMAIL" placeholder="Your Email" class="form-control input-lg font-16" data-height="45px" id="mce-EMAIL" style="height: 45px;">
+                    <span class="input-group-btn">
+                          <button data-height="45px" class="btn btn-colored btn-theme-colored btn-xs m-0 font-14" type="submit">Subscribe</button>
+                        </span>
+                  </div>
+                </form>
+                <!-- Mailchimp Subscription Form Validation-->
+                <script type="text/javascript">
+                  $('#mailchimp-subscription-form1').ajaxChimp({
+                    callback: mailChimpCallBack,
+                    url: '//thememascot.us9.list-manage.com/subscribe/post?u=a01f440178e35febc8cf4e51f&amp;id=49d6d30e1e'
+                  });
+
+                  function mailChimpCallBack(resp) {
+                    // Hide any previous response text
+                    var $mailchimpform = $('#mailchimp-subscription-form1'),
+                      $response = '';
+                    $mailchimpform.children(".alert").remove();
+                    console.log(resp);
+                    if (resp.result === 'success') {
+                      $response = '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + resp.msg + '</div>';
+                    } else if (resp.result === 'error') {
+                      $response = '<div class="alert alert-danger"><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>' + resp.msg + '</div>';
+                    }
+                    $mailchimpform.prepend($response);
+                  }
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

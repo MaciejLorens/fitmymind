@@ -5,12 +5,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-    <meta name="description" content="HealthZone - Daring Multi Concept Theme for Medical, Nursing, Yoga, Sports, Gym & Fitness" />
-    <meta name="keywords" content="building,business,construction,cleaning,transport,workshop" />
-    <meta name="author" content="ThemeMascot" />
+    <meta name="description" content="AleksandraKucharczyk - Dietetyk Kliniczny, Kraków" />
+    <meta name="keywords" content="dieta,dietetyk,kliniczny,plan,żywieniowy,kraków" />
+    <meta name="author" content="Aleksandra Kucharczyk" />
 
     <!-- Page Title -->
-    <title>HealthZone - Daring Multi Concept Theme for Medical, Nursing, Yoga, Sports, Gym & Fitness</title>
+    <title>AleksandraKucharczyk - Dietetyk Kliniczny, Kraków</title>
 
     <!-- Favicon and Touch Icons -->
     <link href="images/favicon.png" rel="shortcut icon" type="image/png">
@@ -36,8 +36,14 @@
   <body class="dark">
 <!--    <p class="notice"><%#= notice %></p>-->
 <!--    <p class="alert"><%#= alert %></p>-->
-    <%= yield %>
-
+  <div id="wrapper">
+    <%= render partial: 'shared/preloader' %>
+    <%= render partial: 'shared/header' %>
+    <div class="main-content">
+      <%= yield %>
+    </div>
+    <%= render partial: 'shared/footer' %>
+  </div>
     <!-- Footer Scripts -->
     <!-- JS | Calendar Event Data -->
     <!-- SLIDER REVOLUTION 5.0 EXTENSIONS
