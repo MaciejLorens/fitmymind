@@ -1,0 +1,129 @@
+<section>
+  <div class="container pb-0">
+    <div class="section-content">
+      <div class="row">
+        <div class="col-md-6 pb-sm-70">
+          <h3 class="mt-0">Calculate Your <span class="text-theme-colored">BMI</span></h3>
+          <p>To determine if you're at a healthy weight, enter the following information and calculate your body mass index (BMI).</p>
+          <!-- Nav tabs -->
+          <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#bmi_English_version" aria-controls="bmi_English_version" role="tab" data-toggle="tab">English Version</a></li>
+            <li role="presentation"><a href="#bmi_metric_version" aria-controls="bmi_metric_version" role="tab" data-toggle="tab">Metric Version</a></li>
+            <li role="presentation"><a href="#bmi_table" aria-controls="bmi_table" role="tab" data-toggle="tab">BMI Table</a></li>
+          </ul>
+          <!-- Tab panes -->
+          <div class="tab-content border-gray-lightgray pr-0">
+            <div role="tabpanel" class="tab-pane active" id="bmi_English_version">
+              <form id="form_bmi_standard_calculator">
+                <div class="row">
+                  <div class="col-xs-8">
+                    <div class="form-group">
+                      <label>Weight </label>
+                      <input type="text" class="form-control" required="" name="bmi_standard_weight_lbs" value="" placeholder="lbs">
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="col-xs-5">
+                    <div class="form-group">
+                      <label>Height </label>
+                      <input type="text" class="form-control" required="" name="bmi_standard_height_ft" value="" placeholder="ft">
+                    </div>
+                  </div>
+                  <div class="col-xs-3">
+                    <div class="form-group">
+                      <label>&nbsp;</label>
+                      <input type="text" class="form-control" required="" name="bmi_standard_height_in" value="" placeholder="in">
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="col-xs-8">
+                    <div class="form-group">
+                      <label>Age </label>
+                      <input type="text" class="form-control" required="" name="bmi_standard_age" value="" placeholder="Enter You Age">
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="col-xs-8">
+                    <div class="form-group">
+                      <label>Gender &nbsp;</label><br>
+                      <label class="radio-inline">
+                        <input type="radio" name="bmi_standard_gender" value="m">Male
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="bmi_standard_gender" value="f">Female
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-xs-8">
+                    <div style="display: none;" role="alert" class="alert alert-success" id="bmi_standard_calculator_form_result"> </div>
+                    <button type="submit" class="btn btn-sm btn-theme-colored text-uppercase" data-loading-text="Please wait...">Calculate</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="bmi_metric_version">
+              <form id="form_bmi_metric_calculator">
+                <div class="row">
+                  <div class="col-xs-8">
+                    <div class="form-group">
+                      <label>Weight </label>
+                      <input type="text" class="form-control" required="" name="bmi_metric_weight_kg" value="" placeholder="kg">
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="col-xs-5">
+                    <div class="form-group">
+                      <label>Height </label>
+                      <input type="text" class="form-control" required="" name="bmi_metric_height_cm" value="" placeholder="cm">
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="col-xs-8">
+                    <div class="form-group">
+                      <label>Age </label>
+                      <input type="text" class="form-control" required="" name="bmi_metric_age" value="" placeholder="Enter You Age">
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
+                  <div class="col-xs-8">
+                    <div class="form-group">
+                      <label>Gender &nbsp;</label><br>
+                      <label class="radio-inline">
+                        <input type="radio" name="bmi_metric_gender" value="m">Male
+                      </label>
+                      <label class="radio-inline">
+                        <input type="radio" name="bmi_metric_gender" value="f">Female
+                      </label>
+                    </div>
+                  </div>
+                  <div class="col-xs-8">
+                    <div style="display: none;" role="alert" class="alert alert-success" id="bmi_metric_calculator_form_result"> </div>
+                    <button type="submit" class="btn btn-sm btn-theme-colored text-uppercase" data-loading-text="Please wait...">Calculate</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="bmi_table">
+              <p>This is the World Health Organization's (WHO) recommended body weight based on BMI values for adults. It is used for both men and women, age 18 or older.</p>
+              <table class="table table-striped">
+                <tbody>
+                <tr><td>Category</td><td>BMI range - kg/m<sup>2</sup></td></tr>
+                <tr><td>Severe Thinness</td><td>&lt; 16</td></tr>
+                <tr><td>Moderate Thinness</td><td>16 - 17</td></tr>
+                <tr><td>Mild Thinness</td><td>17 - 18.5</td></tr>
+
+                <tr><td>Normal</td><td>18.5 - 25</td></tr>
+                <tr><td>Overweight</td><td>25 - 30</td></tr>
+                <tr><td>Obese Class I</td><td>30 - 35</td></tr>
+                <tr><td>Obese Class II</td><td>35 - 40</td></tr>
+                <tr><td>Obese Class III</td><td>&gt; 40</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6"> <img src="assets/template/nutrition/about/1.png" alt=""> </div>
+      </div>
+    </div>
+  </div>
+</section>
