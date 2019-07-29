@@ -15,4 +15,11 @@
 //= require turbolinks
 //= require jquery3
 //= require bootstrap
-//= require_tree .
+//= require template/jquery-2.1.4.min
+//= require template/jquery-ui.min
+//= require template/bootstrap.min
+//= require template/jquery-plugin-collection
+//= require template/jquery.themepunch.tools.min
+//= require template/jquery.themepunch.revolution.min
+//= require template/calendar-events-data
+//= require template/custom

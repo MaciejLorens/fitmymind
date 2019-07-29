@@ -7,4 +7,5 @@ Rails.application.routes.draw do
 
   get 'home/index'
 
+  get 'bootstrap_parent_modal', to: 'home#bootstrap_parent_modal'
 end

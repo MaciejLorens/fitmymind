@@ -1,7 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr" lang="pl">
   <head>
-    <title>Aleksandrakucharczyk</title>
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="description" content="HealthZone - Daring Multi Concept Theme for Medical, Nursing, Yoga, Sports, Gym & Fitness" />
+    <meta name="keywords" content="building,business,construction,cleaning,transport,workshop" />
+    <meta name="author" content="ThemeMascot" />
+
+    <!-- Page Title -->
+    <title>HealthZone - Daring Multi Concept Theme for Medical, Nursing, Yoga, Sports, Gym & Fitness</title>
+
+    <!-- Favicon and Touch Icons -->
+    <link href="images/favicon.png" rel="shortcut icon" type="image/png">
+    <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
+    <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="images/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+
+<!--    <script src="js/custom-rev-slider.js"></script>-->
+
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -9,9 +33,24 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+  <body class="dark">
+<!--    <p class="notice"><%#= notice %></p>-->
+<!--    <p class="alert"><%#= alert %></p>-->
     <%= yield %>
+
+    <!-- Footer Scripts -->
+    <!-- JS | Calendar Event Data -->
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS
+          (Load Extensions only on Local File Systems !
+           The following part can be removed on Server for On Demand Loading) -->
+    <script type="text/javascript" src="assets/template/revolution-slider/revolution.extension.actions.min.js"></script>
+    <script type="text/javascript" src="assets/template/revolution-slider/revolution.extension.carousel.min.js"></script>
+    <script type="text/javascript" src="assets/template/revolution-slider/revolution.extension.kenburn.min.js"></script>
+    <script type="text/javascript" src="assets/template/revolution-slider/revolution.extension.layeranimation.min.js"></script>
+    <script type="text/javascript" src="assets/template/revolution-slider/revolution.extension.migration.min.js"></script>
+    <script type="text/javascript" src="assets/template/revolution-slider/revolution.extension.navigation.min.js"></script>
+    <script type="text/javascript" src="assets/template/revolution-slider/revolution.extension.parallax.min.js"></script>
+    <script type="text/javascript" src="assets/template/revolution-slider/revolution.extension.slideanims.min.js"></script>
+    <script type="text/javascript" src="assets/template/revolution-slider/revolution.extension.video.min.js"></script>
   </body>
 </html>
