@@ -1,0 +1,28 @@
+<div class="header-nav">
+  <div class="header-nav-wrapper navbar-scrolltofixed bg-lighter">
+    <div class="container">
+      <nav id="menuzord-right" class="menuzord orange no-bg"> <a class="menuzord-brand pull-left flip" href="javascript:void(0)"><img src="assets/template/spa/logo-wide.png" alt=""></a>
+        <ul class="menuzord-menu">
+          <li class="<%= action_name == 'index' ? 'active' : '' %>">
+            <%= link_to 'Home', root_path %>
+          </li>
+          <li class="<%= action_name == 'services' ? 'active' : '' %>">
+            <%= link_to 'Usługi', services_path %>
+          </li>
+          <li class="<%= action_name == 'blog' ? 'active' : '' %>">
+            <%= link_to 'Blog', blog_path %>
+          </li>
+          <li class="<%= action_name == 'celebrities' ? 'active' : '' %>">
+            <%= link_to 'Galeria sław', celebrities_path %>
+          </li>
+          <li class="<%= action_name == 'team' ? 'active' : '' %>">
+            <%= link_to 'Zespół', team_path %>
+          </li>
+          <li class="<%= action_name == 'contact' ? 'active' : '' %>">
+            <%= link_to 'Kontakt', contact_path %>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</div>
