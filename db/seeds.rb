@@ -16,3 +16,11 @@ p3 = Post.create(title: 'Sample posts title 3', introduction: short_lorem, conte
 n1 = New.create(title: 'Sample news title 1', introduction: short_lorem, content: lorem)
 n2 = New.create(title: 'Sample news title 2', introduction: short_lorem, content: lorem)
 n3 = New.create(title: 'Sample news title 3', introduction: short_lorem, content: lorem)
+
+50.times do
+  Celebrity.create(
+    name: SecureRandom.hex(4),
+    result: - (rand(150).to_f / 10),
+    created_at: rand(100).days.ago
+  )
+end

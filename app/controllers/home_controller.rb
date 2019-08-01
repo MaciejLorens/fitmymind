@@ -10,6 +10,9 @@ class HomeController < ApplicationController
   end
 
   def celebrities
+    @celebrities = Celebrity
+                     .order(created_at: :desc)
+                     .limit(28)
   end
 
   def team
