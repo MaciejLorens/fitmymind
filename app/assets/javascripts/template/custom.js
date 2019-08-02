@@ -267,23 +267,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
     },
 
     /* ---------------------------------------------------------------------- */
-    /* ------------------------------ preloader  ---------------------------- */
-    /* ---------------------------------------------------------------------- */
-    TM_preLoaderClickDisable: function() {
-      var $preloader = $('#preloader');
-      $preloader.children('#disable-preloader').on('click', function(e) {
-        $preloader.fadeOut();
-        return false;
-      });
-    },
-
-    TM_preLoaderOnLoad: function() {
-      var $preloader = $('#preloader');
-      $preloader.delay(200).fadeOut('slow');
-    },
-
-
-    /* ---------------------------------------------------------------------- */
     /* ------------------------------- Platform detect  --------------------- */
     /* ---------------------------------------------------------------------- */
     TM_platformDetect: function() {
@@ -464,7 +447,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
         type: 'iframe',
         mainClass: 'mfp-fade',
         removalDelay: 160,
-        preloader: false,
 
         fixedContentPos: false
       });
@@ -478,7 +460,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
         overflowY: 'auto',
 
         closeBtnInside: true,
-        preloader: false,
 
         midClick: true,
         removalDelay: 300,
@@ -494,7 +475,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
         overflowY: 'auto',
 
         closeBtnInside: true,
-        preloader: false,
 
         midClick: true,
         removalDelay: 300,
@@ -523,7 +503,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
 
       $('.popup-with-form').magnificPopup({
         type: 'inline',
-        preloader: false,
         focus: '#name',
 
         mainClass: 'mfp-no-margins mfp-fade',
@@ -602,7 +581,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
           disableOn: 600,
           type: 'iframe',
           removalDelay: 160,
-          preloader: false,
           fixedContentPos: false
         });
       }
@@ -2414,7 +2392,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
       $window.trigger("resize");
 
       var t = setTimeout(function() {
-        THEMEMASCOT.initialize.TM_preLoaderOnLoad();
         THEMEMASCOT.initialize.TM_hashForwarding();
         THEMEMASCOT.initialize.TM_parallaxBgInit();
       }, 0);
@@ -2464,7 +2441,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
   /* ---------------------------------------------------------------------- */
   /* ---------------------------- Call Functions -------------------------- */
   /* ---------------------------------------------------------------------- */
-  THEMEMASCOT.initialize.TM_preLoaderClickDisable();
   $(document).ready(THEMEMASCOT.documentOnReady.init);
   $window.load(THEMEMASCOT.documentOnLoad.init);
   $window.on('resize', THEMEMASCOT.documentOnResize.init);
