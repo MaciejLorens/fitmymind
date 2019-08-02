@@ -6,16 +6,17 @@ class HomeController < ApplicationController
   def services
   end
 
-  def blog
+  def team
   end
 
   def celebrities
-    @celebrities = Celebrity
-                     .order(created_at: :desc)
-                     .limit(28)
+    @celebrities = Celebrity.order(created_at: :desc).limit(28)
   end
 
-  def team
+  def calculators
+  end
+
+  def blog
   end
 
   def contact

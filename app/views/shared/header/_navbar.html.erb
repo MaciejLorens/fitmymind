@@ -9,14 +9,17 @@
           <li class="<%= action_name == 'services' ? 'active' : '' %>">
             <%= link_to 'Usługi', services_path %>
           </li>
-          <li class="<%= action_name == 'blog' ? 'active' : '' %>">
-            <%= link_to 'Blog', blog_path %>
+          <li class="<%= action_name == 'team' ? 'active' : '' %>">
+            <%= link_to 'Zespół', team_path %>
           </li>
           <li class="<%= action_name == 'celebrities' ? 'active' : '' %>">
             <%= link_to 'Galeria sław', celebrities_path %>
           </li>
-          <li class="<%= action_name == 'team' ? 'active' : '' %>">
-            <%= link_to 'Zespół', team_path %>
+          <li class="<%= action_name == 'calculators' ? 'active' : '' %>">
+            <%= link_to 'Kalkulatory', calculators_path %>
+          </li>
+          <li class="<%= action_name == 'blog' ? 'active' : '' %>">
+            <%= link_to 'Blog', blog_path %>
           </li>
           <li class="<%= action_name == 'contact' ? 'active' : '' %>">
             <%= link_to 'Kontakt', contact_path %>

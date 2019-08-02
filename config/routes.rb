@@ -7,11 +7,11 @@ Rails.application.routes.draw do
   devise_for :users
 
   get 'home/index'
-
   get 'uslugi', as: 'services', to: 'home#services'
-  get 'blog', as: 'blog', to: 'home#blog'
-  get 'galeria_slaw', as: 'celebrities', to: 'home#celebrities'
   get 'zespol', as: 'team', to: 'home#team'
+  get 'galeria_slaw', as: 'celebrities', to: 'home#celebrities'
+  get 'kalkulatory', as: 'calculators', to: 'home#calculators'
+  get 'blog', as: 'blog', to: 'home#blog'
   get 'kontakt', as: 'contact', to: 'home#contact'
 
 
