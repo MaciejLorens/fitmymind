@@ -126,13 +126,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
         THEMEMASCOT.bmiCalculator.calculateStandard(bmi_Standard_Form);
         return false;
       });
-
-      var bmi_Metric_Form = $('#form_bmi_metric_calculator');
-      bmi_Metric_Form.on('submit', function(e) {
-        e.preventDefault();
-        THEMEMASCOT.bmiCalculator.calculateMetric(bmi_Metric_Form);
-        return false;
-      });
     }
 
   };

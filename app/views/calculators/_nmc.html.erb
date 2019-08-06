@@ -1,0 +1,43 @@
+<section>
+  <div class="container pb-0">
+    <div class="section-content">
+      <div class="row">
+        <div class="col-md-6 pb-sm-70">
+          <h3 class="mt-0">
+            Należna Masa Ciała
+            <span class="text-theme-colored">NMC</span></h3>
+          <p>
+            Jest to należna masa ciała dla danej płci i wzrostu. Obliczana na podstawie wzoru Lorentza.
+          </p>
+
+          <br/>
+
+          <div class="tab-content border-gray-lightgray p-20">
+
+            <div id="nmc-calculator">
+              <div class="col-xs-8 p-0 pt-20">
+                <label>Wzrost w cm</label>
+                <input required type="text" class="form-control" id="nmc_height" name="nmc_height" placeholder="np. 172">
+              </div>
+              <div class="col-xs-8 p-0 pt-20">
+                <label>Płeć</label>
+                <%= select_tag 'nmc_gender', options_for_select(gender_options), class: 'form-control' %>
+              </div>
+              <div class="col-xs-8 p-0 pt-20">
+                <input id="submit-button-nmc" type="submit" class="btn btn-sm btn-theme-colored text-uppercase" value="Oblicz">
+              </div>
+              <div class="clearfix"></div>
+            </div>
+
+            <div id="nmc-result">
+              <hr>
+              <h3>Wynik: <span id="nmc-result-number"></span> kg</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="assets/template/nutrition/about/1.png" alt=""></div>
+      </div>
+    </div>
+  </div>
+</section>

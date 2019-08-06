@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   get 'uslugi', as: 'services', to: 'home#services'
   get 'zespol', as: 'team', to: 'home#team'
   get 'galeria_slaw', as: 'celebrities', to: 'home#celebrities'
-  get 'kalkulatory', as: 'calculators', to: 'home#calculators'
+  get 'kalkulatory', as: 'calculators', to: 'calculators#index'
   get 'blog', as: 'blog', to: 'home#blog'
   get 'kontakt', as: 'contact', to: 'home#contact'
 

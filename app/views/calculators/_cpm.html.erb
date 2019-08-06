@@ -1,0 +1,63 @@
+<section>
+  <div class="container pb-0">
+    <div class="section-content">
+      <div class="row">
+        <div class="col-md-6 pb-sm-70">
+          <h3 class="mt-0">
+            Całkowita Przemiana Materii
+            <span class="text-theme-colored">CPM</span></h3>
+          <p>
+            Całkowita przemiana materii, a inaczej Dzienne Zapotrzebowanie
+            Energetyczne jest to nasz całodobowy wydatek
+            energetyczny, na który składają się wydatki energetyczne potrzebne
+            do prawidłowego funkcjonowania organizmu, np. oddychania oraz
+            wydatki energetyczne związane z życiem codziennym, np. z pracą. CPM
+            informuje nas o tym ile energii (kalorii) powinniśmy dostarczyć z
+            pożywienia w ciągu dnia, aby utrzymać
+            aktualną wagę.
+          </p>
+
+          <br/>
+
+          <div class="tab-content border-gray-lightgray p-20">
+
+            <div id="bmi-calculator">
+              <div class="col-xs-8 p-0">
+                <label>Waga w kg</label>
+                <input required type="text" class="form-control" id="cpm_mass" name="cpm_mass" placeholder="np. 92.5">
+              </div>
+              <div class="col-xs-8 p-0 pt-20">
+                <label>Wzrost w cm</label>
+                <input required type="text" class="form-control" id="cpm_height" name="cpm_height" placeholder="np. 172">
+              </div>
+              <div class="col-xs-8 p-0 pt-20">
+                <label>Wiek w latach</label>
+                <input required type="text" class="form-control" id="cpm_age" name="cpm_age" placeholder="np. 28">
+              </div>
+              <div class="col-xs-8 p-0 pt-20">
+                <label>Aktywność sportowa</label>
+                <%= select_tag 'cpm_sport_activity', options_for_select(activity_options), class: 'form-control sport_activity' %>
+                <div class="sport_activity_explanation"></div>
+              </div>
+              <div class="col-xs-8 p-0 pt-20">
+                <label>Płeć</label>
+                <%= select_tag 'cpm_gender', options_for_select(gender_options), class: 'form-control' %>
+              </div>
+              <div class="col-xs-8 p-0 pt-20">
+                <input id="submit-button-cpm" type="submit" class="btn btn-sm btn-theme-colored text-uppercase" value="Oblicz">
+              </div>
+              <div class="clearfix"></div>
+            </div>
+
+            <div id="cpm-result">
+              <hr>
+              <h3>Wynik: <span id="cpm-result-number"></span> kcal</h3>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="assets/template/nutrition/about/1.png" alt=""></div>
+      </div>
+    </div>
+  </div>
+</section>

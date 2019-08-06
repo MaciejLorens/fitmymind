@@ -3,7 +3,7 @@
     <div class="container">
       <nav id="menuzord-right" class="menuzord orange no-bg"> <a class="menuzord-brand pull-left flip" href="javascript:void(0)"><img src="assets/template/spa/logo-wide.png" alt=""></a>
         <ul class="menuzord-menu">
-          <li class="<%= action_name == 'index' ? 'active' : '' %>">
+          <li class="<%= controller_name == 'home' && action_name == 'index' ? 'active' : '' %>">
             <%= link_to 'Home', root_path %>
           </li>
           <li class="<%= action_name == 'services' ? 'active' : '' %>">
@@ -15,7 +15,7 @@
           <li class="<%= action_name == 'celebrities' ? 'active' : '' %>">
             <%= link_to 'Galeria sław', celebrities_path %>
           </li>
-          <li class="<%= action_name == 'calculators' ? 'active' : '' %>">
+          <li class="<%= controller_name == 'calculators' ? 'active' : '' %>">
             <%= link_to 'Kalkulatory', calculators_path %>
           </li>
           <li class="<%= action_name == 'blog' ? 'active' : '' %>">

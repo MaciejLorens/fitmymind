@@ -1,0 +1,78 @@
+<section>
+  <div class="container pb-0">
+    <div class="section-content">
+      <div class="row">
+        <div class="col-md-6 pb-sm-70">
+          <h3 class="mt-0">
+            Wskaźnik
+            <span class="text-theme-colored">WHR</span></h3>
+          <p>
+            Wskaźnik WHR pozwala określić lokalizację tkanki tłuszczowej co
+            pomaga w rozpoznaniu rodzaju naszej otyłości:
+          </p>
+
+          <p>
+            otyłość androidalna, brzuszna, typu jabłko występuje gdy WHR jest
+            większy lub równy 0.8 u kobiet lub 1.0 u mężczyzn
+          </p>
+
+          <p>
+            otyłość gynoidalna, pośladkowo-udowa, typu gruszka występuje gdy WHR
+            jest niższy niż 0.8 u kobiet lub 1.0 u mężczyzn.
+          </p>
+
+          <p>
+            Gdy nasze BMI mieści się w granicach normy lub występuje niedowaga
+            nie mówimy o otyłości. W takim przypadku wynik obliczenia WHR będzie
+            błędny, może jedynie określić nasze predyspozycje do tycia w
+            wymienionych miejscach.
+          </p>
+
+          <br/>
+
+          <div class="tab-content border-gray-lightgray p-20">
+
+            <div id="bmi-calculator">
+              <div class="col-xs-8 p-0">
+                <label>Obwód w talii w cm</label>
+                <input required type="text" class="form-control" id="whr_talia" name="whr_talia" placeholder="np. 80">
+              </div>
+              <div class="col-xs-8 p-0 pt-20">
+                <label>Obwód w biodrach w cm</label>
+                <input required type="text" class="form-control" id="whr_loins" name="whr_loins" placeholder="np. 100">
+              </div>
+              <div class="col-xs-8 p-0 pt-20">
+                <label>Płeć</label>
+                <%= select_tag 'whr_gender', options_for_select(gender_options), class: 'form-control' %>
+              </div>
+              <div class="col-xs-8 p-0 pt-20">
+                <input id="submit-button-whr" type="submit" class="btn btn-sm btn-theme-colored text-uppercase" value="Oblicz">
+              </div>
+              <div class="clearfix"></div>
+            </div>
+
+            <div id="whr-result">
+              <hr>
+              <h3>Wynik: <span id="whr-result-number"></span></h3>
+              <hr>
+              <p class="whr_pear_description whr_description">
+                Otyłość typu gruszka
+              </p>
+              <p class="whr_pear_description whr_description">
+                Twój organizm ma tendencje do gromadzenia tkanki tłuszczowej w dolnych częściach ciała, czyli na biodrach, pośladkach i udach. Otyłość tego typu wiąże się z występowaniem żylaków podudzi, zwyrodnień układu kostno-stawowego kończyn dolnych oraz schorzeń dróg żółciowych. Powinnaś zwiększyć w swojej  diecie ilość produktów o niskim indeksie glikemicznym. W twoim menu powinny znaleźć się produkty takie jak : kasze, świeże lub gotowane warzywa, drób. Powinnaś unikać białego pieczywa, makaronów, czerwonego mięsa, słodyczy. Pamiętaj że alkohol sprzyja otyłości więc postaraj się go unikać.
+              </p>
+              <p class="whr_apple_description whr_description">
+                Otyłość typu jabłko
+              </p>
+              <p class="whr_apple_description whr_description">
+                Twój organizm ma tendencje do odkładania tkanki tłuszczowej w centralnej części ciała, czyli w okolicach brzucha szczególnie w części pod pępkowej. Otyłość tego typu jest niebezpieczna dla zdrowia ponieważ może prowadzić do cukrzycy, nadciśnienia tętniczego, choroby wieńcowej serca, zaburzeń lipidowych. Powinnaś jeść mniejsze porcje posiłków za to częściej 4-5 razy dziennie. Wskazane są sałatki z warzyw, zupy jarzynowe, duszone lub grillowane ryby i pierś z kurczaka. W twoim menu powinny znaleźć się takie produkty jak brązowy ryż, marchew, buraki, a unikać powinnaś produktów z pszenicy. Niezdrową przekąskę możesz zastąpić gruszką lub orzechami. Pamiętaj że alkohol sprzyja powstawaniu otyłości więc postaraj się go unikać, szczególnie piwa.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <img src="assets/template/nutrition/about/1.png" alt=""></div>
+      </div>
+    </div>
+  </div>
+</section>
