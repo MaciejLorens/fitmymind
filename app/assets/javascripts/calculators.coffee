@@ -20,7 +20,26 @@ ready = ->
       when '2.2' then ''
     $('.sport_activity_explanation').text(explanation)
 
-#   -------------------------------------------------------------------- BMI ---
+  $("#bmi_mass, #cpm_mass, #znw_mass").keyup ->
+    val = $(@).val()
+    $("#bmi_mass").val(val)
+    $("#cpm_mass").val(val)
+    $("#znw_mass").val(val)
+
+  $("#bmi_height, #nmc_height, #cpm_height").keyup ->
+    val = $(@).val()
+    $("#bmi_height").val(val)
+    $("#nmc_height").val(val)
+    $("#cpm_height").val(val)
+
+  $("#nmc_gender, #whr_gender, #cpm_gender").change ->
+    val = $(@).val()
+    $("#nmc_gender").val(val)
+    $("#whr_gender").val(val)
+    $("#cpm_gender").val(val)
+
+
+  #   ---------------------------------------------------------------------- BMI
   $('#submit-button-bmi').click ->
     $('#bmi-result').fadeOut 300, ->
       $('.bmi_result_description').hide()
@@ -40,31 +59,8 @@ ready = ->
       $("#bmi-result-number").html(bmi)
       $('#bmi-result').fadeIn(300)
 
-#   -------------------------------------------------------------------- CPM ---
-  $('#submit-button-cpm').click ->
-    $('#cpm-result').fadeOut 300, ->
-      mass = parseFloat($('#cpm_mass').val())
-      height = parseFloat($('#cpm_height').val())
-      age = parseFloat($('#cpm_age').val())
-      sex = $("#cpm_gender").val()
-      pal = $("#cpm_sport_activity").val()
 
-      console.log('  ----- mass: %j', mass);
-      console.log('  ----- height: %j', height);
-      console.log('  ----- age: %j', age);
-      console.log('  ----- sex: %j', sex);
-
-      ppm = if sex == 'woman'
-        665.09 + (9.56 * mass ) + (1.85 * height) - (4.67 * age)
-      else
-        66.47 + (13.75 * mass) + (5 * height) - (6.75 * age)
-
-      cpm = Math.round(ppm * pal)
-      console.log('  ----- cpm: %j', cpm);
-      $("#cpm-result-number").html(cpm)
-      $("#cpm-result").fadeIn(300)
-
-#   -------------------------------------------------------------------- NMC ---
+  #   ---------------------------------------------------------------------- NMC
   $('#submit-button-nmc').click ->
     $('#nmc-result').fadeOut 300, ->
       height = parseFloat($('#nmc_height').val())
@@ -77,7 +73,7 @@ ready = ->
       $('#nmc-result').fadeIn(300)
 
 
-#   -------------------------------------------------------------------- WHR ---
+  #   ---------------------------------------------------------------------- WHR
   $('#submit-button-whr').click ->
     $('#whr-result').fadeOut 300, ->
       $('.whr_description').hide()
@@ -100,7 +96,26 @@ ready = ->
       $("#whr-result-number").html(whr)
       $('#whr-result').fadeIn(300)
 
-#   -------------------------------------------------------------------- ZNW ---
+
+  #   ---------------------------------------------------------------------- CPM
+  $('#submit-button-cpm').click ->
+    $('#cpm-result').fadeOut 300, ->
+      mass = parseFloat($('#cpm_mass').val())
+      height = parseFloat($('#cpm_height').val())
+      age = parseFloat($('#cpm_age').val())
+      sex = $("#cpm_gender").val()
+      pal = $("#cpm_sport_activity").val()
+
+      ppm = if sex == 'woman'
+        665.09 + (9.56 * mass) + (1.85 * height) - (4.67 * age)
+      else
+        66.47 + (13.75 * mass) + (5 * height) - (6.75 * age)
+
+      cpm = Math.round(ppm * pal)
+      $("#cpm-result-number").html(cpm)
+      $("#cpm-result").fadeIn(300)
+
+  #   ---------------------------------------------------------------------- ZNW
   $('#submit-button-znw').click ->
     $('#znw-result').fadeOut 300, ->
       mass = parseFloat($('#znw_mass').val())

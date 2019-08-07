@@ -186,8 +186,8 @@ body.dark {
   border: 1px solid #333333;
 }
 .dark .form-control {
-  background: rgba(0, 0, 0, 0.2);
   border-color: #333333;
+  border-radius: 5px;
 }
 .dark .login-form .form-control,
 .dark .register-form .form-control {
