@@ -6,22 +6,22 @@
           <li class="<%= controller_name == 'home' && action_name == 'index' ? 'active' : '' %>">
             <%= link_to 'Home', root_path %>
           </li>
-          <li class="<%= action_name == 'services' ? 'active' : '' %>">
+          <li class="<%= controller_name == 'services' ? 'active' : '' %>">
             <%= link_to 'Usługi', services_path %>
           </li>
-          <li class="<%= action_name == 'team' ? 'active' : '' %>">
+          <li class="<%= controller_name == 'team' ? 'active' : '' %>">
             <%= link_to 'Zespół', team_path %>
           </li>
-          <li class="<%= action_name == 'celebrities' ? 'active' : '' %>">
+          <li class="<%= controller_name == 'celebrities' ? 'active' : '' %>">
             <%= link_to 'Galeria sław', celebrities_path %>
           </li>
           <li class="<%= controller_name == 'calculators' ? 'active' : '' %>">
             <%= link_to 'Kalkulatory', calculators_path %>
           </li>
-          <li class="<%= action_name == 'blog' ? 'active' : '' %>">
+          <li class="<%= controller_name == 'posts' ? 'active' : '' %>">
             <%= link_to 'Blog', blog_path %>
           </li>
-          <li class="<%= action_name == 'contact' ? 'active' : '' %>">
+          <li class="<%= controller_name == 'contact' ? 'active' : '' %>">
             <%= link_to 'Kontakt', contact_path %>
           </li>
         </ul>

@@ -1,33 +1,69 @@
-<p id="notice"><%= notice %></p>
+<%= render partial: 'title' %>
 
-<h1>Posts</h1>
+<section>
+  <div class="container mt-30 mb-30 pt-30 pb-30">
+    <div class="row ">
+      <div class="col-md-9">
+        <div class="blog-posts">
+          <div class="col-md-12">
+            <div class="row list-dashed">
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Introduction</th>
-      <th>Content</th>
-      <th>Photo</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+              <% @posts.each do |post| %>
+                <article class="post mb-50 pb-30">
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.introduction %></td>
-        <td><%= post.content %></td>
-        <td><%= post.photo %></td>
-        <td><%= link_to 'Show', post %></td>
-        <td><%= link_to 'Edit', edit_post_path(post) %></td>
-        <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+                  <div class="entry-header">
+                    <div class="post-thumb">
+                      <%= link_to image_tag(post.photo.url(:original), size: '900x450'), post_path(post) %>
+                    </div>
+                  </div>
+                  <div class="clearfix"></div>
 
-<br>
+                  <div class="entry-content">
+                    <h5 class="entry-title text-uppercase mt-0">
+                      <%= link_to post.title, post_path(post) %>
+                    </h5>
 
-<%= link_to 'New Post', new_post_path %>
+                    <ul class="list-inline font-12 mb-20 mt-10">
+                      <li>
+                        <i class="fa fa-calendar mr-5"></i> <%= post.created_at.strftime('%d/%m/%Y') %>
+                      </li>
+                      <li>
+                        <i class="fa fa-comments-o ml-5 mr-5"></i> <%#= post.comments.count %>
+                      </li>
+                    </ul>
+
+                    <p>
+                      <%= post.introduction %>
+                    </p>
+
+                    <ul class="list-inline like-comment pull-left flip font-12">
+                      <li>
+                        Kategoria: <%= link_to post.category.name, '#', class: 'post-category' %>
+                      </li>
+                      <li>
+                        Tagi:
+                        <% post.tags.each do |tag| %>
+                          <%= link_to tag.name, '#', class: 'post-tag' %>
+                        <% end %>
+                      </li>
+                    </ul>
+
+                    <%= link_to '<i class="fa fa-angle-double-right text-theme-colored"></i> Czytaj więcej...'.html_safe, post_path(post), class: 'pull-right flip text-gray font-13 mt-10' %>
+                    <div class="clearfix"></div>
+                  </div>
+                </article>
+              <% end %>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-sm-12 col-md-3">
+        <%= render partial: 'sidebar' %>
+      </div>
+
+    </div>
+  </div>
+</section>

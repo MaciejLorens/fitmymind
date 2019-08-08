@@ -2595,8 +2595,8 @@ form input[type="date"]:focus,
 form input[type="color"]:focus,
 form select:focus,
 form textarea:focus {
-  color: #404040;
-  border-color: rgba(0, 0, 0, 0.3);
+  color: white;
+  border-color: #c0c0c0;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);

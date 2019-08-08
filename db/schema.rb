@@ -10,10 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_01_072734) do
+ActiveRecord::Schema.define(version: 2019_08_08_095125) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "categories", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_categories_on_name"
+  end
 
   create_table "celebrities", force: :cascade do |t|
     t.string "name"
@@ -32,18 +39,38 @@ ActiveRecord::Schema.define(version: 2019_08_01_072734) do
     t.string "photo_content_type"
     t.integer "photo_file_size"
     t.datetime "photo_updated_at"
+    t.index ["content"], name: "index_news_on_content"
+    t.index ["introduction"], name: "index_news_on_introduction"
+    t.index ["title"], name: "index_news_on_title"
   end
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
     t.text "introduction"
     t.text "content"
+    t.integer "category_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "photo_file_name"
     t.string "photo_content_type"
     t.integer "photo_file_size"
     t.datetime "photo_updated_at"
+    t.index ["category_id"], name: "index_posts_on_category_id"
+    t.index ["content"], name: "index_posts_on_content"
+    t.index ["introduction"], name: "index_posts_on_introduction"
+    t.index ["title"], name: "index_posts_on_title"
+  end
+
+  create_table "posts_tags", id: false, force: :cascade do |t|
+    t.integer "post_id", null: false
+    t.integer "tag_id", null: false
+  end
+
+  create_table "tags", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_tags_on_name"
   end
 
   create_table "users", force: :cascade do |t|

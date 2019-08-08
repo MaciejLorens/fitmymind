@@ -1,18 +1,9 @@
-<section class="inner-header divider layer-overlay overlay-dark-5" data-parallax-ratio="0.7" data-bg-img="assets/kalkulatory/tlo.png" title="twoja_droga_do_sukcesu">
-  <div class="container pt-80 pb-80">
-    <div class="section-content">
-      <div class="row">
-        <div class="col-md-12">
-          <h1 class="title text-white">dowiedz się coś na temat swojego
-            ciała</h1>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+<%= render partial: 'title' %>
 
-<%= render partial: 'bmi' %>
-<%= render partial: 'nmc' %>
-<%= render partial: 'whr' %>
-<%= render partial: 'cpm' %>
-<%= render partial: 'znw' %>
+<div id="calculators-wrapper">
+  <%= render partial: 'bmi' %>
+  <%= render partial: 'nmc' %>
+  <%= render partial: 'whr' %>
+  <%= render partial: 'cpm' %>
+  <%= render partial: 'znw' %>
+</div>

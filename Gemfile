@@ -9,6 +9,7 @@ gem 'aws-sdk-s3'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'coffee-rails', '~> 4.2'
 gem 'devise'
+gem 'hirb'
 gem 'jbuilder', '~> 2.5'
 gem 'jquery-rails'
 gem 'paperclip', '~> 6.0.0'

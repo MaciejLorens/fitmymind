@@ -3,19 +3,27 @@ short_lorem = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem ac
 lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
 User.create(
-  email: 'mckl@poczta.fm',
+  email: 'maciej.lorens@gmail.com',
   password: '123456',
   password_confirmation: '123456',
   admin: true
 )
 
-p1 = Post.create(title: 'Sample posts title 1', introduction: short_lorem, content: lorem)
-p2 = Post.create(title: 'Sample posts title 2', introduction: short_lorem, content: lorem)
-p3 = Post.create(title: 'Sample posts title 3', introduction: short_lorem, content: lorem)
+c1 = Category.create(name: 'Dietetyka')
+c2 = Category.create(name: 'Fitness')
+c3 = Category.create(name: 'Zdrowie')
 
-n1 = New.create(title: 'Sample news title 1', introduction: short_lorem, content: lorem)
-n2 = New.create(title: 'Sample news title 2', introduction: short_lorem, content: lorem)
-n3 = New.create(title: 'Sample news title 3', introduction: short_lorem, content: lorem)
+t1 = Tag.create(name: 'Woda')
+t2 = Tag.create(name: 'Kalorie')
+t3 = Tag.create(name: 'Energia')
+
+p1 = Post.create(title: 'Sample post title 1', introduction: short_lorem, content: lorem, category: c1)
+p2 = Post.create(title: 'Sample post title 2', introduction: short_lorem, content: lorem, category: c2)
+p3 = Post.create(title: 'Sample post title 3', introduction: short_lorem, content: lorem, category: c3)
+
+n1 = New.create(title: 'Sample new title 1', introduction: short_lorem, content: lorem)
+n2 = New.create(title: 'Sample new title 2', introduction: short_lorem, content: lorem)
+n3 = New.create(title: 'Sample new title 3', introduction: short_lorem, content: lorem)
 
 50.times do
   Celebrity.create(
@@ -24,3 +32,7 @@ n3 = New.create(title: 'Sample news title 3', introduction: short_lorem, content
     created_at: rand(100).days.ago
   )
 end
+
+p1.update(tags: [t1, t2, t3])
+p2.update(tags: [t1])
+p3.update(tags: [t1, t3])

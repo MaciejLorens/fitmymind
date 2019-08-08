@@ -6,13 +6,12 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  get 'home/index'
-  get 'uslugi', as: 'services', to: 'home#services'
-  get 'zespol', as: 'team', to: 'home#team'
-  get 'galeria_slaw', as: 'celebrities', to: 'home#celebrities'
+  get 'uslugi', as: 'services', to: 'services#index'
+  get 'zespol', as: 'team', to: 'team#index'
+  get 'galeria_slaw', as: 'celebrities', to: 'celebrities#index'
   get 'kalkulatory', as: 'calculators', to: 'calculators#index'
-  get 'blog', as: 'blog', to: 'home#blog'
-  get 'kontakt', as: 'contact', to: 'home#contact'
+  get 'blog', as: 'blog', to: 'posts#index'
+  get 'kontakt', as: 'contact', to: 'contact#index'
 
 
   resources :posts

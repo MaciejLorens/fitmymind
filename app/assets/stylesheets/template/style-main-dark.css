@@ -307,7 +307,7 @@ body.dark {
   border-bottom: 1px dashed #555555 !important;
 }
 .dark .widget .search-button {
-  border: 1px solid #333333;
+  border: 1px solid #c0c0c0;
 }
 .dark .widget .list-border li {
   border-bottom: 1px dashed #333333;
