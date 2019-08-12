@@ -26,7 +26,7 @@ n2 = New.create(title: 'Sample new title 2', introduction: short_lorem, content:
 n3 = New.create(title: 'Sample new title 3', introduction: short_lorem, content: lorem)
 
 50.times do
-  Celebrity.create(
+  Result.create(
     name: SecureRandom.hex(4),
     result: - (rand(150).to_f / 10),
     created_at: rand(100).days.ago

@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   get 'uslugi', as: 'services', to: 'services#index'
   get 'zespol', as: 'team', to: 'team#index'
-  get 'galeria_slaw', as: 'celebrities', to: 'celebrities#index'
+  get 'rezultaty', as: 'results', to: 'results#index'
   get 'kalkulatory', as: 'calculators', to: 'calculators#index'
   get 'blog', as: 'blog', to: 'posts#index'
   get 'kontakt', as: 'contact', to: 'contact#index'

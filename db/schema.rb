@@ -22,13 +22,6 @@ ActiveRecord::Schema.define(version: 2019_08_08_095125) do
     t.index ["name"], name: "index_categories_on_name"
   end
 
-  create_table "celebrities", force: :cascade do |t|
-    t.string "name"
-    t.string "result"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "news", force: :cascade do |t|
     t.string "title"
     t.text "introduction"
@@ -64,6 +57,13 @@ ActiveRecord::Schema.define(version: 2019_08_08_095125) do
   create_table "posts_tags", id: false, force: :cascade do |t|
     t.integer "post_id", null: false
     t.integer "tag_id", null: false
+  end
+
+  create_table "results", force: :cascade do |t|
+    t.string "name"
+    t.string "result"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "tags", force: :cascade do |t|

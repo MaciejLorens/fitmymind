@@ -6,14 +6,14 @@
       <div class="row">
         <div class="col-md-12">
 
-          <div class="celebrities-wrapper" data-bg-img="assets/pin-board-wide.png" style="background-repeat: no-repeat">
+          <div class="results-wrapper" data-bg-img="assets/pin-board-wide.png" style="background-repeat: no-repeat">
             <ul>
-              <% @celebrities.each do |celebrity| %>
+              <% @results.each do |result| %>
                 <li>
                   <a href="#">
-                    <p><b>P. <%= celebrity.name %></b></p>
-                    <p><%= celebrity.created_at.strftime('%d-%m-%Y') %></p>
-                    <p><b><%= celebrity.result %> kg !</b></p>
+                    <p><b>P. <%= result.name %></b></p>
+                    <p><%= result.created_at.strftime('%d-%m-%Y') %></p>
+                    <p><b><%= result.result %> kg !</b></p>
                   </a>
                 </li>
               <% end %>
