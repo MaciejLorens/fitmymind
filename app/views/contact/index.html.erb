@@ -1,1 +1,72 @@
-kontakt
+<%= render partial: 'title' %>
+
+<section id="contact" class="divider">
+  <div class="container pt-60 pb-60">
+    <div class="section-title mb-60">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="esc-heading small-border text-center">
+            <h3>Masz jakiekolwiek pytania?</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-content">
+      <div class="row">
+        <div class="col-sm-12 col-md-4">
+          <div class="contact-info text-center">
+            <i class="fa fa-phone font-36 mb-10 text-theme-colored"></i>
+            <h4>Zadzwoń do nas</h4>
+            <h6 class="text-gray">Tel: 535 662 313</h6>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <div class="contact-info text-center">
+            <i class="fa fa-map-marker font-36 mb-10 text-theme-colored"></i>
+            <h4>Adres</h4>
+            <h6 class="text-gray">Dobrego Pasterza 120, 31-416 Kraków</h6>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <div class="contact-info text-center">
+            <i class="fa fa-envelope font-36 mb-10 text-theme-colored"></i>
+            <h4>Email</h4>
+            <h6 class="text-gray">krakow@bonne-sante.pl</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="section-content mt-50">
+      <div class="row">
+        <div class="col-sm-12 col-md-4">
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <a id="zl-url" class="zl-url" href="https://www.znanylekarz.pl/aleksandra-kucharczyk-3/dietetyk/krakow" rel="nofollow" data-zlw-doctor="aleksandra-kucharczyk-3" data-zlw-type="big" data-zlw-opinion="true" data-zlw-hide-branding="true">Aleksandra
+            Kucharczyk - ZnanyLekarz.pl</a>
+          <script>!function ($_x, _s, id) {
+            var js, fjs = $_x.getElementsByTagName(_s)[0];
+            if (!$_x.getElementById(id)) {
+              js = $_x.createElement(_s);
+              js.id = id;
+              js.src = "//platform.docplanner.com/js/widget.js";
+              fjs.parentNode.insertBefore(js, fjs);
+            }
+          }(document, "script", "zl-widget-s");</script>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container-fluid p-0">
+    <div class="row">
+
+      <div id="map"></div>
+
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaR_BALevZSQjSdq3fmty7urX2mMWS4Y&callback=initMap"
+              async defer></script>
+
+    </div>
+  </div>
+</section>

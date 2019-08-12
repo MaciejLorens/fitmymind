@@ -17,4 +17,6 @@
 //= require template/jquery.themepunch.tools.min
 //= require template/jquery.themepunch.revolution.min
 //= require template/calendar-events-data
+//= require template/google-map-init
 //= require calculators
+//= require contact
