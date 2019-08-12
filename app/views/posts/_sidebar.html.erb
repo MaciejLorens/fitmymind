@@ -1,42 +1,40 @@
 <div class="sidebar sidebar-right mt-sm-30">
+
+<!--  <div class="widget">-->
+<!--    <h5 class="widget-title line-bottom">Wyszukaj w treści</h5>-->
+<!--    <div class="search-form">-->
+<!--      <div class="input-group">-->
+<!--        <input type="text" placeholder="np. hashimoto" class="form-control search-input">-->
+
+<!--        <span class="input-group-btn">-->
+<!--          <button type="submit" class="btn search-button">-->
+<!--            <i class="fa fa-search"></i>-->
+<!--          </button>-->
+<!--        </span>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
   <div class="widget">
-    <h5 class="widget-title line-bottom">Search box</h5>
-    <div class="search-form">
-      <form>
-        <div class="input-group">
-          <input type="text" placeholder="Click to Search" class="form-control search-input">
-          <span class="input-group-btn">
-                      <button type="submit" class="btn search-button"><i class="fa fa-search"></i></button>
-                      </span>
-        </div>
-      </form>
-    </div>
-  </div>
-  <div class="widget">
-    <h5 class="widget-title line-bottom">Categories</h5>
+    <h5 class="widget-title line-bottom">Kategorie</h5>
     <div class="categories">
       <ul class="list list-border angle-double-right">
-        <li><a href="#">Creative<span>(19)</span></a></li>
-        <li><a href="#">Portfolio<span>(21)</span></a></li>
-        <li><a href="#">Fitness<span>(15)</span></a></li>
-        <li><a href="#">Gym<span>(35)</span></a></li>
-        <li><a href="#">Personal<span>(16)</span></a></li>
+        <% @categories.each do |category| %>
+          <li>
+            <%= category_to(category) %>
+          </li>
+        <% end %>
       </ul>
     </div>
   </div>
+
   <div class="widget">
-    <h5 class="widget-title line-bottom">Tags</h5>
+    <h5 class="widget-title line-bottom">Tagi</h5>
     <div class="tags">
-      <a href="#">travel</a>
-      <a href="#">blog</a>
-      <a href="#">lifestyle</a>
-      <a href="#">feature</a>
-      <a href="#">mountain</a>
-      <a href="#">design</a>
-      <a href="#">restaurant</a>
-      <a href="#">journey</a>
-      <a href="#">classic</a>
-      <a href="#">sunset</a>
+      <% @tags.each do |tag| %>
+        <%= tag_to(tag) %>
+      <% end %>
     </div>
   </div>
+
 </div>

@@ -7,7 +7,6 @@
         <div class="blog-posts">
           <div class="col-md-12">
             <div class="row list-dashed">
-
               <% @posts.each do |post| %>
                 <article class="post mb-50 pb-30">
 
@@ -41,10 +40,12 @@
                         Kategoria: <%= link_to post.category.name, '#', class: 'post-category' %>
                       </li>
                       <li>
-                        Tagi:
-                        <% post.tags.each do |tag| %>
-                          <%= link_to tag.name, '#', class: 'post-tag' %>
-                        <% end %>
+                        <div class="tags">
+                          Tagi:
+                          <% post.tags.each do |tag| %>
+                            <%= link_to tag.name, '#', class: 'post-tag' %>
+                          <% end %>
+                        </div>
                       </li>
                     </ul>
 

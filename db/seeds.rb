@@ -9,13 +9,13 @@ User.create(
   admin: true
 )
 
-c1 = Category.create(name: 'Dietetyka')
-c2 = Category.create(name: 'Fitness')
-c3 = Category.create(name: 'Zdrowie')
+c1 = Category.create(name: 'dietetyka')
+c2 = Category.create(name: 'fitness')
+c3 = Category.create(name: 'zdrowie')
 
-t1 = Tag.create(name: 'Woda')
-t2 = Tag.create(name: 'Kalorie')
-t3 = Tag.create(name: 'Energia')
+t1 = Tag.create(name: 'woda')
+t2 = Tag.create(name: 'kalorie')
+t3 = Tag.create(name: 'energia')
 
 p1 = Post.create(title: 'Sample post title 1', introduction: short_lorem, content: lorem, category: c1)
 p2 = Post.create(title: 'Sample post title 2', introduction: short_lorem, content: lorem, category: c2)

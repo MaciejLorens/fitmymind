@@ -13,3 +13,17 @@
   margin: 5px 4px 5px 0;
   padding: 5px 10px;
 }
+
+.tags {
+  .selected {
+    color: white;
+    background: #72A230;
+    border: 1px solid #333333;
+  }
+}
+
+.categories {
+  .selected {
+    color: #72A230;
+  }
+}
