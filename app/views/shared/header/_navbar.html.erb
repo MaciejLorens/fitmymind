@@ -1,7 +1,10 @@
 <div class="header-nav">
   <div class="header-nav-wrapper navbar-scrolltofixed bg-lighter">
     <div class="container">
-      <nav id="menuzord-right" class="menuzord orange no-bg"> <a class="menuzord-brand pull-left flip" href="javascript:void(0)"><img src="assets/template/spa/logo-wide.png" alt=""></a>
+      <nav id="menuzord-right" class="menuzord orange no-bg">
+
+        <%= link_to image_tag('template/spa/logo-wide.png'), root_path, class: 'menuzord-brand pull-left flip' %>
+
         <ul class="menuzord-menu">
           <li class="<%= controller_name == 'home' && action_name == 'index' ? 'active' : '' %>">
             <%= link_to 'Home', root_path %>
