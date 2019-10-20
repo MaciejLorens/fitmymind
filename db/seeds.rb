@@ -17,9 +17,9 @@ t1 = Tag.create(name: 'woda')
 t2 = Tag.create(name: 'kalorie')
 t3 = Tag.create(name: 'energia')
 
-p1 = Post.create(title: 'Sample post title 1', introduction: short_lorem, content: lorem, category: c1)
-p2 = Post.create(title: 'Sample post title 2', introduction: short_lorem, content: lorem, category: c2)
-p3 = Post.create(title: 'Sample post title 3', introduction: short_lorem, content: lorem, category: c3)
+p1 = Post.create(title: 'Sample post title 1', introduction: short_lorem, content: lorem, category: c1, author: 'Aleksandra Kucharchyk')
+p2 = Post.create(title: 'Sample post title 2', introduction: short_lorem, content: lorem, category: c2, author: 'Aleksandra Kucharchyk')
+p3 = Post.create(title: 'Sample post title 3', introduction: short_lorem, content: lorem, category: c3, author: 'Aleksandra Kucharchyk')
 
 n1 = New.create(title: 'Sample new title 1', introduction: short_lorem, content: lorem)
 n2 = New.create(title: 'Sample new title 2', introduction: short_lorem, content: lorem)

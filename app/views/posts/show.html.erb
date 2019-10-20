@@ -1,24 +1,94 @@
-<p id="notice"><%= notice %></p>
+<%= render partial: 'title' %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
+<section>
+  <div class="container mt-30 mb-30 pt-30 pb-30">
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <div class="blog-posts single-post">
+          <article class="post clearfix mb-0">
+            <div class="entry-header">
+              <div class="post-thumb thumb">
+                <img src="images/bg/bg2.jpg" alt="" class="img-responsive img-fullwidth">
+                <%= image_tag @post.photo.url(:big), size: '750x500' %>
+              </div>
+            </div>
+            <div class="entry-content">
 
-<p>
-  <strong>Introduction:</strong>
-  <%= @post.introduction %>
-</p>
+              <div class="entry-title pt-0">
+                <h4>
+                  <%= link_to @post.title, post_path(@post) %>
+                </h4>
+              </div>
 
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
+              <div class="entry-meta mb-20">
+                <ul class="list-inline">
+                  <li>Napisane:
+                    <span class="text-theme-colored">
+                      <%= @post.created_at.strftime('%d/%m/%Y') %>
+                    </span>
+                  </li>
+                  <li>Przez:
+                    <span class="text-theme-colored">
+                      <%= @post.author %>
+                    </span>
+                  </li>
+                  <li>
+                    <i class="fa fa-comments-o ml-5 mr-5"></i>
+                    0 komentarzy
+                  </li>
+                </ul>
+              </div>
 
-<p>
-  <strong>Photo:</strong>
-  <%= @post.photo %>
-</p>
+              <p class="mb-15">
+                <%= @post.content %>
+              </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+              <div class="mt-30 mb-0">
+                <h5 class="pull-left mt-10 mr-20 text-theme-colored">Udostępnij:</h5>
+                <ul class="social-icons icon-circled m-0">
+                  <li><a href="#" data-bg-color="#3A5795"><i class="fa fa-facebook text-white"></i></a></li>
+                  <li><a href="#" data-bg-color="#55ACEE"><i class="fa fa-twitter text-white"></i></a></li>
+                </ul>
+              </div>
+
+            </div>
+          </article>
+
+          <div class="tagline p-0 pt-20 mt-5">
+            <div class="row">
+
+              <div class="col-md-4">
+                <div class="categories">
+                  <i class="fa fa-tags text-theme-colored"></i>
+                    <span>Kategoria: &nbsp;<%= link_to @post.category.name, '#', class: 'post-category' %></span>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="tags">
+                  <i class="fa fa-tags text-theme-colored"></i>
+                    <span>Tagi: &nbsp;</span>
+                    <% @post.tags.each do |tag| %>
+                      <%= link_to tag.name, '#', class: 'post-tag' %>
+                    <% end %>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+<!--          <div class="author-details media-post">-->
+<!--            <a href="#" class="post-thumb mb-0 pull-left flip pr-20"><img class="img-thumbnail" alt="" src="images/gym/news/author.jpg"></a>-->
+<!--            <div class="post-right">-->
+<!--              <h5 class="post-title mt-0 mb-0"><a href="#" class="font-18">John Doe</a></h5>-->
+<!--              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et-->
+<!--                dolore magna et sed aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut-->
+<!--                aliquip ex ea commodo consequat.</p>-->
+<!--            </div>-->
+<!--            <div class="clearfix"></div>-->
+<!--          </div>-->
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
