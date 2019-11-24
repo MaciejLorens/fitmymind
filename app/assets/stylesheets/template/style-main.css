@@ -5456,16 +5456,19 @@ blockquote p {
  * Shortcode: Facebook-Disqus-Comments.less
  * -----------------------------------------------
 */
-.fb-comments,
-.fb_iframe_widget,
-.fb-comments > span,
-.fb_iframe_widget > span,
-.fb-comments > span > iframe,
-.fb_iframe_widget > span > iframe {
-  display: block !important;
-  margin: 0;
-  width: 100% !important;
+
+.fb_customer_chat_bounce_in_v2 {
+  right: -30pt;
 }
+
+._6ati {
+  width: 310px;
+}
+
+._6atl {
+  width: 310px;
+}
+
 /*
  * Shortcode: Faqs.less
  * -----------------------------------------------

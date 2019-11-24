@@ -16,11 +16,12 @@
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));</script>
 
-<!-- Your customer chat code -->
+<% greeting = Time.now.hour >= 19 ? 'Dzień dobry' : 'Dobry wieczór' %>
 <div class="fb-customerchat"
+     greeting_dialog_delay="30"
      attribution=setup_tool
      page_id="2839618429385669"
      theme_color="#67b868"
-     logged_in_greeting="Witam, w czy mogę pomóc?"
-     logged_out_greeting="Witam, w czy mogę pomóc?">
+     logged_in_greeting="<%= greeting %> :) Czy jest coś co mogę dla ciebie zrobić?"
+     logged_out_greeting="<%= greeting %> :) Czy jest coś co mogę dla ciebie zrobić?">
 </div>
