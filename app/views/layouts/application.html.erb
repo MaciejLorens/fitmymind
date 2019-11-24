@@ -36,6 +36,8 @@
   </head>
 
   <body class="dark">
+
+  <%= render partial: 'layouts/shared/fb_integration' %>
 <!--    <p class="notice"><%#= notice %></p>-->
 <!--    <p class="alert"><%#= alert %></p>-->
   <div id="wrapper">
@@ -62,7 +64,5 @@
 
     <%= javascript_include_tag 'template/custom' %>
 
-<script type="text/javascript">function add_chatinline(){var hccid=20302013;var nt=document.createElement("script");nt.async=true;nt.src="https://mylivechat.com/chatinline.aspx?hccid="+hccid;var ct=document.getElementsByTagName("script")[0];ct.parentNode.insertBefore(nt,ct);}
-add_chatinline(); </script>
   </body>
 </html>
