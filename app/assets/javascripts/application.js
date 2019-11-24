@@ -18,5 +18,6 @@
 //= require template/jquery.themepunch.revolution.min
 //= require template/calendar-events-data
 //= require template/google-map-init
+//= require home
 //= require calculators
 //= require contact
