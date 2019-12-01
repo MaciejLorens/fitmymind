@@ -20,3 +20,4 @@
 //= require template/google-map-init
 //= require calculators
 //= require contact
+//= require_tree ./template/revolution-slider

@@ -8,8 +8,7 @@
           <article class="post clearfix mb-0">
             <div class="entry-header">
               <div class="post-thumb thumb">
-                <img src="images/bg/bg2.jpg" alt="" class="img-responsive img-fullwidth">
-                <%= image_tag @post.photo.url(:big), size: '750x500' %>
+                <%= image_tag @post.photo.url(:original), size: '850x450' %>
               </div>
             </div>
             <div class="entry-content">
@@ -63,7 +62,7 @@
                     <span>Kategoria: &nbsp;<%= link_to @post.category.name, '#', class: 'post-category' %></span>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div class="col-md-8">
                 <div class="tags">
                   <i class="fa fa-tags text-theme-colored"></i>
                     <span>Tagi: &nbsp;</span>
@@ -75,17 +74,6 @@
 
             </div>
           </div>
-
-<!--          <div class="author-details media-post">-->
-<!--            <a href="#" class="post-thumb mb-0 pull-left flip pr-20"><img class="img-thumbnail" alt="" src="images/gym/news/author.jpg"></a>-->
-<!--            <div class="post-right">-->
-<!--              <h5 class="post-title mt-0 mb-0"><a href="#" class="font-18">John Doe</a></h5>-->
-<!--              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et-->
-<!--                dolore magna et sed aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut-->
-<!--                aliquip ex ea commodo consequat.</p>-->
-<!--            </div>-->
-<!--            <div class="clearfix"></div>-->
-<!--          </div>-->
 
         </div>
       </div>

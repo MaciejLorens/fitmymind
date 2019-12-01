@@ -33,35 +33,26 @@
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
+
   </head>
 
   <body class="dark">
 
-<!--    <p class="notice"><%#= notice %></p>-->
+
+  <!--    <p class="notice"><%#= notice %></p>-->
 <!--    <p class="alert"><%#= alert %></p>-->
   <div id="wrapper">
+
     <%= render partial: 'shared/header' %>
+
     <div class="main-content">
       <%= yield %>
     </div>
+
     <%= render partial: 'shared/footer' %>
   </div>
-    <!-- Footer Scripts -->
-    <!-- JS | Calendar Event Data -->
-    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS
-          (Load Extensions only on Local File Systems !
-           The following part can be removed on Server for On Demand Loading) -->
-    <script type="text/javascript" src="assets/template/revolution-slider/revolution.extension.actions.min.js"></script>
-    <script type="text/javascript" src="assets/template/revolution-slider/revolution.extension.carousel.min.js"></script>
-    <script type="text/javascript" src="assets/template/revolution-slider/revolution.extension.kenburn.min.js"></script>
-    <script type="text/javascript" src="assets/template/revolution-slider/revolution.extension.layeranimation.min.js"></script>
-    <script type="text/javascript" src="assets/template/revolution-slider/revolution.extension.migration.min.js"></script>
-    <script type="text/javascript" src="assets/template/revolution-slider/revolution.extension.navigation.min.js"></script>
-    <script type="text/javascript" src="assets/template/revolution-slider/revolution.extension.parallax.min.js"></script>
-    <script type="text/javascript" src="assets/template/revolution-slider/revolution.extension.slideanims.min.js"></script>
-    <script type="text/javascript" src="assets/template/revolution-slider/revolution.extension.video.min.js"></script>
 
-    <%= javascript_include_tag 'template/custom' %>
+  <%= javascript_include_tag 'template/custom' %>
 
   </body>
 </html>
