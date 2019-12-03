@@ -6407,7 +6407,7 @@ blockquote p {
   position: relative;
 }
 .section-title p {
-  font-size: 14px;
+  font-size: 16px;
 }
 .section-title p.left-bordered {
   border-left: 2px solid #c0c0c0;
