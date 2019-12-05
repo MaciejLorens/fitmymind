@@ -15,7 +15,7 @@
 
               <div class="entry-title pt-0">
                 <h4>
-                  <%= link_to @post.title, post_path(@post) %>
+                  <%= link_to @post.title&.html_safe, post_path(@post) %>
                 </h4>
               </div>
 
@@ -31,25 +31,32 @@
                       <%= @post.author %>
                     </span>
                   </li>
-                  <li>
-                    <i class="fa fa-comments-o ml-5 mr-5"></i>
-                    0 komentarzy
-                  </li>
                 </ul>
               </div>
 
-              <p class="mb-15">
-                <%= @post.content %>
-              </p>
+              <div class="post-introduction">
+                <%= @post.introduction&.html_safe %>
+              </div>
+
+              <div class="post-content">
+                <%= @post.content&.html_safe %>
+              </div>
+
+              <br>
+
+              <div class="post-bibliography">
+                <%= @post.bibliography&.html_safe %>
+              </div>
 
               <div class="mt-30 mb-0">
-                <h5 class="pull-left mt-10 mr-20 text-theme-colored">Udostępnij:</h5>
-                <ul class="social-icons icon-circled m-0">
-                  <li><a href="#" data-bg-color="#3A5795"><i class="fa fa-facebook text-white"></i></a></li>
-                  <li><a href="#" data-bg-color="#55ACEE"><i class="fa fa-twitter text-white"></i></a></li>
-                </ul>
-              </div>
 
+                <div class="fb-share-button" data-href="<%= post_url(@post  ) %>" data-layout="button" data-size="large">
+                  <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fdevelopers.facebook.com%2Fdocs%2Fplugins%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">
+                    Udostępnij
+                  </a>
+                </div>
+
+              </div>
             </div>
           </article>
 

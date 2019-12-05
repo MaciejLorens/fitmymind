@@ -5,7 +5,7 @@ class PostsController < ApplicationController
     @categories = Category.order(name: :asc)
     @tags = Tag.order(name: :asc)
 
-    @posts = Post.joins(:tags).includes(:category, :tags).order(created_at: :desc)
+    @posts = Post.includes(:category, :tags).order(created_at: :desc)
 
     if params[:category]
       @posts = @posts.where('categories.name = ?', params[:category])

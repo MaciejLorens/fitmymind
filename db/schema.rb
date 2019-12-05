@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2019_08_08_095125) do
     t.string "title"
     t.text "introduction"
     t.text "content"
+    t.text "bibliography"
     t.text "author"
     t.integer "category_id"
     t.datetime "created_at", null: false
@@ -49,10 +50,6 @@ ActiveRecord::Schema.define(version: 2019_08_08_095125) do
     t.string "photo_content_type"
     t.integer "photo_file_size"
     t.datetime "photo_updated_at"
-    t.index ["category_id"], name: "index_posts_on_category_id"
-    t.index ["content"], name: "index_posts_on_content"
-    t.index ["introduction"], name: "index_posts_on_introduction"
-    t.index ["title"], name: "index_posts_on_title"
   end
 
   create_table "posts_tags", id: false, force: :cascade do |t|

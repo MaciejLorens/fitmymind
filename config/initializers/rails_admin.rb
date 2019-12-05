@@ -41,4 +41,19 @@ RailsAdmin.config do |config|
     # history_index
     # history_show
   end
+
+  config.model Post do
+    edit do
+
+      field :title, :ck_editor
+      field :introduction, :ck_editor
+      field :content, :ck_editor
+      field :bibliography, :ck_editor
+      field :author
+      field :category
+      field :tags
+      field :created_at
+
+    end
+  end
 end

@@ -8,6 +8,7 @@ gem 'rails', '~> 5.2.3'
 gem 'aws-sdk-s3'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'coffee-rails', '~> 4.2'
+gem 'ckeditor'
 gem 'devise'
 gem 'hirb'
 gem 'jbuilder', '~> 2.5'

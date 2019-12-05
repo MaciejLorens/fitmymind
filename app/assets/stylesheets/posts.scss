@@ -27,3 +27,32 @@
     color: #72A230;
   }
 }
+
+.blog-posts {
+  .entry-content {
+    p {
+      font-size: 16px;
+      text-align: justify;
+
+      a {
+        color: #72A230 !important
+      }
+    }
+  }
+}
+
+.single-post {
+  .post-content {
+    ul {
+      list-style: disc;
+      padding: 0 0 0 40px;
+      font-size: 16px;
+    }
+  }
+
+  .post-bibliography {
+    p {
+      font-size: 12px;
+    }
+  }
+}
