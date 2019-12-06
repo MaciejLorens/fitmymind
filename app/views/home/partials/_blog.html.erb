@@ -3,7 +3,7 @@
     <div class="section-title text-center">
       <div class="row">
         <div class="col-md-6 col-md-offset-3">
-          <h2 class="title text-uppercase">Aktualności & <span class="text-white font-weight-300">blog</span></h2>
+          <h2 class="title text-uppercase">Aktualności <span class="text-blue">& blog</span></h2>
           <p class="text-uppercase letter-space-4">
             "Givers gain" - jedno z naszych mott. Dzielimy się naszą wiedzą abyś wykorzystał to dla swojego
             zdrowia.
@@ -17,27 +17,15 @@
         <% @recent_posts.each do |post| %>
           <div class="col-md-4">
             <article class="post clearfix">
+
               <div class="entry-header">
                 <div class="post-thumb thumb">
                   <%= link_to image_tag(post.photo.url(:medium), class: 'img-responsive', style: 'height: 220px;'), post_path(post) %>
-                <div class="entry-meta meta-absolute text-center pl-15 pr-15">
-                  <div class="display-table">
-                    <div class="display-table-cell">
-                      <ul class="font-12">
-                        <li><a href="#" class="text-white"><i class="fa fa-thumbs-o-up"></i> <br>
-                          30 Likes</a></li>
-                        <li class="mt-20"><a href="#" class="text-white"><i class="fa fa-comments-o"></i> <br>
-                          72 Comments</a></li>
-                        <li class="mt-20"><a href="#" class="text-white"><i class="fa fa-share-square-o"></i> <br>
-                          Share</a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
               </div>
+
               <div class="entry-content p-20">
                 <h4 class="entry-title text-white text-uppercase">
-                  <%= link_to post.title, post_path(post) %>
+                  <%= link_to post.title&.html_safe.gsub('<h2>', '').gsub('</h2>', ''), post_path(post) %>
                 </h4>
                 <ul class="entry-date list-inline mt-10 mb-10">
                   <li class="text-theme-colored">
@@ -45,7 +33,7 @@
                   </li>
                 </ul>
                 <p>
-                  <%= post.introduction %>
+                  <%= post.introduction&.html_safe %>
                 </p>
 
                 <%= link_to '<i class="fa fa-angle-double-right text-theme-colored"></i> Czytaj więcej...'.html_safe, post_path(post), class: 'pull-left text-gray font-13 mt-10' %>
@@ -58,24 +46,13 @@
 
         <div class="col-md-4">
           <article class="post clearfix">
+
             <div class="entry-header">
               <div class="post-thumb thumb">
                 <%= image_tag(@recent_new.photo.url(:medium), class: 'img-responsive', style: 'height: 220px;') %>
-              <div class="entry-meta meta-absolute text-center pl-15 pr-15">
-                <div class="display-table">
-                  <div class="display-table-cell">
-                    <ul class="font-12">
-                      <li><a href="#" class="text-white"><i class="fa fa-thumbs-o-up"></i> <br>
-                        30 Likes</a></li>
-                      <li class="mt-20"><a href="#" class="text-white"><i class="fa fa-comments-o"></i> <br>
-                        72 Comments</a></li>
-                      <li class="mt-20"><a href="#" class="text-white"><i class="fa fa-share-square-o"></i> <br>
-                        Share</a></li>
-                    </ul>
-                  </div>
-                </div>
               </div>
             </div>
+
             <div class="entry-content p-20">
               <h4 class="entry-title text-white text-uppercase">
                 <%= link_to @recent_new.title, post_path(@recent_new) %>
