@@ -11,18 +11,43 @@
           </li>
           <li class="<%= controller_name == 'services' ? 'active' : '' %>">
             <%= link_to 'Usługi', services_path %>
+
+            <ul class="dropdown">
+              <li>
+                <%= link_to 'Metabolic Balance', metabolic_balance_path %>
+              </li>
+              <li>
+                <%= link_to 'Bonne Sante', bonne_sante_path %>
+              </li>
+              <li>
+                <%= link_to 'Metamorfoza', metamorphosis_path %>
+              </li>
+              <li>
+                <%= link_to 'Ars Medica', ars_medica_path %>
+              </li>
+              <li>
+                <%= link_to 'Korporacje', corporations_path %>
+              </li>
+              <li>
+                <%= link_to 'Prelekcje', lectures_path %>
+              </li>
+            </ul>
           </li>
+
           <li class="<%= controller_name == 'team' ? 'active' : '' %>">
             <%= link_to 'Zespół', team_path %>
           </li>
           <li class="<%= controller_name == 'results' ? 'active' : '' %>">
             <%= link_to 'Rezultaty', results_path %>
           </li>
-          <li class="<%= controller_name == 'calculators' ? 'active' : '' %>">
-            <%= link_to 'Kalkulatory', calculators_path %>
+          <li class="<%= controller_name == 'gallery' ? 'active' : '' %>">
+            <%= link_to 'Galeria', gallery_path %>
           </li>
           <li class="<%= controller_name == 'posts' ? 'active' : '' %>">
             <%= link_to 'Blog', blog_path %>
+          </li>
+          <li class="<%= controller_name == 'calculators' ? 'active' : '' %>">
+            <%= link_to 'Kalkulatory', calculators_path %>
           </li>
           <li class="<%= controller_name == 'contact' ? 'active' : '' %>">
             <%= link_to 'Kontakt', contact_path %>

@@ -1991,7 +1991,7 @@ section > .container-fluid {
 }
 .menuzord .menuzord-menu ul.dropdown,
 .menuzord .menuzord-menu .megamenu {
-  border: 1px solid #f0f0f0;
+  border: 2px solid #292B33;
 }
 .menuzord-menu ul.dropdown li {
   margin: 0;

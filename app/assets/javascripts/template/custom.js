@@ -136,7 +136,7 @@ var THEMEMASCOT = THEMEMASCOT || {};
       THEMEMASCOT.bmiCalculator.init();
       THEMEMASCOT.initialize.TM_datePicker();
       THEMEMASCOT.initialize.TM_onLoadModal();
-      THEMEMASCOT.initialize.TM_loadBSParentModal();
+      // THEMEMASCOT.initialize.TM_loadBSParentModal();
       THEMEMASCOT.initialize.TM_platformDetect();
       THEMEMASCOT.initialize.TM_customDataAttributes();
       THEMEMASCOT.initialize.TM_parallaxBgInit();
@@ -864,7 +864,7 @@ var THEMEMASCOT = THEMEMASCOT || {};
         align: "right",
         effect: "slide",
         animation: "none",
-        indicatorFirstLevel: "<i class='fa fa-angle-down'></i>",
+        indicatorFirstLevel: "", //&#128899;
         indicatorSecondLevel: "<i class='fa fa-angle-right'></i>"
       });
       $("#menuzord-side-panel").menuzord({
