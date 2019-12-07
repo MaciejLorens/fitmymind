@@ -1,0 +1,24 @@
+.gallery-filter-btns {
+  width: 480px;
+  margin: auto;
+
+  .gallery-filter-btn {
+    border: 2px solid #ABD62E;
+    color: #ABD62E;
+    display: inline-block;
+    float: left;
+    padding: 5px 10px;
+    margin: 10px;
+    width: 100px;
+
+    &.active, &:hover {
+      background-color: #ABD62E;
+      color: white;
+    }
+  }
+}
+
+.portfolio-item {
+  position: initial !important;
+  float: left;
+}
