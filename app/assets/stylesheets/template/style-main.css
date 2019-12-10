@@ -7035,8 +7035,6 @@ blockquote p {
 }
 .testimonial-carousel.fullwidth .content p::after,
 .testimonial-carousel-style2.fullwidth .content p::after {
-  content: "\f10e";
-  font-family: fontawesome;
   font-size: 100px;
   left: 42%;
   opacity: 0.1;
