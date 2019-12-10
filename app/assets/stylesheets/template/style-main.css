@@ -1756,18 +1756,6 @@ section > .container-fluid {
 */
 .layer-overlay {
   position: relative;
-  /* overlay-dark */
-  /* overlay-white */
-}
-.layer-overlay::before {
-  background: rgba(17, 17, 17, 0.5) none repeat scroll 0 0;
-  content: " ";
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: 0;
 }
 .layer-overlay.overlay-light::before {
   background-color: rgba(255, 255, 255, 0.4);
