@@ -116,7 +116,7 @@
   border-style: none;
   border-width: 0;
   color: #000;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins-Light"f;
   font-size: 24px;
   font-weight: 800;
   line-height: 20px;
@@ -130,7 +130,7 @@
   border-style: none;
   border-width: 0;
   color: #fff;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins-Light";
   font-size: 24px;
   font-weight: 800;
   line-height: 20px;
@@ -144,7 +144,7 @@
   border-style: none;
   border-width: 0;
   color: #000;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins-Light";
   font-size: 24px;
   font-weight: 300;
   line-height: 20px;
@@ -159,7 +159,7 @@
   border-style: none;
   border-width: 0;
   color: #fff;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins-Light";
   font-size: 30px;
   font-weight: 800;
   letter-spacing: 0;
@@ -175,7 +175,7 @@
   border-style: none;
   border-width: 0;
   color: #fff;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins-Light";
   font-size: 30px;
   font-weight: 300;
   letter-spacing: 0;
@@ -217,7 +217,7 @@
 .tp-caption.thinheadline_dark, .thinheadline_dark {
   background-color: transparent;
   color: rgba(0, 0, 0, 0.85);
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 30px;
   font-weight: 300;
   line-height: 30px;
@@ -228,7 +228,7 @@
 .tp-caption.thintext_dark, .thintext_dark {
   background-color: transparent;
   color: rgba(0, 0, 0, 0.85);
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 16px;
   font-weight: 300;
   line-height: 26px;
@@ -242,7 +242,7 @@
   background-color: #000;
   border-radius: 0;
   color: #fff;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 50px;
   font-weight: 300;
   line-height: 70px;
@@ -257,7 +257,7 @@
   background-color: #db4360;
   border-radius: 0;
   color: #fff;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 50px;
   font-weight: 300;
   line-height: 70px;
@@ -272,7 +272,7 @@
   background-color: #fff;
   border-radius: 0;
   color: #000;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 50px;
   font-weight: 300;
   line-height: 70px;
@@ -287,7 +287,7 @@
   background-color: #67ae73;
   border-radius: 0;
   color: #fff;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 50px;
   font-weight: 300;
   line-height: 70px;
@@ -322,7 +322,7 @@
   border-style: none;
   border-width: 0;
   color: #666;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 60px;
   font-weight: 800;
   line-height: 60px;
@@ -338,7 +338,7 @@
   border-style: none;
   border-width: 0;
   color: #666;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 34px;
   font-weight: 300;
   line-height: 30px;
@@ -354,7 +354,7 @@
   border-style: none;
   border-width: 0;
   color: #757575;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 18px;
   font-weight: 300;
   line-height: 26px;
@@ -382,7 +382,7 @@
   border-style: none;
   border-width: 0;
   color: #34495e;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 58px;
   font-weight: 800;
   line-height: 60px;
@@ -395,7 +395,7 @@
   border-style: none;
   border-width: 0;
   color: #fff;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 20px;
   font-weight: 800;
   line-height: 20px;
@@ -409,7 +409,7 @@
   border-style: none;
   border-width: 0;
   color: #e33a0c;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 24px;
   font-weight: 800;
   line-height: 30px;
@@ -423,7 +423,7 @@
   border-style: none;
   border-width: 0;
   color: #e33a0c;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 21px;
   font-weight: 300;
   line-height: 26px;
@@ -437,7 +437,7 @@
   border-style: none;
   border-width: 0;
   color: #fff;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 20px;
   font-weight: 800;
   line-height: 20px;
@@ -451,7 +451,7 @@
   border-style: none;
   border-width: 0;
   color: #f39c12;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 24px;
   font-weight: 800;
   line-height: 30px;
@@ -464,7 +464,7 @@
   border-style: none;
   border-width: 0;
   color: #fff;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 20px;
   font-weight: 800;
   line-height: 20px;
@@ -488,7 +488,7 @@
   border-style: none;
   border-width: 0;
   color: #fff;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 58px;
   font-weight: 800;
   line-height: 60px;
@@ -501,7 +501,7 @@
   border-style: none;
   border-width: 0;
   color: #fff;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 30px;
   font-weight: 300;
   line-height: 36px;
@@ -515,7 +515,7 @@
   border-style: none;
   border-width: 0;
   color: #fff;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 34px;
   font-weight: 300;
   line-height: 40px;
@@ -529,7 +529,7 @@
   border-style: none;
   border-width: 0;
   color: #fff;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 34px;
   font-weight: 300;
   line-height: 40px;
@@ -544,7 +544,7 @@
   border-style: none;
   border-width: 0;
   color: #fff;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 20px;
   font-weight: 800;
   line-height: 20px;
@@ -558,7 +558,7 @@
   border-style: none;
   border-width: 0;
   color: #000;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 30px;
   font-weight: 300;
   line-height: 36px;
@@ -572,7 +572,7 @@
   border-style: none;
   border-width: 0;
   color: #000;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 58px;
   font-weight: 800;
   line-height: 60px;
@@ -585,7 +585,7 @@
   border-style: none;
   border-width: 0;
   color: #34495e;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 34px;
   font-weight: 300;
   line-height: 40px;
@@ -599,7 +599,7 @@
   border-style: none;
   border-width: 0;
   color: #fff;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 17px;
   font-weight: 300;
   line-height: 28px;
@@ -619,7 +619,7 @@
   border-style: none;
   border-width: 0;
   color: #fff;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 40px;
   font-weight: 800;
   line-height: 40px;
@@ -633,7 +633,7 @@
   border-style: none;
   border-width: 0;
   color: #000;
-  font-family: "Open Sans";
+  font-family: "Poppins-Light";
   font-size: 30px;
   font-weight: 300;
   line-height: 30px;
@@ -2332,7 +2332,7 @@
 }
 
 .revtp-searchform input[type="text"], .revtp-searchform input[type="email"], .revtp-form input[type="text"], .revtp-form input[type="email"] {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial";
   font-size: 15px;
   color: #000;
   background-color: #fff;
@@ -2897,7 +2897,7 @@
 }
 
 .revtp-searchform input[type="submit"], .revtp-form input[type="submit"] {
-  font-family: "Arial", sans-serif;
+  font-family: "Arial";
   line-height: 46px;
   letter-spacing: 1px;
   text-transform: uppercase;

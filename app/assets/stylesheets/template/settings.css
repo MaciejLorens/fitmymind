@@ -731,7 +731,7 @@ img.tp-slider-alternative-image {
   text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.6) !important;
   font-size: 15px;
   line-height: 45px !important;
-  font-family: arial, sans-serif;
+  font-family: arial;
   font-weight: bold;
   letter-spacing: -1px;
   text-decoration: none;
@@ -803,7 +803,7 @@ img.tp-slider-alternative-image {
   box-sizing: border-box;
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   cursor: pointer;
 }
 
@@ -1054,7 +1054,7 @@ img.tp-slider-alternative-image {
   font-weight: normal;
   color: #7f8c8d;
   color: #ffffff;
-  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "proxima-nova", "Helvetica Neue", Helvetica, Arial;
   letter-spacing: 2px;
 }
 

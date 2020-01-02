@@ -185,7 +185,7 @@
   opacity: 1;
   padding: 10px;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   border-bottom: 1px solid #e5e5e5;
 }
 
@@ -874,7 +874,7 @@
   opacity: 1;
   padding: 10px;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
@@ -1823,7 +1823,7 @@
   opacity: 1;
   padding: 10px;
   box-sizing: border-box;
-  font-family: "Roboto", sans-serif;
+  font-family: "Roboto";
   border-bottom: 1px solid #e5e5e5;
 }
 

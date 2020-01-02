@@ -33,6 +33,16 @@ URL:            http://themeforest.net/user/ThemeMascot
 @import url(https://fonts.googleapis.com/css?family=Droid+Sans:400,700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800);
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,500,600,700,800,900);
+
+@font-face {
+  font-family: "Poppins-Light";
+  src: asset-url('Poppins-Light.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  src: asset-url('Poppins-Bold.ttf') format('truetype');
+}
 /*
 This file contains the common styles of this theme.
 */
@@ -126,14 +136,21 @@ This file contains the common styles of this theme.
 html {
   font-size: 100%;
 }
+
 body {
   line-height: 1.7;
   color: #515151;
   font-size: 14px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins-Light';
   background-color: #fff;
   background-attachment: fixed;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins-Bold';
+  font-weight: normal;
+}
+
 a {
   color: #808080;
   text-decoration: none;
@@ -188,8 +205,6 @@ h6 .h1,
 .h4,
 .h5,
 .h6 {
-  font-family: 'Droid Sans', sans-serif;
-  font-weight: 600;
   line-height: 1.42857143;
   color: #333333;
 }
@@ -248,13 +263,10 @@ form {
 }
 /* -------- Custom Font Family ---------- */
 .font-opensans {
-  font-family: 'Open Sans', sans-serif;
-}
-.font-droidsans {
-  font-family: 'Droid Sans', sans-serif;
+  font-family: 'Poppins-Light';
 }
 .font-raleway {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Raleway';
 }
 /* breadcrumb */
 .breadcrumb {
@@ -2340,7 +2352,7 @@ section > .container-fluid {
 .menu-full-page #fullpage-nav li a {
   color: #111111;
   font-size: 18px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins-Light';
   text-decoration: none;
   font-weight: 400;
   text-transform: uppercase;
@@ -4079,7 +4091,7 @@ textarea {
   background: none repeat scroll 0 0 transparent;
   border: 1px solid #ccc;
   border-radius: 3px;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins-Light';
   height: 18px;
   left: 2.8571em;
   line-height: 1;
@@ -5226,7 +5238,7 @@ blockquote p {
 #countdown-timer-soon-watch-red {
   background-color: #030303;
   color: #ffffff;
-  font-family: "Comfortaa", sans-serif;
+  font-family: "Comfortaa";
 }
 #countdown-timer-soon-watch-red .soon-reflection {
   background-color: #030303;
@@ -5272,7 +5284,7 @@ blockquote p {
 #countdown-timer-soon-orange {
   background-color: #ffffff;
   color: #141541;
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Source Sans Pro";
 }
 #countdown-timer-soon-orange .soon-reflection {
   background-color: #ffffff;
@@ -5290,7 +5302,7 @@ blockquote p {
 #countdown-timer-soon-product {
   position: relative;
   text-align: left;
-  font-family: 'Chewy', sans-serif;
+  font-family: 'Chewy';
   color: #fff;
   padding: .5em 1em 5em 1em;
   background-color: #000;
@@ -5338,7 +5350,7 @@ blockquote p {
 /* -------- Soon-Klas ---------- */
 #countdown-timer-soon-klas {
   text-align: center;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Source Sans Pro';
   color: #fff;
   text-shadow: 0 0 0.125em rgba(255, 255, 255, 0.5);
 }
@@ -5379,7 +5391,7 @@ blockquote p {
 }
 /* -------- Soon-Sep ---------- */
 #countdown-timer-soon-sep {
-  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", sans-serif;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans";
   text-align: center;
   color: #1E99DD;
 }
@@ -5399,7 +5411,7 @@ blockquote p {
 }
 /* -------- Soon-Glow ---------- */
 #countdown-timer-soon-glow {
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Quicksand';
   color: #fff;
   text-transform: lowercase;
 }
@@ -6585,7 +6597,7 @@ blockquote p {
 .nav-tabs > li > a {
   background-color: #f5f5f5;
   border-radius: 0;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Poppins-Light';
   font-size: 12px;
   color: #555555;
   padding: 7px 15px;
@@ -6779,11 +6791,11 @@ blockquote p {
 }
 .services-tab .tab-content .service-content .sub-title {
   color: #c8c8c8;
-  font-family: 'Playfair Display', sans-serif;
+  font-family: 'Playfair Display';
 }
 .services-tab .tab-content .service-content .title {
   color: #555555;
-  font-family: 'Playfair Display', sans-serif;
+  font-family: 'Playfair Display';
 }
 @media only screen and (max-width: 1199px) {
   .services-tab .service-content {
