@@ -1,155 +1,81 @@
-<!-- Divider: Testimonials -->
-<section class="divider parallax layer-overlay overlay-black" data-bg-img="assets/template/nutrition/bg/bg3.jpg">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-10 col-md-offset-1">
-        <div class="testimonial-carousel fullwidth">
+<section class="bg-theme-colored">
+  <div class="container pt-0 pb-0">
+    <div class="section-content">
+      <div class="row">
+        <div class="col-md-12 mt-20 mb-20">
+          <div class="testimonial-carousel fullwidth">
 
-          <div class="item text-center">
-            <div class="thumb">
-              <%= image_tag 'template/nutrition/testimonials/s1.jpg', class: 'img-circle', alt: 'zdjęcie klienta opinia' %>
-            </div>
-            <div class="content">
-              <p>
-                Pani Aleksandra zawsze służyła mi pomocą, informacją, wsparciem zarówno telefonicznym jak i w trakcie
+            <% content = 'Pani Aleksandra zawsze służyła mi pomocą, informacją, wsparciem zarówno telefonicznym jak i w trakcie
                 konsultacji w trakcie wizyt. Zarówno telefony, (smsy) jak i wizyty kontrolne były chyba zawsze
                 inspirowane przez Panią Olę. To dodatkowo zachęcało mnie i mobilizowało do pracy. Zmniejszenie wagi o
                 około 10 kg, dodało mi energii, umożliwiło uprawiania sportu na poziomie który wcześniej był
                 nieosiągalny. Dzięki ponad półrocznej opiece i wsparciu Pani Oli, nawyki żywieniowe trwale weszły do
-                mojego życia i mimo różnych potknięć ciągle wracam i staram się trzymać planu działania.
-              </p>
-              <h4 class="author text-theme-colored">Przemysław R.</h4>
-            </div>
-          </div>
+                mojego życia i mimo różnych potknięć ciągle wracam i staram się trzymać planu działania.' %>
 
-          <div class="item text-center">
-            <div class="thumb">
-              <%= image_tag 'template/nutrition/testimonials/s1.jpg', class: 'img-circle', alt: 'zdjęcie klienta opinia' %>
-            </div>
-            <div class="content">
-              <p>
-                Na planie Metabolic Balance jestem od października 2017 r. Dzięki fachowej opiece p. Oli schudłam około
+            <%= render partial: 'home/partials/testimonial', locals: {content: content, author: 'Przemysław R.'} %>
+
+            <% content = 'Na planie Metabolic Balance jestem od października 2017 r. Dzięki fachowej opiece p. Oli schudłam około
                 10 kg, co więcej, poziom nawodnienia wzrósł o około 10 %, co zaowocowało zdecydowanym polepszeniem
                 samopoczucia (zniknęła m.in. ospałość towarzysząca przy Hashimoto) oraz zniwelowało dolegliwości
-                trawienne wpływając jednocześnie na poprawę wyglądu :).
-              </p>
-              <h4 class="author text-theme-colored">Monika M.</h4>
-            </div>
-          </div>
+                trawienne wpływając jednocześnie na poprawę wyglądu :).' %>
 
-          <div class="item text-center">
-            <div class="thumb">
-              <%= image_tag 'template/nutrition/testimonials/s1.jpg', class: 'img-circle', alt: 'zdjęcie klienta opinia' %>
-            </div>
-            <div class="content">
-              <p>
-                Cudowna, ciepła i przede wszystkim normalna - a taka relacja w długim kontakcie z dietetykiem jest
+            <%= render partial: 'home/partials/testimonial', locals: {content: content, author: 'Monika M.'} %>
+
+
+            <% content = 'Cudowna, ciepła i przede wszystkim normalna - a taka relacja w długim kontakcie z dietetykiem jest
                 bardzo ważna, bo wzbrania przed oszukiwaniem nawet samego siebie;). Pani Ola potrafi zadzwonić ze
                 wsparciem nawet w sobotni wieczór, konkretna, rzeczowa, każdy aspekt planu potrafi sprawnie i
-                szczegółowo omówić. Polecam z całego serca!
-              </p>
-              <h4 class="author text-theme-colored">Ewelina S.</h4>
-            </div>
-          </div>
+                szczegółowo omówić. Polecam z całego serca!' %>
 
-          <div class="item text-center">
-            <div class="thumb">
-              <%= image_tag 'template/nutrition/testimonials/s1.jpg', class: 'img-circle', alt: 'zdjęcie klienta opinia' %>
-            </div>
-            <div class="content">
-              <p>
-                Z przyjemnością polecam! Mój wynik to blisko 10 kg w dół :) :) Na planie żywieniowym Oli jestem od
+            <%= render partial: 'home/partials/testimonial', locals: {content: content, author: 'Ewelina S.'} %>
+
+
+            <% content = 'Z przyjemnością polecam! Mój wynik to blisko 10 kg w dół :) :) Na planie żywieniowym Oli jestem od
                 połowy lutego. Nawet nie wiem kiedy to zleciało. Jak napiszę, że bezboleśnie to skłamię - faktycznie
                 wymaga to samodyscypliny. Cudów nie ma. Jak to mówią - z pustego to i Salomon nie naleje;) Niemniej
-                jednak muszę uczciwie przyznać, że Ola dobiera plan i ustala go w taki sposób, by nie był męczarnią.
-              </p>
-              <h4 class="author text-theme-colored">Beata D.</h4>
-            </div>
-          </div>
+                jednak muszę uczciwie przyznać, że Ola dobiera plan i ustala go w taki sposób, by nie był męczarnią.' %>
 
-          <div class="item text-center">
-            <div class="thumb">
-              <%= image_tag 'template/nutrition/testimonials/s1.jpg', class: 'img-circle', alt: 'zdjęcie klienta opinia' %>
-            </div>
-            <div class="content">
-              <p>
-                Bardzo profesjonalna pomoc, życzliwe i miłe podejście do pacjenta. Już po miesiącu stosowania się do
-                zaleceń zauważyłam pierwsze pozytywne efekty m.in. mniejsze zmęczenie.
-              </p>
-              <h4 class="author text-theme-colored">Iwona K.</h4>
-            </div>
-          </div>
+            <%= render partial: 'home/partials/testimonial', locals: {content: content, author: 'Beata D.'} %>
 
-          <div class="item text-center">
-            <div class="thumb">
-              <%= image_tag 'template/nutrition/testimonials/s1.jpg', class: 'img-circle', alt: 'zdjęcie klienta opinia' %>
-            </div>
-            <div class="content">
-              <p>
-                Odkąd jestem na planie schudłam 7 kilo (wcześniej ważyłam 57) i czuje się z tym świetnie. Z badań wyszła
+
+            <% content = 'Bardzo profesjonalna pomoc, życzliwe i miłe podejście do pacjenta. Już po miesiącu stosowania się do
+                zaleceń zauważyłam pierwsze pozytywne efekty m.in. mniejsze zmęczenie.' %>
+
+            <%= render partial: 'home/partials/testimonial', locals: {content: content, author: 'Iwona K.'} %>
+
+            <% content = 'Odkąd jestem na planie schudłam 7 kilo (wcześniej ważyłam 57) i czuje się z tym świetnie. Z badań wyszła
                 mi insulinooporność wiec dieta jak najbardziej mi sprzyja aby nie zachorować na cukrzyce. Sama sobie
                 przygotowuje posiłki i przez to podszlifowlam swoje kulinarne umiejętności. Jestem zadowolona z tego jak
-                teraz wyglądam i nie zamierzam już nigdy wracać do poprzedniego stylu życia i dożywiania.
-              </p>
-              <h4 class="author text-theme-colored">Natalia O.</h4>
-            </div>
-          </div>
+                teraz wyglądam i nie zamierzam już nigdy wracać do poprzedniego stylu życia i dożywiania.' %>
 
-          <div class="item text-center">
-            <div class="thumb">
-              <%= image_tag 'template/nutrition/testimonials/s1.jpg', class: 'img-circle', alt: 'zdjęcie klienta opinia' %>
-            </div>
-            <div class="content">
-              <p>
-                Dzięki współpracy z Panią Olą udało mi się nareszcie ustabilizować wagę. Wcześniejsze diety, jakkolwiek
+            <%= render partial: 'home/partials/testimonial', locals: {content: content, author: 'Natalia O.'} %>
+
+
+            <% content = 'Dzięki współpracy z Panią Olą udało mi się nareszcie ustabilizować wagę. Wcześniejsze diety, jakkolwiek
                 skuteczne, dawały mniej lub bardziej długotrwały efekt, ale niestety zajadanie stresu zazwyczaj
                 powodowało, że pojawiał się efekt jo-jo. Dieta przygotowana przez Panią Olę pozwoliła mi nie tylko
-                zredukować zapasy, ale również utrzymać wagę w dłuższym okresie czasu.
-              </p>
-              <h4 class="author text-theme-colored">Szymek D.</h4>
-            </div>
-          </div>
+                zredukować zapasy, ale również utrzymać wagę w dłuższym okresie czasu.' %>
 
-          <div class="item text-center">
-            <div class="thumb">
-              <%= image_tag 'template/nutrition/testimonials/s1.jpg', class: 'img-circle', alt: 'zdjęcie klienta opinia' %>
-            </div>
-            <div class="content">
-              <p>
-                Bardzo profesjonalna i niezastąpiona pomoc. Bardzo się cieszę, że skorzystałam z porady dietetycznej,
-                która pozwala mi wprowadzać zdrowe nawyki żywieniowe, to duża dawka pozytywnej energii!
-              </p>
-              <h4 class="author text-theme-colored">Malwina K.</h4>
-            </div>
-          </div>
+            <%= render partial: 'home/partials/testimonial', locals: {content: content, author: 'Szymon D.'} %>
 
-          <div class="item text-center">
-            <div class="thumb">
-              <%= image_tag 'template/nutrition/testimonials/s1.jpg', class: 'img-circle', alt: 'zdjęcie klienta opinia' %>
-            </div>
-            <div class="content">
-              <p>
-                Pani Aleksandra jest niezwykle profesjonalna i zaangażowana, widać, że jest pasjonatką tego, co robi. A
+            <% content = 'Bardzo profesjonalna i niezastąpiona pomoc. Bardzo się cieszę, że skorzystałam z porady dietetycznej,
+                która pozwala mi wprowadzać zdrowe nawyki żywieniowe, to duża dawka pozytywnej energii!' %>
+
+            <%= render partial: 'home/partials/testimonial', locals: {content: content, author: 'Malwina K.'} %>
+
+            <% content = 'Pani Aleksandra jest niezwykle profesjonalna i zaangażowana, widać, że jest pasjonatką tego, co robi. A
                 przy tym jest cudowną, ciepłą i empatyczną osobą. Pracujemy razem nade mną już jakiś czas i wynik -
-                ponad 17 kg - mówi sam za siebie...
-              </p>
-              <h4 class="author text-theme-colored">Paweł F.</h4>
-            </div>
-          </div>
+                ponad 17 kg - mówi sam za siebie...' %>
 
-          <div class="item text-center">
-            <div class="thumb">
-              <%= image_tag 'template/nutrition/testimonials/s1.jpg', class: 'img-circle', alt: 'zdjęcie klienta opinia' %>
-            </div>
-            <div class="content">
-              <p>
-                Profesjonalne podejście, bardzo dobry kontakt z pacjentem. Jestem bardzo zadowolona, wszystko wyjaśnione
-                w sposób prosty i zrozumiały. Polecam!
-              </p>
-              <h4 class="author text-theme-colored">Kinga Ż.</h4>
-            </div>
-          </div>
+            <%= render partial: 'home/partials/testimonial', locals: {content: content, author: 'Paweł F.'} %>
 
+
+            <% content = 'Profesjonalne podejście, bardzo dobry kontakt z pacjentem. Jestem bardzo zadowolona, wszystko wyjaśnione
+                w sposób prosty i zrozumiały. Polecam!' %>
+
+            <%= render partial: 'home/partials/testimonial', locals: {content: content, author: 'Kinga Ż.'} %>
+
+          </div>
         </div>
       </div>
     </div>
