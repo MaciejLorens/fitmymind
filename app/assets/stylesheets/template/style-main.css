@@ -484,6 +484,12 @@ iframe {
 .text-green {
   color: #ABD62E !important;
 }
+.text-red {
+  color: #d62d25 !important;
+}
+.text-orange {
+  color: #d69f36 !important;
+}
 /* Text White Color*/
 .text-blue {
   color: #292B33 !important;
