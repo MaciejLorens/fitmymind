@@ -1257,6 +1257,23 @@ ul.list.list-white li a {
   text-align: center;
   width: 28px;
 }
+.get-appointment {
+  color: #fff;
+  background-color: #292B33;
+  border-color: #292B33;
+}
+
+.get-appointment:visited {
+  color: #fff;
+  background-color: #292B33;
+  border-color: #292B33;
+}
+
+.get-appointment:hover {
+  color: #ABD62E;
+  background-color: #1b1d23;
+}
+
 .list-icon.theme-colored.square li i {
   color: #fff;
 }
