@@ -17,11 +17,6 @@ class ServicesController < ApplicationController
   def ars_medica
   end
 
-
-  def corporations
-  end
-
-
   def lectures
   end
 

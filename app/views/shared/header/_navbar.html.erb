@@ -26,9 +26,6 @@
                 <%#= link_to 'Ars Medica', ars_medica_path %>
 <!--              </li>-->
               <li>
-                <%= link_to 'Korporacje', corporations_path %>
-              </li>
-              <li>
                 <%= link_to 'Prelekcje', lectures_path %>
               </li>
             </ul>
@@ -48,6 +45,9 @@
           </li>
           <li class="<%= controller_name == 'calculators' ? 'active' : '' %>">
             <%= link_to 'Kalkulatory', calculators_path %>
+          </li>
+          <li class="<%= controller_name == 'corporations' ? 'active' : '' %>">
+            <%= link_to 'Dla Firm', corporations_path %>
           </li>
           <li class="<%= controller_name == 'contact' ? 'active' : '' %>">
             <%= link_to 'Kontakt', contact_path %>
