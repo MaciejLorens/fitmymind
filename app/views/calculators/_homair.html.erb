@@ -1,0 +1,58 @@
+<div class="col-md-6 mb-30 calculator homair">
+  <div class="item">
+    <div class="class-item box-hover-effect effect1 mb-md-30 bg-lighter">
+      <div class="thumb mb-20">
+        <%= image_tag 'kalkulatory/znw.jpg', alt: 'kalkulator zapotrzebowanie na wode' %>
+      </div>
+
+      <div class="content flip p-25 pt-0">
+        <h4 class="mt-0 text-center ">
+          Kalkulator
+          <span class="text-theme-colored">HOMA-IR</span>
+        </h4>
+
+        <p class="text-justify">
+          W celu zdiagnozowania insulinooporności należy wykonać odpowiednie badania z krwi żylnej. Posiadając wyniki
+          badań wykonanych na czczo, możemy ocenić stopień insulinooporności. Wyliczenie wskaźnika HOMA-IR jest
+          najprostszą metodą, do obliczeń potrzebujemy wyników poziomu glukozy i insuliny wykonanych na czczo. Wynik
+          powyżej 2 może oznaczać insulinooporność.
+        </p>
+
+        <div class="tab-content border-gray-lightgray p-20">
+          <div id="bmi-calculator">
+            <div class="p-0">
+              <label>Poziom Insuliny uJ/ml</label>
+              <input required type="text" class="form-control" id="homair_insulin" placeholder="np. 92.5">
+            </div>
+
+            <div class="p-0 pt-20 col-xs-8">
+              <label>Poziom glukozy</label>
+              <input required type="text" class="form-control" id="homair_glucose" placeholder="np. 92.5">
+            </div>
+
+            <div class="p-0 col-xs-3 col-xs-offset-1" style="margin-top: 45px;">
+              <input type="radio" id="homair_unit_mmol" name="homair_unit" value="mmol" checked>
+              <label for="mmol">mmol/l</label>
+              <br>
+              <input type="radio" id="homair_unit_mg" name="homair_unit" value="mg">
+              <label for="mg">mg/dL</label>
+            </div>
+            <div class="p-0">
+
+            </div>
+            <div class="col-xs-8 p-0 pt-20">
+              <input id="submit-button-homair" type="submit" class="btn btn-sm btn-theme-colored text-uppercase" value="Oblicz">
+            </div>
+            <div class="clearfix"></div>
+          </div>
+
+          <div id="homair-result">
+            <hr>
+            <h3>Wynik: <span id="homair-result-number"></span></h3>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

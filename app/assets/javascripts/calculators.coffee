@@ -29,8 +29,24 @@ ready = ->
   $('#whr-result').hide()
   $('#cpm-result').hide()
   $('#znw-result').hide()
+  $('#ft3ft4-result').hide()
+  $('#homair-result').hide()
   $('.bmi_result_description').hide()
   $('.bmi_result_description').hide()
+
+  #   ---------------------------------------------------------------------- LINK CLICKS
+
+  $(".calculators-tags").click (e) ->
+    e.preventDefault()
+    $(".calculators-tags").removeClass('active')
+    $(@).addClass('active')
+    which_one = $(@).data('target')
+    $("#calculators .calculator").hide()
+    if which_one == 'all'
+      $("#calculators .calculator").show()
+    else
+      $("#calculators ." + which_one).show()
+
 
   $('.sport_activity').change ->
     explanation = switch $(@).val()
@@ -95,28 +111,28 @@ ready = ->
       $('#nmc-result').fadeIn(300)
 
 
-  #   ---------------------------------------------------------------------- WHR
-  $('#submit-button-whr').click ->
-    $('#whr-result').fadeOut 300, ->
-      $('.whr_description').hide()
-      talia = parseFloat($('#whr_talia').val())
-      loins = parseFloat($('#whr_loins').val())
-      sex = $("#whr_gender").val()
-      whr = Math.round((talia * 100) / loins) / 100
-
-      if sex == 'woman'
-        if whr >= 0.8
-          $('.whr_apple_description').show()
-        else
-          $('.whr_pear_description').show()
-      else
-        if whr >= 1.0
-          $('.whr_apple_description').show()
-        else
-          $('.whr_pear_description').show()
-
-      $("#whr-result-number").html(whr)
-      $('#whr-result').fadeIn(300)
+#  #   ---------------------------------------------------------------------- WHR
+#  $('#submit-button-whr').click ->
+#    $('#whr-result').fadeOut 300, ->
+#      $('.whr_description').hide()
+#      talia = parseFloat($('#whr_talia').val())
+#      loins = parseFloat($('#whr_loins').val())
+#      sex = $("#whr_gender").val()
+#      whr = Math.round((talia * 100) / loins) / 100
+#
+#      if sex == 'woman'
+#        if whr >= 0.8
+#          $('.whr_apple_description').show()
+#        else
+#          $('.whr_pear_description').show()
+#      else
+#        if whr >= 1.0
+#          $('.whr_apple_description').show()
+#        else
+#          $('.whr_pear_description').show()
+#
+#      $("#whr-result-number").html(whr)
+#      $('#whr-result').fadeIn(300)
 
 
   #   ---------------------------------------------------------------------- CPM
@@ -144,6 +160,44 @@ ready = ->
       znw = (1500 + (mass - 20) * 20) / 1000
       $("#znw-result-number").html(znw)
       $('#znw-result').fadeIn(300)
+
+
+  #   ---------------------------------------------------------------------- FT3FT4
+  $('#submit-button-ft3ft4').click ->
+    $('#ft3ft4-result').fadeOut 300, ->
+      ft4 = parseFloat($('#ft4_val').val())
+      ft4_n1 = parseFloat($('#ft4_n1').val())
+      ft4_n2 = parseFloat($('#ft4_n2').val())
+
+      ft3 = parseFloat($('#ft3_val').val())
+      ft3_n1 = parseFloat($('#ft3_n1').val())
+      ft3_n2 = parseFloat($('#ft3_n2').val())
+
+      ft4_result = Math.round((ft4 - ft4_n1) / (ft4_n2 - ft4_n1) * 10000) / 100;
+      ft3_result = Math.round((ft3 - ft3_n1) / (ft3_n2 - ft3_n1) * 10000) / 100;
+      
+      result = '<br>FT4: &nbsp;' + ft4_result + '%<br>FT3: &nbsp;' + ft3_result + '%'
+
+      $("#ft3ft4-result-number").html(result)
+      $('#ft3ft4-result').fadeIn(300)
+
+
+  #   ---------------------------------------------------------------------- HOMA-IR
+  $('#submit-button-homair').click ->
+    $('#homair-result').fadeOut 300, ->
+      insulin = parseFloat($('#homair_insulin').val())
+      glucose = parseFloat($('#homair_glucose').val())
+      unit = $("input[name='homair_unit']:checked").val();
+
+      homair = if unit == 'mmol'
+        insulin * glucose / 22.5
+      else
+        insulin * glucose / 405
+
+      result = Math.round(homair * 100) / 100
+
+      $("#homair-result-number").html(result)
+      $('#homair-result').fadeIn(300)
 
 
 $(document).ready(ready)

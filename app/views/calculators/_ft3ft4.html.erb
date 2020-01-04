@@ -1,0 +1,70 @@
+<div class="col-md-6 mb-30 calculator ft3ft4">
+  <div class="item">
+    <div class="class-item box-hover-effect effect1 mb-md-30 bg-lighter">
+      <div class="thumb mb-20">
+        <%= image_tag 'kalkulatory/znw.jpg', alt: 'kalkulator zapotrzebowanie na wode' %>
+      </div>
+
+      <div class="content flip p-25 pt-0">
+        <h4 class="mt-0 text-center ">
+          Kalkulator
+          <span class="text-theme-colored">FT3 i FT4</span>
+        </h4>
+
+        <p class="text-justify">
+          Do sprawdzenia pracy tarczycy należy wykonać podstawowe badania laboratoryjne TSH, FT3 i FT4 (pamiętaj - tylko
+          pełen pakiet pokaże jak pracuje tarczyca m.in. aTPO, aTG, USG tarczycy - diagnostyka jest kwestią kluczową).
+          Tarczyca wytwarza dwa hormony tyroksynę (T4) i trójjodotyroninę (T3), kontrolowane przez hormon tyreotropowy
+          TSH wytwarzany przez przysadkę mózgową. T3 jest aktywną formą hormonu tarczycy, T4 jest postacią nieaktywną,
+          aby tarczyca działała prawidłowo musi dojść do konwersji czyli przekształcenia się T4 w T3. Procentowe
+          wartości FT3 i FT4 powinny być do siebie zbliżone. Nie powinny być niższe niż 50%. Do obliczenia procentowych
+          wartości skorzystaj z kalkulatora.
+        </p>
+
+        <div class="tab-content border-gray-lightgray p-20">
+          <div id="bmi-calculator">
+
+            <div class="col-xs-4 p-0 pr-10">
+              <label>FT4</label>
+              <input required type="text" class="form-control" id="ft4_val" placeholder="np. 1.45">
+            </div>
+            <div class="col-xs-4 p-0 pr-10">
+              <label>Norma Od</label>
+              <input required type="text" class="form-control" id="ft4_n1" placeholder="np. 0.89">
+            </div>
+            <div class="col-xs-4 p-0">
+              <label>Norma Do</label>
+              <input required type="text" class="form-control" id="ft4_n2" placeholder="np. 1.76">
+            </div>
+
+            <div class="col-xs-4 p-0 pr-10 pt-20">
+              <label>FT3</label>
+              <input required type="text" class="form-control" id="ft3_val" placeholder="np. 3.54">
+            </div>
+            <div class="col-xs-4 p-0 pr-10 pt-20">
+              <label>Norma Od</label>
+              <input required type="text" class="form-control" id="ft3_n1" placeholder="np. 2.3">
+            </div>
+            <div class="col-xs-4 p-0 pt-20">
+              <label>Norma Do</label>
+              <input required type="text" class="form-control" id="ft3_n2" placeholder="np. 4.2">
+            </div>
+
+            <div class="col-xs-4 p-0 pt-20">
+              <input id="submit-button-ft3ft4" type="submit" class="btn btn-sm btn-theme-colored text-uppercase"
+                     value="Oblicz">
+            </div>
+
+            <div class="clearfix"></div>
+          </div>
+
+          <div id="ft3ft4-result">
+            <hr>
+            <h3>Wynik: <span id="ft3ft4-result-number"></span></h3>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

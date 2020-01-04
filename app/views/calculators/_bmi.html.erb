@@ -1,105 +1,87 @@
-<section>
-  <div class="container pb-0">
-    <div class="section-content">
-      <div class="row">
-        <div class="col-md-6 pb-sm-70">
-          <h3 class="mt-0">
-            Body Mass Index
-            <span class="text-theme-colored">BMI</span></h3>
-          <p>
-            BMI jest wskaźnikiem wykorzystywanym do oceny
-            ryzyka pojawienia się groźnych chorób związanych z nadwagą i
-            otyłością m.in. miażdżycy, cukrzycy czy choroby niedokrwiennej
-            serca. BMI pozwala również sprawdzić czy występuje u nas niedowaga,
-            a nawet wychudzenie co także sprzyja powstawaniu chorób np.
-            anoreksji. Aby ustalić czy masz zdrową wagę, wprowadź następujące
-            informacje i oblicz wskaźnik masy ciała (BMI).
-          </p>
+<div class="col-md-6 mb-30 calculator bmi">
+  <div class="item">
+    <div class="class-item box-hover-effect effect1 mb-md-30 bg-lighter">
+      <div class="thumb mb-20">
+        <%= image_tag 'kalkulatory/bmi.jpg', alt: 'kalkulator body mass index' %>
+      </div>
 
-          <br/>
+      <div class="content flip p-25 pt-0">
+        <h4 class="mt-0 text-center ">
+          Body Mass Index
+          <span class="text-theme-colored">BMI</span>
+        </h4>
 
-          <div class="tab-content border-gray-lightgray p-20">
+        <p class="text-justify">
+          BMI jest wskaźnikiem wykorzystywanym do oceny ryzyka pojawienia się groźnych chorób związanych z nadwagą i
+          otyłością m.in. miażdżycy, cukrzycy czy choroby niedokrwiennej serca. BMI pozwala również sprawdzić czy
+          występuje u nas niedowaga, a nawet wychudzenie co także sprzyja powstawaniu chorób np. anoreksji. Aby ustalić
+          czy masz zdrową wagę, wprowadź następujące informacje i oblicz wskaźnik masy ciała (BMI).
+        </p>
 
-            <div id="bmi-calculator">
-              <div class="col-xs-8 p-0">
-                <label>Waga w kg</label>
-                <input required type="text" class="form-control" id="bmi_mass" name="bmi_mass" placeholder="np. 92.5">
-              </div>
-              <div class="col-xs-8 p-0 pt-20">
-                <label>Wzrost w cm</label>
-                <input required type="text" class="form-control" id="bmi_height" name="bmi_height" placeholder="np. 172">
-              </div>
-              <div class="col-xs-8 p-0 pt-20">
-                <input id="submit-button-bmi" type="submit" class="btn btn-sm btn-theme-colored text-uppercase" value="Oblicz">
-              </div>
-              <div class="clearfix"></div>
+        <div class="tab-content border-gray-lightgray p-20">
+          <div id="bmi-calculator">
+            <div class="p-0">
+              <label>Waga w kg</label>
+              <input required type="text" class="form-control" id="bmi_mass" name="bmi_mass" placeholder="np. 92.5">
             </div>
-
-            <div id="bmi-result">
-              <hr>
-              <h3>Wynik: <span id="bmi-result-number"></span></h3>
-              <hr>
-              <p class="bmi_0 bmi_result_description">
-                wygłodzenie – BMI < 16,0 mówi o poważnym ryzyku zaburzeń stanu
-                zdrowia, może wystąpić zaawansowane niedożywienie
-                białkowo-energetyczne, które przyczynia się do powstania
-                osteoporozy, niedoborów tkanki mięśniowej. Umów się na wizytę z
-                dietetykiem w celu unormowania masy ciała i poprawy zdrowia.
-              </p>
-              <p class="bmi_1699 bmi_result_description">
-                wychudzenie – BMI między 16,0 a 16,99 mówi o zwiększonym ryzyku
-                zaburzeń stanu zdrowia, może wystąpić umiarkowane niedożywienie
-                białkowo-energetyczne. Wychudzenie przyczynia się do braku
-                energii, zaburzeń hormonalnych, depresji. Umów się na wizytę z
-                dietetykiem w celu unormowania masy ciała i poprawy zdrowia.
-              </p>
-              <p class="bmi_1849 bmi_result_description">
-                niedowaga – BMI między 17,0 a 18,49 mówi o ryzyku zaburzeń stanu
-                zdrowia, może wystąpić niewielkie ryzyko niedożywienia
-                białkowo-energetycznego. Niedowaga jest niebezpieczna, mogą
-                pojawić się zaburzenia hormonalne, niedobory witamin i
-                składników mineralnych. Może być przyczyną poronień u kobiet w
-                ciąży. Objawia się m.in. zmniejszoną odpornością organizmu,
-                zmęczeniem, sennością, złym samopoczuciem itp.
-              </p>
-              <p class="bmi_2499 bmi_result_description">
-                waga prawidłowa – BMI między 18,5 a 24,99 świadczy o prawidłowej
-                masie ciała. Nie musisz zmieniać stylu życia. Dbaj o zdrowe
-                odżywianie i odpowiednią podaż aktywności fizycznej. Ogólne
-                samopoczucie powinno być w normie.
-              </p>
-              <p class="bmi_2999 bmi_result_description">
-                Nadwaga – BMI między 25,0 a 29,99 jest sygnałem do zmiany stylu
-                życia, nadwaga jest stanem poprzedzającym otyłość. Zwiększa się
-                ryzyko chorób dieto zależnych. Objawia się m.in. zmęczeniem,
-                problemami z trawieniem, brakiem energii. Powinniśmy ograniczyć
-                cukry, tłuszcze a przede wszystkim kaloryczność posiłków w celu
-                uzyskania szczegółowych zaleceń skontaktuj się z dietetykiem.
-              </p>
-              <p class="bmi_3499 bmi_result_description">
-                I stopień otyłości – BMI między 30,0 a 34,99 mówi o zwiększonym
-                ryzyku wystąpienia chorób związanych z otyłością m.in.
-                nadciśnienie, cukrzyca, choroby sercowo-naczyniowe. Skontaktuj
-                się z dietetykiem w celu redukcji nadmiernej masy ciała.
-              </p>
-              <p class="bmi_3999 bmi_result_description">
-                II stopień otyłości – BMI między 35,0 a 39,99 mówi o bardzo
-                wysokim ryzyku rozwoju zaburzeń metabolicznych. Choroby związane
-                z otyłością jakie mogą się pojawić to m.in. nadciśnienie,
-                cukrzyca, miażdżyca, choroby sercowo-naczyniowe. Skontaktuj się
-                z dietetykiem w celu zrzucenia zbędnych kilogramów.
-              </p>
-              <p class="bmi_4000 bmi_result_description">
-                III stopień otyłości – osoby z BMI >= 40 powinny jak najszybciej
-                udać się do lekarza i dietetyka.
-              </p>
+            <div class="p-0 pt-20">
+              <label>Wzrost w cm</label>
+              <input required type="text" class="form-control" id="bmi_height" name="bmi_height" placeholder="np. 172">
             </div>
+            <div class="p-0 pt-20">
+              <input id="submit-button-bmi" type="submit" class="btn btn-sm btn-theme-colored text-uppercase" value="Oblicz">
+            </div>
+            <div class="clearfix"></div>
+          </div>
+
+          <div id="bmi-result">
+            <hr>
+            <h3>Wynik: <span id="bmi-result-number"></span></h3>
+            <hr>
+            <p class="bmi_0 bmi_result_description">
+              wygłodzenie – BMI < 16,0 mówi o poważnym ryzyku zaburzeń stanu zdrowia, może wystąpić zaawansowane
+              niedożywienie białkowo-energetyczne, które przyczynia się do powstania osteoporozy, niedoborów tkanki
+              mięśniowej. Umów się na wizytę z dietetykiem w celu unormowania masy ciała i poprawy zdrowia.
+            </p>
+            <p class="bmi_1699 bmi_result_description">
+              wychudzenie – BMI między 16,0 a 16,99 mówi o zwiększonym ryzyku zaburzeń stanu zdrowia, może wystąpić
+              umiarkowane niedożywienie białkowo-energetyczne. Wychudzenie przyczynia się do braku energii, zaburzeń
+              hormonalnych, depresji. Umów się na wizytę z dietetykiem w celu unormowania masy ciała i poprawy zdrowia.
+            </p>
+            <p class="bmi_1849 bmi_result_description">
+              niedowaga – BMI między 17,0 a 18,49 mówi o ryzyku zaburzeń stanu zdrowia, może wystąpić niewielkie ryzyko
+              niedożywienia białkowo-energetycznego. Niedowaga jest niebezpieczna, mogą pojawić się zaburzenia
+              hormonalne, niedobory witamin i składników mineralnych. Może być przyczyną poronień u kobiet w ciąży.
+              Objawia się m.in. zmniejszoną odpornością organizmu, zmęczeniem, sennością, złym samopoczuciem itp.
+            </p>
+            <p class="bmi_2499 bmi_result_description">
+              waga prawidłowa – BMI między 18,5 a 24,99 świadczy o prawidłowej masie ciała. Nie musisz zmieniać stylu
+              życia. Dbaj o zdrowe odżywianie i odpowiednią podaż aktywności fizycznej. Ogólne samopoczucie powinno być
+              w normie.
+            </p>
+            <p class="bmi_2999 bmi_result_description">
+              Nadwaga – BMI między 25,0 a 29,99 jest sygnałem do zmiany stylu życia, nadwaga jest stanem poprzedzającym
+              otyłość. Zwiększa się ryzyko chorób dieto zależnych. Objawia się m.in. zmęczeniem, problemami z
+              trawieniem, brakiem energii. Powinniśmy ograniczyć cukry, tłuszcze a przede wszystkim kaloryczność
+              posiłków w celu uzyskania szczegółowych zaleceń skontaktuj się z dietetykiem.
+            </p>
+            <p class="bmi_3499 bmi_result_description">
+              I stopień otyłości – BMI między 30,0 a 34,99 mówi o zwiększonym ryzyku wystąpienia chorób związanych z
+              otyłością m.in. nadciśnienie, cukrzyca, choroby sercowo-naczyniowe. Skontaktuj się z dietetykiem w celu
+              redukcji nadmiernej masy ciała.
+            </p>
+            <p class="bmi_3999 bmi_result_description">
+              II stopień otyłości – BMI między 35,0 a 39,99 mówi o bardzo wysokim ryzyku rozwoju zaburzeń
+              metabolicznych. Choroby związane z otyłością jakie mogą się pojawić to m.in. nadciśnienie, cukrzyca,
+              miażdżyca, choroby sercowo-naczyniowe. Skontaktuj się z dietetykiem w celu zrzucenia zbędnych kilogramów.
+            </p>
+            <p class="bmi_4000 bmi_result_description">
+              III stopień otyłości – osoby z BMI >= 40 powinny jak najszybciej udać się do lekarza i dietetyka.
+            </p>
           </div>
         </div>
-        <div class="col-md-6">
-          <%= image_tag 'kalkulatory/bmi.jpg', alt: 'kalkulator body mass index' %>
-        </div>
+
       </div>
     </div>
   </div>
-</section>
+</div>

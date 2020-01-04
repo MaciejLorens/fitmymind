@@ -1,44 +1,41 @@
-<section>
-  <div class="container pb-20">
-    <div class="section-content">
-      <div class="row">
-        <div class="col-md-6 pb-sm-70">
-          <h3 class="mt-0">
-            Zapotrzebowanie Na Wodę
-            <span class="text-theme-colored">ZNW</span></h3>
-          <p>
-            Odpowiednie nawodnienie jest niezwykle istotne, ale przyjmowanie
-            wody wymaga pewnej równowagi i wbrew pozorom istnieje możliwość
-            wypicia zbyt dużej ilości płynu. Sprawdź czy występujące rzadko
-            nadmierne nawodnienie może dotyczyć ciebie? Sprawdź ile wody
-            powinnaś wypijać aby móc cieszyć się zdrowiem
-          </p>
+<div class="col-md-6 mb-30 calculator znw">
+  <div class="item">
+    <div class="class-item box-hover-effect effect1 mb-md-30 bg-lighter">
+      <div class="thumb mb-20">
+        <%= image_tag 'kalkulatory/znw.jpg', alt: 'kalkulator zapotrzebowanie na wode' %>
+      </div>
 
-          <br/>
+      <div class="content flip p-25 pt-0">
+        <h4 class="mt-0 text-center ">
+          Zapotrzebowanie Na Wodę
+          <span class="text-theme-colored">ZNW</span>
+        </h4>
 
-          <div class="tab-content border-gray-lightgray p-20">
+        <p class="text-justify">
+          Odpowiednie nawodnienie jest niezwykle istotne, ale przyjmowanie wody wymaga pewnej równowagi i wbrew
+          pozorom istnieje możliwość  wypicia zbyt dużej ilości płynu. Sprawdź czy występujące rzadko nadmierne
+          nawodnienie może dotyczyć ciebie? Sprawdź ile wody powinnaś wypijać aby móc cieszyć się zdrowiem.
+        </p>
 
-            <div id="bmi-calculator">
-              <div class="col-xs-8 p-0">
-                <label>Waga w kg</label>
-                <input required type="text" class="form-control" id="znw_mass" name="znw_mass" placeholder="np. 92.5">
-              </div>
-              <div class="col-xs-8 p-0 pt-20">
-                <input id="submit-button-znw" type="submit" class="btn btn-sm btn-theme-colored text-uppercase" value="Oblicz">
-              </div>
-              <div class="clearfix"></div>
+        <div class="tab-content border-gray-lightgray p-20">
+          <div id="bmi-calculator">
+            <div class="col-xs-8 p-0">
+              <label>Waga w kg</label>
+              <input required type="text" class="form-control" id="znw_mass" name="znw_mass" placeholder="np. 92.5">
             </div>
-
-            <div id="znw-result">
-              <hr>
-              <h3>Wynik: <span id="znw-result-number"></span> l</h3>
+            <div class="col-xs-8 p-0 pt-20">
+              <input id="submit-button-znw" type="submit" class="btn btn-sm btn-theme-colored text-uppercase" value="Oblicz">
             </div>
+            <div class="clearfix"></div>
+          </div>
+
+          <div id="znw-result">
+            <hr>
+            <h3>Wynik: <span id="znw-result-number"></span> l</h3>
           </div>
         </div>
-        <div class="col-md-6">
-          <%= image_tag 'kalkulatory/znw.jpg', alt: 'kalkulator zapotrzebowanie na wode' %>
-        </div>
+
       </div>
     </div>
   </div>
-</section>
+</div>
