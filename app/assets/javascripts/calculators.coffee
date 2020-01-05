@@ -7,6 +7,24 @@ ready = ->
     $('.read-more-content').addClass('hidden')
     $(@).parent().find('span').removeClass('hidden')
 
+#  ----------------- services:
+  $(".mb-menu-item").click (e) ->
+    e.preventDefault()
+
+#  ----------------- services:
+  $(".ola-details").click (e) ->
+    e.preventDefault()
+    $("#description_ola").show()
+    $("#description_magda").hide()
+    $('html, body').animate({scrollTop: $("#description_ola").offset().top - 20}, 500)
+
+  $(".magda-details").click (e) ->
+    e.preventDefault()
+    $("#description_magda").show()
+    $("#description_ola").hide()
+    $('html, body').animate({scrollTop: $("#description_magda").offset().top - 20}, 500)
+
+
 #  ----------------- gallery:
 
   $(".gallery-filter-btn").click (e) ->

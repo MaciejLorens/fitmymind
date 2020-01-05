@@ -4,20 +4,15 @@
   <div class="container pt-20 pb-0">
     <div class="section-content">
       <div class="row">
-        <div class="col-md-12 pb-40">
-
-          <h3 class="m-0 text-white letter-space-3 font-weidth-400 pt-20 pb-30 text-justify">
-            Lista Kalkulatorów
-          </h3>
+        <div class="col-md-12 pb-40 pt-20">
 
           <a href="#" data-target="all" class="calculators-tags active">Wszystkie</a>
           <a href="#" data-target="ft3ft4" class="calculators-tags">Kalkulator Poziomu Procentowego FT4, FT3</a>
-          <a href="#" data-target="bmi" class="calculators-tags">Kalkulator BMI</a>
-          <a href="#" data-target="nmc" class="calculators-tags">Kalkulator Należnej Masy Ciała</a>
-          <a href="#" data-target="cpm" class="calculators-tags">Kalkulator CPM</a>
-          <a href="#" data-target="znw" class="calculators-tags">Kalkulator Zapotrzebowania Na Wodę</a>
           <a href="#" data-target="homair" class="calculators-tags">Kalkulator HOMA-IR</a>
-
+          <a href="#" data-target="nmc" class="calculators-tags">Kalkulator Należnej Masy Ciała</a>
+          <a href="#" data-target="znw" class="calculators-tags">Kalkulator Zapotrzebowania Na Wodę</a>
+          <a href="#" data-target="bmi" class="calculators-tags">Kalkulator BMI</a>
+          <a href="#" data-target="cpm" class="calculators-tags">Kalkulator CPM</a>
 
         </div>
       </div>
@@ -26,23 +21,24 @@
 </section>
 
 <section id="calculators" class="bg-theme-colored-white">
-  <div class="container pb-sm-50 pb-50">
+  <div class="container">
 
     <div class="row mtli-row-clearfix">
       <div class="row">
         <%= render partial: 'ft3ft4' %>
-        <%= render partial: 'bmi' %>
+        <%= render partial: 'homair' %>
       </div>
 
       <div class="row">
         <%= render partial: 'nmc' %>
-        <%= render partial: 'cpm' %>
+        <%= render partial: 'znw' %>
       </div>
 
       <div class="row">
-        <%= render partial: 'znw' %>
-        <%= render partial: 'homair' %>
+        <%= render partial: 'bmi' %>
+        <%= render partial: 'cpm' %>
       </div>
     </div>
+
   </div>
 </section>
