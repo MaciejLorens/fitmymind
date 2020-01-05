@@ -13,7 +13,7 @@
   }
   ul{
     overflow:hidden;
-    padding: 2.5em 3em;
+    padding:4em 3.5em;
   }
   ul li a{
     text-decoration:none;
@@ -31,7 +31,7 @@
     -webkit-transition:-webkit-transform .15s linear;
   }
   ul li{
-    margin: 1em 1.1em;
+    margin: 1.1em;
     float:left;
   }
   ul li h2{
@@ -84,4 +84,10 @@
   ol{text-align:center;}
   ol li{display:inline;padding-right:1em;}
   ol li a{color:#fff;}
+}
+
+@media (max-width:1199px) {
+  #board {
+    display: none;
+  }
 }

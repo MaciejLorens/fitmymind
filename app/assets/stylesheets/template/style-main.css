@@ -2190,7 +2190,11 @@ section > .container-fluid {
   text-align: center;
 }
 .inner-header .title {
-  font-size: 2rem;
+  font-size: 2.4rem;
+  background-color: #292B33;
+  padding: 8px;
+  width: 65%;
+  margin: auto
 }
 /*
  *  Vertical-Nav.less

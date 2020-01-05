@@ -26,12 +26,27 @@ n1 = New.create(title: 'Sample new title 1', introduction: short_lorem, content:
 n2 = New.create(title: 'Sample new title 2', introduction: short_lorem, content: lorem)
 n3 = New.create(title: 'Sample new title 3', introduction: short_lorem, content: lorem)
 
-50.times do
-  Result.create(
-    name: SecureRandom.hex(4),
-    result: - (rand(150).to_f / 10),
-    created_at: rand(100).days.ago
-  )
-end
+
+Result.create(name: 'Marek', result: -9.5, created_at: 1.days.ago)
+Result.create(name: 'Justyna', result: -4.2, created_at: 2.days.ago)
+Result.create(name: 'Weronika', result: -4.9, created_at: 5.days.ago)
+Result.create(name: 'Maciej', result: -5.1, created_at: 7.days.ago)
+Result.create(name: 'Tomasz', result: -7.8, created_at: 7.days.ago)
+
+Result.create(name: 'Edyta', result: -4.3, created_at: 8.days.ago)
+Result.create(name: 'Monika', result: -2.9, created_at: 9.days.ago)
+Result.create(name: 'Grzesiek', result: -6.3, created_at: 11.days.ago)
+Result.create(name: 'Ewa', result: -5.0, created_at: 12.days.ago)
+Result.create(name: 'Miłosz', result: -8.1, created_at: 15.days.ago)
+
+Result.create(name: 'Ola', result: -4.4, created_at: 17.days.ago)
+Result.create(name: 'Anita', result: -6.6, created_at: 20.days.ago)
+Result.create(name: 'Robert', result: -3.8, created_at: 23.days.ago)
+Result.create(name: 'Monika', result: -4.6, created_at: 24.days.ago)
+Result.create(name: 'Ryszard', result: -8.7, created_at: 24.days.ago)
+
+Result.create(name: 'Basia', result: -5.8, created_at: 26.days.ago)
+Result.create(name: 'Jacek', result: -11.4, created_at: 28.days.ago)
+Result.create(name: 'Magda', result: -6.2, created_at: 29.days.ago)
 
 p1.update(tags: [t1, t2, t3])
