@@ -11,7 +11,26 @@ ready = ->
   $(".mb-menu-item").click (e) ->
     e.preventDefault()
 
-#  ----------------- services:
+  $(".read-more-mb-program").click (e) ->
+    e.preventDefault()
+    $("#mb-program").show()
+
+  $('.read-more-mb-who').click (e) ->
+    e.preventDefault()
+    $("#mb-who").show()
+
+  $(".mb-menu-tags").click (e) ->
+    e.preventDefault()
+    target = $(@).data('target')
+
+    $(".main.mb-menu-tags").removeClass('active')
+    $(".main.mb-menu-tags[data-target='" + target + "']").addClass('active')
+
+    $(".metabolic-balance-part").hide()
+    $(".metabolic-balance-part." + target).show()
+    $('html, body').animate({scrollTop: $("." + target).offset().top - 50}, 500)
+
+#  ----------------- team:
   $(".ola-details").click (e) ->
     e.preventDefault()
     $("#description_ola").show()
