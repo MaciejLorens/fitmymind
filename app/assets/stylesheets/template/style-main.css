@@ -7703,15 +7703,23 @@ blockquote p {
 .widget .social-icons li a {
   margin-bottom: 0;
 }
-.widget .tags a {
-  border: 1px solid #d3d3d3;
+.tags a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  line-height: 1.7;
+  box-sizing: border-box;
+  background-color: transparent;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  color: #292B33;
   display: inline-block;
-  font-size: 11px;
+  font-size: 12px;
   margin: 5px 4px 5px -2px;
   padding: 5px 10px;
+  border: 1px solid #292B33;
 }
-.widget .tags a:hover {
+.tags a:hover {
   color: #fff;
+  background-color: #ABD62E;
 }
 .widget .search-input {
   background: transparent none repeat scroll 0 0;

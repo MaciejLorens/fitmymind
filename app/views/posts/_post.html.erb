@@ -1,0 +1,46 @@
+<article class="post mb-50 pb-30">
+
+  <div class="entry-header">
+    <div class="post-thumb">
+      <%= link_to image_tag(post.photo.url(:original), size: '850x450'), post_path(post) %>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+
+  <div class="entry-content">
+    <%= link_to post.title.html_safe, post_path(post) %>
+
+    <ul class="list-inline">
+      <li>
+        Napisane:
+        <span class="text-theme-colored"><%= post.created_at.strftime('%d/%m/%Y') %></span>
+      </li>
+      <li>
+        Przez:
+        <span class="text-theme-colored"><%= post.author %></span>
+      </li>
+    </ul>
+
+    <p>
+      <%= post.introduction.html_safe %>
+    </p>
+
+    <ul class="list-inline like-comment pull-left flip font-16">
+      <li class="tags">
+        Kategoria: <%= category_to(post.category) %>
+
+      </li>
+      <li>
+        <div class="tags">
+          Tagi:
+          <% post.reload.tags.each do |tag| %>
+            <%= tag_to(tag) %>
+          <% end %>
+        </div>
+      </li>
+    </ul>
+
+    <%= link_to '<i class="fa fa-angle-double-right text-theme-colored"></i> Czytaj więcej...'.html_safe, post_path(post), class: 'pull-right flip text-gray font-16 mt-10' %>
+    <div class="clearfix"></div>
+  </div>
+</article>

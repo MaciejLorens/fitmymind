@@ -16,9 +16,11 @@
 <!--  </div>-->
 
   <div class="widget">
+
     <h5 class="widget-title line-bottom">Kategorie</h5>
+
     <div class="categories">
-      <ul class="list list-border angle-double-right">
+      <ul class="list-border tags">
         <% @categories.each do |category| %>
           <li>
             <%= category_to(category) %>
