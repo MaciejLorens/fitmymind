@@ -1524,7 +1524,7 @@ window.Modernizr = function (e, t, n) {
     var m, f = e(this), g = e(f).children(".menuzord-menu"),
       w = e(g).find("li"), v = 900, b = 2e3, y = 200;
     e(g).children("li").children("a").each(function () {
-      e(this).siblings(".dropdown, .megamenu").length > 0 && e(this).append("<span class='indicator'>" + p.indicatorFirstLevel + "</span>")
+      e(this).siblings(".dropdown, .megamenu").length > 0 && e(this).append("<span class='indicator'>&#11167;" + p.indicatorFirstLevel + "</span>")
     }), e(g).find(".dropdown").children("li").children("a").each(function () {
       e(this).siblings(".dropdown").length > 0 && e(this).append("<span class='indicator'>" + p.indicatorSecondLevel + "</span>")
     }), "right" == p.align && e(g).addClass("menuzord-right"), p.indentChildren && e(g).addClass("menuzord-indented"), p.responsive && (e(f).addClass("menuzord-responsive").prepend("<a href='javascript:void(0)' class='showhide'><em></em><em></em><em></em></a>"), m = e(f).children(".showhide")), p.scrollable && p.responsive && e(g).css("max-height", p.scrollableMaxHeight).addClass("scrollable").append("<li class='scrollable-fix'></li>"), u(), e(window).resize(function () {

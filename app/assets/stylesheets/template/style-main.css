@@ -2002,10 +2002,15 @@ section > .container-fluid {
 }
 /* -------- Menuzord ---------- */
 .menuzord-menu > li > a {
+  background-color: #292B33;
   color: white;
   font-size: 13px;
   font-weight: 400;
   text-transform: uppercase;
+}
+.menuzord-menu ul.dropdown li a {
+  background-color: #292B33;
+  color: white;
 }
 .menuzord .menuzord-menu > li.active > a i,
 .menuzord .menuzord-menu > li:hover > a i,
@@ -2625,6 +2630,7 @@ section > .container-fluid {
 .form-control {
   height: 45px;
   border-radius: 0;
+  color: #404040 !important;
 }
 .input-group-addon {
   border-radius: 0;
@@ -2888,6 +2894,11 @@ form .error {
 .side-push-panel.has-side-panel .menuzord .showhide {
   float: left;
 }
+
+.menuzord .showhide em {
+  background: #ABD62E;
+}
+
 /* -------- Body Overlay ---------- */
 .has-side-panel .body-overlay {
   -webkit-transition: opacity 0.3s ease;
