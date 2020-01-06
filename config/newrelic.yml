@@ -1,0 +1,21 @@
+common: &default_settings
+  license_key: eu01xx43a8cfa094ec3ca034909d9201feebNRAL
+  app_name: FitMyMind
+  log_level: info
+
+
+development:
+  <<: *default_settings
+  app_name: FitMyMind (Development)
+
+test:
+  <<: *default_settings
+  # It doesn't make sense to report to New Relic from automated test runs.
+  monitor_mode: false
+
+staging:
+  <<: *default_settings
+  app_name: FitMyMind (Production)
+
+production:
+  <<: *default_settings
