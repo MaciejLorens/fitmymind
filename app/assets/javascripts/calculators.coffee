@@ -13,11 +13,27 @@ ready = ->
 
   $(".read-more-mb-program").click (e) ->
     e.preventDefault()
+    $(@).hide()
+    $(".read-less-mb-program").show()
     $("#mb-program").show()
+
+  $(".read-less-mb-program").click (e) ->
+    e.preventDefault()
+    $(@).hide()
+    $(".read-more-mb-program").show()
+    $("#mb-program").hide()
 
   $('.read-more-mb-who').click (e) ->
     e.preventDefault()
+    $(@).hide()
+    $(".read-less-mb-who").show()
     $("#mb-who").show()
+
+  $(".read-less-mb-who").click (e) ->
+    e.preventDefault()
+    $(@).hide()
+    $(".read-more-mb-who").show()
+    $("#mb-who").hide()
 
   $(".mb-menu-tags").click (e) ->
     e.preventDefault()
@@ -28,7 +44,7 @@ ready = ->
 
     $(".metabolic-balance-part").hide()
     $(".metabolic-balance-part." + target).show()
-    $('html, body').animate({scrollTop: $("." + target).offset().top - 50}, 500)
+    $('html, body').animate({scrollTop: $("." + target).offset().top - 100}, 500)
 
 #  ----------------- team:
   $(".ola-details").click (e) ->

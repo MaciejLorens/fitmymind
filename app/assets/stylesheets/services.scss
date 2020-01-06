@@ -5,30 +5,13 @@
 }
 
 .mb-tags, .mb-menu-tags {
-  background-color: #292B33;
-  color: #E8E8E8;
-  font-size: 16px;
-  border: 1px solid #ABD62E;
-  display: inline-block;
-  margin: 5px 4px 5px -2px;
-  padding: 5px 10px;
-
-  &:visited {
-    color: #E8E8E8;
-    border: 1px solid #ABD62E;
-    background-color: #292B33;
-  }
 
   &.active {
-    color: #E8E8E8;
-    border: 1px solid #292B33;
-    background-color: #ABD62E;
+    color: #ABD62E;
   }
 
   &:hover {
-    color: #E8E8E8;
-    border: 1px solid #292B33;
-    background-color: #ABD62E;
+    color: #ABD62E;
   }
 }
 
