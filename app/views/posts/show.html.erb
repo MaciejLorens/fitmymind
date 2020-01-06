@@ -1,7 +1,5 @@
-<%= render partial: 'title' %>
-
 <section>
-  <div class="container mt-30 mb-30 pt-30 pb-30">
+  <div class="container">
     <div class="row">
       <div class="col-md-8 col-md-offset-2">
         <div class="blog-posts single-post">
@@ -42,9 +40,8 @@
                 <%= @post.content&.html_safe %>
               </div>
 
-              <br>
-
               <div class="post-bibliography">
+                <h4>Bibliografia</h4>
                 <%= @post.bibliography&.html_safe %>
               </div>
 

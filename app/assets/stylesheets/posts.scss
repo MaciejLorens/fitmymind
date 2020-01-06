@@ -51,8 +51,16 @@
   }
 
   .post-bibliography {
-    p {
+    ol, ul, p {
+      text-align: justify;
+      margin-left: 20px;
       font-size: 12px;
+    }
+
+    ol {
+      li {
+        list-style: decimal;
+      }
     }
   }
 }
