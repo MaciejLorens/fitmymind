@@ -60,6 +60,7 @@ ready = ->
     $(@).addClass('active')
     which_one = $(@).data('target')
     $("#calculators .calculator").hide()
+    $('html, body').animate({scrollTop: $("#calculators").offset().top - 40}, 500)
     if which_one == 'all'
       $("#calculators .calculator").show()
     else
