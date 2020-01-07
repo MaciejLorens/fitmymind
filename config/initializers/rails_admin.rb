@@ -52,6 +52,7 @@ RailsAdmin.config do |config|
       field :author
       field :category
       field :tags
+      field :photo
       field :created_at
 
     end

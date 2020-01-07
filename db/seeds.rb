@@ -4,7 +4,7 @@ lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 
 User.create(
   email: 'maciej.lorens@gmail.com',
-  password: '1234567890',
+  password: 'uhqr374grq2',
   password_confirmation: '1234567890',
   admin: true
 )

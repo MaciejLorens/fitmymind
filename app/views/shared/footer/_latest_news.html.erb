@@ -1,18 +1,18 @@
 <div class="col-sm-6 col-md-3">
   <div class="widget dark">
 
-    <h5 class="widget-title line-bottom">Nowości</h5>
+    <h5 class="widget-title line-bottom">Blog</h5>
 
     <div class="latest-posts">
-      <% latest_news.each do |latest_new| %>
+      <% latest_posts.each do |post| %>
         <article class="post media-post clearfix pb-0 mb-10">
-          <%= link_to image_tag(latest_new.photo.url(:thumb)), news_path(latest_new), class: 'post-thumb' %>
+          <%= link_to image_tag(post.photo.url(:thumb)), post_path(post), class: 'post-thumb' %>
 
           <div class="post-right">
             <h5 class="post-title mt-0 mb-5">
-              <%= link_to latest_new.title, news_path(latest_new) %>
+              <%= link_to post_title(post), post_path(post) %>
             </h5>
-            <p class="post-date mb-0 font-12"><%= latest_new.created_at.strftime('%d-%m-%Y') %></p>
+            <p class="post-date mb-0 font-12"><%= post.created_at.strftime('%d-%m-%Y') %></p>
           </div>
         </article>
       <% end %>

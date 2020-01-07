@@ -25,19 +25,32 @@
               </div>
 
               <div class="entry-content p-20">
+
                 <h4 class="entry-title text-white text-uppercase">
                   <%= link_to post.title&.html_safe.gsub('<h2>', '').gsub('</h2>', ''), post_path(post) %>
                 </h4>
-                <ul class="entry-date list-inline mt-10 mb-10">
-                  <li class="text-theme-colored">
-                    <%= post.created_at.strftime('%d/%m/%Y') %>
+
+                <ul class="list-inline">
+                  <li>
+                    <span class="text-theme-colored">
+                      <%= post.created_at.strftime('%d/%m/%Y') %>
+                    </span>
                   </li>
                 </ul>
+
                 <p>
                   <%= post.introduction&.html_safe %>
                 </p>
 
-                <%= link_to '<i class="fa fa-angle-double-right text-theme-colored"></i> Czytaj więcej...'.html_safe, post_path(post), class: 'pull-left text-gray font-13 mt-10' %>
+                <ul class="list-inline">
+                  <li>Autor:
+                    <span class="text-theme-colored">
+                      <%= post.author %>
+                    </span>
+                  </li>
+                </ul>
+                <%= link_to '<i class="fa fa-angle-double-right text-theme-colored"></i> Czytaj więcej . . .'
+                                .html_safe, post_path(post), class: 'pull-left text-gray mt-10' %>
 
                 <div class="clearfix"></div>
               </div>
@@ -45,34 +58,34 @@
           </div>
         <% end %>
 
-        <div class="col-md-4">
-          <article class="post clearfix">
+        <!--        <div class="col-md-4">-->
+        <!--          <article class="post clearfix">-->
 
-            <div class="entry-header">
-              <div class="post-thumb thumb">
-                <%= image_tag(@recent_new.photo.url(:medium), class: 'img-responsive', style: 'height: 220px;') %>
-              </div>
-            </div>
+        <!--            <div class="entry-header">-->
+        <!--              <div class="post-thumb thumb">-->
+        <%#= image_tag(@recent_new.photo.url(:medium), class: 'img-responsive', style: 'height: 220px;') %>
+        <!--              </div>-->
+        <!--            </div>-->
 
-            <div class="entry-content p-20">
-              <h4 class="entry-title text-white text-uppercase">
-                <%= link_to @recent_new.title, post_path(@recent_new) %>
-              </h4>
-              <ul class="entry-date list-inline mt-10 mb-10">
-                <li class="text-theme-colored">
-                  <%= @recent_new.created_at.strftime('%d/%m/%Y') %>
-                </li>
-              </ul>
-              <p>
-                <%= @recent_new.introduction %>
-              </p>
+        <!--            <div class="entry-content p-20">-->
+        <!--              <h4 class="entry-title text-white text-uppercase">-->
+        <%#= link_to @recent_new.title, post_path(@recent_new) %>
+        <!--              </h4>-->
+        <!--              <ul class="entry-date list-inline mt-10 mb-10">-->
+        <!--                <li class="text-theme-colored">-->
+        <%#= @recent_new.created_at.strftime('%d/%m/%Y') %>
+        <!--                </li>-->
+        <!--              </ul>-->
+        <!--              <p>-->
+        <%#= @recent_new.introduction %>
+        <!--              </p>-->
 
-              <%= link_to '<i class="fa fa-angle-double-right text-theme-colored"></i> Czytaj więcej...'.html_safe, post_path(@recent_new), class: 'pull-left text-gray font-13 mt-10' %>
+        <%#= link_to '<i class="fa fa-angle-double-right text-theme-colored"></i> Czytaj więcej...'.html_safe, post_path(@recent_new), class: 'pull-left text-gray font-13 mt-10' %>
 
-              <div class="clearfix"></div>
-            </div>
-          </article>
-        </div>
+        <!--              <div class="clearfix"></div>-->
+        <!--            </div>-->
+        <!--          </article>-->
+        <!--        </div>-->
 
       </div>
     </div>
