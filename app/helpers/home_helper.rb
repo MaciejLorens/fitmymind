@@ -2,7 +2,7 @@ module HomeHelper
 
   def are_we_open
     wday = Time.now.wday
-    hour = Time.now.hour
+    hour = Time.now.hour + 1 # because heroku is on UTC
 
     closed = '<h5 class="widget-title pull-right pb-10 text-red">Teraz Zamknięte</h5>'
     open = '<h5 class="widget-title pull-right pb-10 text-green">Teraz Otwarte</h5>'
