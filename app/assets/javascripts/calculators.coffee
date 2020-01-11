@@ -1,4 +1,5 @@
 ready = ->
+
 #  ----------------- home:
   $(".read-more").click (e) ->
     e.preventDefault();
@@ -6,6 +7,7 @@ ready = ->
     $(@).hide()
     $('.read-more-content').addClass('hidden')
     $(@).parent().find('span').removeClass('hidden')
+
 
 #  ----------------- services:
   $(".mb-menu-item").click (e) ->
@@ -46,6 +48,20 @@ ready = ->
     $(".metabolic-balance-part." + target).show()
     $('html, body').animate({scrollTop: $("." + target).offset().top - 100}, 500)
 
+
+#  ----------------- corporations:
+  $(".cr-menu-tags").click (e) ->
+    e.preventDefault()
+    target = $(@).data('target')
+
+    $(".main.cr-menu-tags").removeClass('active')
+    $(".main.cr-menu-tags[data-target='" + target + "']").addClass('active')
+
+    $(".corporation-part").hide()
+    $(".corporation-part." + target).show()
+    $('html, body').animate({scrollTop: $("." + target).offset().top - 100}, 500)
+
+
 #  ----------------- team:
   $(".ola-details").click (e) ->
     e.preventDefault()
@@ -74,6 +90,7 @@ ready = ->
       $(".portfolio-gallery .portfolio-item").hide()
       $(".portfolio-gallery .portfolio-item." + $(@).data('filter')).show()
     $(".portfolio-gallery").fadeIn()
+
 
 #  ----------------- calculators:
 
