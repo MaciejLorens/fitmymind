@@ -7917,3 +7917,15 @@ blockquote p {
   height: 42px;
   margin-right: 10px;
 }
+
+.menuzord-responsive .menuzord-menu > li > a {
+  border: none;
+}
+
+.menuzord-responsive .menuzord-menu ul.dropdown li a {
+  border-bottom: none;
+}
+
+.menuzord-responsive .menuzord-menu li .indicator {
+  height: 42px;
+}
