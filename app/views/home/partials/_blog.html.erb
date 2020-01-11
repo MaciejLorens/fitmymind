@@ -15,7 +15,7 @@
       <div class="row">
 
         <% @recent_posts.each do |post| %>
-          <div class="col-md-4 mt-10">
+          <div class="blog-posts col-md-4 mt-10">
             <article class="post clearfix">
 
               <div class="entry-header">
@@ -38,9 +38,9 @@
                   </li>
                 </ul>
 
-                <p>
+                <div class="post-introduction">
                   <%= post.introduction&.html_safe %>
-                </p>
+                </div>
 
                 <ul class="list-inline">
                   <li>Autor:
