@@ -35,12 +35,12 @@ URL:            http://themeforest.net/user/ThemeMascot
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,500,600,700,800,900);
 
 @font-face {
-  font-family: "Poppins-Light", sans-serif;
+  font-family: "Poppins-Light";
   src: asset-url('Poppins-Light.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: "Poppins-Bold", sans-serif;
+  font-family: "Poppins-Bold";
   src: asset-url('Poppins-Bold.ttf') format('truetype');
 }
 /*
