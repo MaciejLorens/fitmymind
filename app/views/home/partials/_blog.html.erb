@@ -27,7 +27,7 @@
               <div class="entry-content p-20">
 
                 <h4 class="entry-title text-white text-uppercase">
-                  <%= link_to post.title&.html_safe.gsub('<h2>', '').gsub('</h2>', ''), post_path(post) %>
+                  <%= link_to post.title.gsub('<h2>', '').gsub('</h2>', '').html_safe, post_path(post) %>
                 </h4>
 
                 <ul class="list-inline">
