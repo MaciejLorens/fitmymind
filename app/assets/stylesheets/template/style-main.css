@@ -7929,3 +7929,7 @@ blockquote p {
 .menuzord-responsive .menuzord-menu li .indicator {
   height: 42px;
 }
+
+.rev_slider_wrapper .btn {
+  padding: 10px 20px !important;
+}
