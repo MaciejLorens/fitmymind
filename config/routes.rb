@@ -19,12 +19,12 @@ Rails.application.routes.draw do
   get 'blog', as: 'blog', to: 'posts#index'
   get 'kalkulatory', as: 'calculators', to: 'calculators#index'
   get 'kontakt', as: 'contact', to: 'contact#index'
-  get 'korporacje', as: 'corporations', to: 'corporations#index'
+  get 'dla_firm', as: 'corporations', to: 'corporations#index'
 
   get 'polityka_prywatnosci', as: 'private_policy', to: 'private_policy#index'
 
 
-  resources :posts
+  resources :posts, except: [:index]
   resources :news
 
 end
