@@ -1,98 +1,4 @@
-ready = ->
-
-#  ----------------- home:
-  $(".read-more").click (e) ->
-    e.preventDefault();
-    $(".read-more").show()
-    $(@).hide()
-    $('.read-more-content').addClass('hidden')
-    $(@).parent().find('span').removeClass('hidden')
-
-
-#  ----------------- services:
-  $(".mb-menu-item").click (e) ->
-    e.preventDefault()
-
-  $(".read-more-mb-program").click (e) ->
-    e.preventDefault()
-    $(@).hide()
-    $(".read-less-mb-program").show()
-    $("#mb-program").show()
-
-  $(".read-less-mb-program").click (e) ->
-    e.preventDefault()
-    $(@).hide()
-    $(".read-more-mb-program").show()
-    $("#mb-program").hide()
-
-  $('.read-more-mb-who').click (e) ->
-    e.preventDefault()
-    $(@).hide()
-    $(".read-less-mb-who").show()
-    $("#mb-who").show()
-
-  $(".read-less-mb-who").click (e) ->
-    e.preventDefault()
-    $(@).hide()
-    $(".read-more-mb-who").show()
-    $("#mb-who").hide()
-
-  $(".mb-menu-tags").click (e) ->
-    e.preventDefault()
-    target = $(@).data('target')
-
-    $(".main.mb-menu-tags").removeClass('active')
-    $(".main.mb-menu-tags[data-target='" + target + "']").addClass('active')
-
-    $(".metabolic-balance-part").hide()
-    $(".metabolic-balance-part." + target).show()
-    $('html, body').animate({scrollTop: $("." + target).offset().top - 100}, 500)
-
-
-#  ----------------- corporations:
-  $(".cr-menu-tags").click (e) ->
-    e.preventDefault()
-    target = $(@).data('target')
-
-    $(".main.cr-menu-tags").removeClass('active')
-    $(".main.cr-menu-tags[data-target='" + target + "']").addClass('active')
-
-    $(".corporation-part").hide()
-    $(".corporation-part." + target).show()
-    $('html, body').animate({scrollTop: $("." + target).offset().top - 100}, 500)
-
-
-#  ----------------- team:
-  $(".ola-details").click (e) ->
-    e.preventDefault()
-    $("#description_ola").show()
-    $("#description_magda").hide()
-    $('html, body').animate({scrollTop: $("#description_ola").offset().top - 20}, 500)
-
-  $(".magda-details").click (e) ->
-    e.preventDefault()
-    $("#description_magda").show()
-    $("#description_ola").hide()
-    $('html, body').animate({scrollTop: $("#description_magda").offset().top - 20}, 500)
-
-
-#  ----------------- gallery:
-
-  $(".gallery-filter-btn").click (e) ->
-    e.preventDefault()
-    $(".portfolio-gallery").hide()
-    $(".gallery-filter-btns li a").removeClass('active')
-    $(@).addClass('active')
-    filter = $(@).data('filter')
-    if filter == 'all'
-      $(".portfolio-gallery .portfolio-item").show()
-    else
-      $(".portfolio-gallery .portfolio-item").hide()
-      $(".portfolio-gallery .portfolio-item." + $(@).data('filter')).show()
-    $(".portfolio-gallery").fadeIn()
-
-
-#  ----------------- calculators:
+$(document).on 'turbolinks:load', () ->
 
   $('#bmi-result').hide()
   $('#nmc-result').hide()
@@ -246,7 +152,7 @@ ready = ->
 
       ft4_result = Math.round((ft4 - ft4_n1) / (ft4_n2 - ft4_n1) * 10000) / 100;
       ft3_result = Math.round((ft3 - ft3_n1) / (ft3_n2 - ft3_n1) * 10000) / 100;
-      
+
       result = '<br>FT4: &nbsp;' + ft4_result + '%<br>FT3: &nbsp;' + ft3_result + '%'
 
       $("#ft3ft4-result-number").html(result)
@@ -269,7 +175,3 @@ ready = ->
 
       $("#homair-result-number").html(result)
       $('#homair-result').fadeIn(300)
-
-
-$(document).ready(ready)
-$(document).on('page:load', ready)
