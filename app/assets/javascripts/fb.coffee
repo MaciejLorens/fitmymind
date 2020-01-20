@@ -24,12 +24,9 @@ restoreFacebookRoot = ->
 
 loadFacebookSDK = ->
   window.fbAsyncInit = initializeFacebookSDK
-  $.getScript("//connect.facebook.net/en_US/sdk.js")
+  $.getScript("//connect.facebook.net/pl_PL/sdk/xfbml.customerchat.js")
 
 initializeFacebookSDK = ->
   FB.init
-    appId  : '2839618429385669'
-    status : true
-    cookie : true
     xfbml  : true
-    version: 'v2.7'
+    version: 'v5.0'
