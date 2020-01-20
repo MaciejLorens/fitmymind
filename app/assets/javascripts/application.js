@@ -26,5 +26,6 @@
 //= require calculators
 //= require corporations
 //= require contact
+//= require fb
 //= require znanylekarz
 //= require_tree ./template/revolution-slider
