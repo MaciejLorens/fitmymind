@@ -21,8 +21,10 @@
 //= require template/google-map-init
 //= require home
 //= require services
-//= require calculators
-//= require contact
+//= require team
 //= require gallery
+//= require calculators
 //= require corporations
+//= require contact
+//= require znanylekarz
 //= require_tree ./template/revolution-slider
