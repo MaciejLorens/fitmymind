@@ -137,7 +137,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
       THEMEMASCOT.initialize.TM_onLoadModal();
       THEMEMASCOT.initialize.TM_platformDetect();
       THEMEMASCOT.initialize.TM_customDataAttributes();
-      THEMEMASCOT.initialize.TM_parallaxBgInit();
       THEMEMASCOT.initialize.TM_magnificPopup_lightbox();
     },
 
@@ -300,22 +299,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
       $('[data-margin-left]').each(function() {
         $(this).css('margin-left', $(this).data("margin-left"));
       });
-    },
-
-
-
-    /* ---------------------------------------------------------------------- */
-    /* -------------------------- Background Parallax ----------------------- */
-    /* ---------------------------------------------------------------------- */
-    TM_parallaxBgInit: function() {
-      if (!THEMEMASCOT.isMobile.any() && $(window).width() >= 800 ) {
-        $('.parallax').each(function() {
-          var data_parallax_ratio = ( $(this).data("parallax-ratio") === undefined ) ? '0.5': $(this).data("parallax-ratio");
-          $(this).parallax("50%", data_parallax_ratio);
-        });
-      } else {
-        $('.parallax').addClass("mobile-parallax");
-      }
     },
 
     /* ---------------------------------------------------------------------- */
@@ -578,7 +561,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
         THEMEMASCOT.header.TM_scrolltoTarget();
         THEMEMASCOT.header.TM_menuzord();
         THEMEMASCOT.header.TM_menuCollapseOnClick();
-        THEMEMASCOT.header.TM_homeParallaxFadeEffect();
         THEMEMASCOT.header.TM_topsearch_toggle();
       }, 0);
 
@@ -763,16 +745,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
         $(".navbar-sticky-animated .header-nav-wrapper .container, .navbar-sticky-animated .header-nav-wrapper .container-fluid").removeClass("add-padding");
       } else {
         $(".navbar-sticky-animated .header-nav-wrapper .container, .navbar-sticky-animated .header-nav-wrapper .container-fluid").addClass("add-padding");
-      }
-    },
-
-    /* ---------------------------------------------------------------------- */
-    /* ---------------- home section on scroll parallax & fade -------------- */
-    /* ---------------------------------------------------------------------- */
-    TM_homeParallaxFadeEffect: function() {
-      if ($window.width() >= 1200) {
-        var scrolled = $window.scrollTop();
-        $('.content-fade-effect .home-content .home-text').css('padding-top', (scrolled * 0.0610) + '%').css('opacity', 1 - (scrolled * 0.00120));
       }
     },
 
@@ -1791,7 +1763,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
 
       var t = setTimeout(function() {
         THEMEMASCOT.initialize.TM_hashForwarding();
-        THEMEMASCOT.initialize.TM_parallaxBgInit();
       }, 0);
 
     }

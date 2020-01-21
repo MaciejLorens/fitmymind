@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get 'polityka_prywatnosci', as: 'private_policy', to: 'private_policy#index'
 
 
-  resources :posts, except: [:index]
+  resources :posts
   resources :news
 
 end

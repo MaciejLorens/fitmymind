@@ -7753,20 +7753,6 @@ blockquote p {
 .widget.dark .btn.btn-default {
   border-color: #333;
 }
-/* -------- Flickr-Feed ---------- */
-#flickr-feed img {
-  background: none repeat scroll 0 0 #000;
-  float: left;
-  height: 60px;
-  margin: 0 5px 5px 0;
-  padding: 0;
-  width: 70px;
-}
-.text-hover-theme-colored {
-  -webkit-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
 /*
  * Footer.less
  * -----------------------------------------------
