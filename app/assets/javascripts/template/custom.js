@@ -2125,21 +2125,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
           }
         });
       });
-    },
-
-
-    /* ---------------------------------------------------------------------- */
-    /* ---------- maximage Fullscreen Parallax Background Slider  ----------- */
-    /* ---------------------------------------------------------------------- */
-    TM_maximageSlider: function() {
-      $('#maximage').maximage({
-        cycleOptions: {
-          fx: 'fade',
-          speed: 1500,
-          prev: '.img-prev',
-          next: '.img-next'
-        }
-      });
     }
   };
 
