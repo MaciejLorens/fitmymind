@@ -828,24 +828,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
       });
     },
 
-    TM_portfolioFlexSliderGalleryPopUpInit: function() {
-      var $flexSliders = $portfolio_gallery.find('.slides');
-      $flexSliders.each(function () {
-        var _items = $(this).find("li > a");
-        var items = [];
-        for (var i = 0; i < _items.length; i++) {
-          items.push({src: $(_items[i]).attr("href"), title: $(_items[i]).attr("title")});
-        }
-        $(this).parent().parent().parent().find(".icons-holder").magnificPopup({
-          items: items,
-          type: 'image',
-          gallery: {
-            enabled: true
-          }
-        });
-      });
-    },
-
 
     /* ---------------------------------------------------------------------- */
     /* ----------------------------- CountDown ------------------------------ */
@@ -908,7 +890,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
 
       var t = setTimeout(function() {
         THEMEMASCOT.slider.TM_typedAnimation();
-        THEMEMASCOT.slider.TM_flexslider();
         THEMEMASCOT.slider.TM_owlCarousel();
       }, 0);
 
@@ -947,67 +928,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
             loop: loop,
             contentType: 'text',
             loopCount: false
-          });
-        });
-      }
-    },
-
-
-    /* ---------------------------------------------------------------------- */
-    /* -------------------------------- flexslider  ------------------------- */
-    /* ---------------------------------------------------------------------- */
-    TM_flexslider: function() {
-      var $flexSlider = $('.flexslider-wrapper').find('.flexslider');
-      if( $flexSlider.length > 0 ){
-        $flexSlider.each(function() {
-          THEMEMASCOT.widget.TM_portfolioFlexSliderGalleryPopUpInit();
-          var $flexsSlider = $(this),
-            flexsAnimation = $flexsSlider.parent().data('animation'),
-            flexsEasing = $flexsSlider.parent().data('easing'),
-            flexsDirection = $flexsSlider.parent().data('direction'),
-            flexsSlideshow = $flexsSlider.parent().data('slideshow'),
-            flexsSlideShowSpeed = $flexsSlider.parent().data('slidespeed'),
-            flexsAnimationSpeed = $flexsSlider.parent().data('animationspeed'),
-            flexsControlNav = $flexsSlider.parent().data('controlnav'),
-            flexsArrows = $flexsSlider.parent().data('arrows'),
-            flexsThumbnails = $flexsSlider.parent().data('thumbnails'),
-            flexsPauseHover = $flexsSlider.parent().data('pausehover');
-
-          if( !flexsAnimation ) { flexsAnimation = 'slide'; }
-          if( !flexsEasing || flexsEasing == 'swing' ) {
-            flexsEasing = 'swing';
-          }
-          if( !flexsDirection ) { flexsDirection = 'horizontal'; }
-          if( flexsSlideshow == false ) { flexsSlideshow = false; } else { flexsSlideshow = true; }
-          if( !flexsSlideShowSpeed ) { flexsSlideShowSpeed = 5000; }
-          if( !flexsAnimationSpeed ) { flexsAnimationSpeed = 600; }
-          if( flexsControlNav == false ) { flexsControlNav = false; } else { flexsControlNav = true; }
-          if( flexsThumbnails == true ) { flexsControlNav = 'thumbnails'; }
-          if( flexsArrows == false ) { flexsArrows = false; } else { flexsArrows = true; }
-          if( flexsPauseHover == false ) { flexsPauseHover = false; } else { flexsPauseHover = true; }
-
-          $flexsSlider.flexslider({
-            rtl: THEMEMASCOT.isRTL.check(),
-            selector: ".slides > li",
-            animation: flexsAnimation,
-            easing: flexsEasing,
-            direction: flexsDirection,
-            slideshow: flexsSlideshow,
-            slideshowSpeed: Number(flexsSlideShowSpeed),
-            animationSpeed: Number(flexsAnimationSpeed),
-            pauseOnHover: flexsPauseHover,
-            controlNav: flexsControlNav,
-            directionNav: flexsArrows,
-            start: function(slider){
-              imagesLoaded($portfolio_gallery, function(){
-                setTimeout(function(){
-                  $portfolio_filter_first_child.trigger("click");
-                },500);
-              });
-              THEMEMASCOT.initialize.TM_magnificPopup_lightbox();
-            },
-            after: function(){
-            }
           });
         });
       }
