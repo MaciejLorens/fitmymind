@@ -3701,21 +3701,6 @@ form .error {
 .news-carousel-3col .item {
   margin-right: 25px;
 }
-/* -------- Twitter Feed Carousel ---------- */
-.twitter-feed.twitter-carousel {
-  color: #111111;
-  font-size: 16px;
-}
-.twitter-feed.twitter-carousel a {
-  color: #111111;
-}
-.twitter-feed .date {
-  font-size: 12px;
-}
-.twitter-feed.twitter-white,
-.twitter-feed.twitter-white a {
-  color: #fff;
-}
 /* -------- BX Slider ---------- */
 .bx-wrapper {
   margin: 0 auto 7px;
@@ -7678,23 +7663,6 @@ blockquote p {
   font-size: 16px;
   margin-right: 8px;
   vertical-align: middle;
-}
-.widget .twitter-feed li {
-  font-size: 13px;
-  margin-bottom: 15px;
-  margin-top: 0px;
-  padding-left: 30px;
-}
-.widget .twitter-feed li.item {
-  position: relative;
-}
-.widget .twitter-feed li::after {
-  content: "\f099";
-  font-size: 24px;
-  font-family: fontawesome;
-  left: 0;
-  position: absolute;
-  top: 0;
 }
 .widget .social-icons li {
   margin-bottom: 0;

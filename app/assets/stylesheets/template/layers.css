@@ -1,12 +1,3 @@
-.tp-caption.Twitter-Content a, .tp-caption.Twitter-Content a:visited {
-  color: #0084B4 !important;
-}
-
-.tp-caption.Twitter-Content a:hover {
-  color: #0084B4 !important;
-  text-decoration: underline !important;
-}
-
 .tp-caption.medium_grey, .medium_grey {
   background-color: #888;
   border-style: none;
@@ -2253,83 +2244,6 @@
   text-decoration: none;
 }
 
-.tp-caption.Twitter-Favorites, .Twitter-Favorites {
-  background-color: rgba(255, 255, 255, 0);
-  border-color: transparent;
-  border-radius: 0 0 0 0;
-  border-style: none;
-  border-width: 0;
-  color: rgba(136, 153, 166, 1.00);
-  font-family: Roboto;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 22px;
-  padding: 0;
-  text-align: left;
-  text-decoration: none;
-}
-
-.tp-caption.Twitter-Link, .Twitter-Link {
-  background-color: rgba(255, 255, 255, 1.00);
-  border-color: transparent;
-  border-radius: 30px 30px 30px 30px;
-  border-style: none;
-  border-width: 0;
-  color: rgba(135, 153, 165, 1.00);
-  font-family: Roboto;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 15px;
-  padding: 11px 11px 9px;
-  text-align: left;
-  text-decoration: none;
-}
-
-.tp-caption.Twitter-Link:hover, .Twitter-Link:hover {
-  background-color: rgba(0, 132, 180, 1.00);
-  border-color: transparent;
-  border-radius: 30px 30px 30px 30px;
-  border-style: none;
-  border-width: 0;
-  color: rgba(255, 255, 255, 1.00);
-  text-decoration: none;
-}
-
-.tp-caption.Twitter-Retweet, .Twitter-Retweet {
-  background-color: rgba(255, 255, 255, 0);
-  border-color: transparent;
-  border-radius: 0 0 0 0;
-  border-style: none;
-  border-width: 0;
-  color: rgba(136, 153, 166, 1.00);
-  font-family: Roboto;
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 22px;
-  padding: 0;
-  text-align: left;
-  text-decoration: none;
-}
-
-.tp-caption.Twitter-Content, .Twitter-Content {
-  background-color: rgba(255, 255, 255, 1.00);
-  border-color: transparent;
-  border-radius: 0 0 0 0;
-  border-style: none;
-  border-width: 0;
-  color: rgba(41, 47, 51, 1.00);
-  font-family: Roboto;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 28px;
-  padding: 30px 30px 70px;
-  text-align: left;
-  text-decoration: none;
-}
 
 .revtp-searchform input[type="text"], .revtp-searchform input[type="email"], .revtp-form input[type="text"], .revtp-form input[type="email"] {
   font-family: "Arial";
@@ -2912,15 +2826,6 @@
   border-radius: 0px;
 }
 
-.tp-caption.Twitter-Content a, .tp-caption.Twitter-Content a:visited {
-  color: #0084B4 !important
-}
-
-.tp-caption.Twitter-Content a:hover {
-  color: #0084B4 !important;
-  text-decoration: underline !important
-}
-
 .tp-caption.Concept-Title, .Concept-Title {
   color: rgba(255, 255, 255, 1.00);
   font-size: 70px;
@@ -3148,15 +3053,6 @@
 
 .tp-caption.Concept-Content-Dark a:hover {
   border-bottom: 1px solid transparent !important;
-}
-
-.tp-caption.Twitter-Content a, .tp-caption.Twitter-Content a:visited {
-  color: #0084B4 !important
-}
-
-.tp-caption.Twitter-Content a:hover {
-  color: #0084B4 !important;
-  text-decoration: underline !important
 }
 
 .tp-caption.Creative-Title, .Creative-Title {
