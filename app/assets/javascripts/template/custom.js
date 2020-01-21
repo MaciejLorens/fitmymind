@@ -795,13 +795,7 @@ var THEMEMASCOT = THEMEMASCOT || {};
 
       var t = setTimeout(function() {
         THEMEMASCOT.widget.TM_shopClickEvents();
-        THEMEMASCOT.widget.TM_verticalMasonryTimeline();
-        THEMEMASCOT.widget.TM_masonryIsotop();
-        THEMEMASCOT.widget.TM_pieChart();
-        THEMEMASCOT.widget.TM_progressBar();
         THEMEMASCOT.widget.TM_funfact();
-        THEMEMASCOT.widget.TM_instagramFeed();
-        THEMEMASCOT.widget.TM_jflickrfeed();
         THEMEMASCOT.widget.TM_accordion_toggles();
         THEMEMASCOT.widget.TM_tooltip();
         //THEMEMASCOT.widget.TM_countDownTimer();
@@ -834,92 +828,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
       });
     },
 
-
-    /* ---------------------------------------------------------------------- */
-    /* ----------------------- Vertical Masonry Timeline -------------------- */
-    /* ---------------------------------------------------------------------- */
-    TM_verticalMasonryTimeline: function() {
-      var $masonry_timeline = $('.vertical-masonry-timeline');
-      $masonry_timeline.isotope({
-        itemSelector : '.each-masonry-item',
-        sortBy: 'original-order',
-        layoutMode: 'masonry',
-        resizable: false
-      });
-
-      //=====> Timeline Positions
-      function  timeline_on_left_and_right(){
-        $masonry_timeline.children('.each-masonry-item').each(function(index, element) {
-          var last_child = $(this);
-          var prev_last  = $(this).prev();
-          var last_child_offset = parseInt(last_child.css('top'), 10);
-          var prev_last_offset  = parseInt(prev_last.css('top'), 10);
-          var offset_icon       = last_child_offset - prev_last_offset;
-
-          var go_top_to = 0;
-          if(offset_icon){
-            if ( offset_icon <= 87 ){
-              go_top_to = 87 - offset_icon;
-              last_child.find('.timeline-post-format').animate({
-                top: go_top_to
-              }, 300);
-            }
-          }
-
-          if( $(this).position().left === 0 ){
-            $(this).removeClass('item-right');
-            $(this).addClass('item-left');
-          }else{
-            $(this).removeClass('item-left');
-            $(this).addClass('item-right');
-          }
-        });
-      }
-      timeline_on_left_and_right();
-
-      $(window).resize(function() {
-        timeline_on_left_and_right();
-      });
-    },
-
-    /* ---------------------------------------------------------------------- */
-    /* ----------------------------- Masonry Isotope ------------------------ */
-    /* ---------------------------------------------------------------------- */
-    TM_masonryIsotop: function() {
-      var isotope_mode;
-      if ($portfolio_gallery.hasClass("masonry")){
-        isotope_mode = "masonry";
-      } else{
-        isotope_mode = "fitRows";
-      }
-
-      //isotope firsttime loading
-      $portfolio_gallery.imagesLoaded(function(){
-        $portfolio_gallery.isotope({
-          itemSelector: '.portfolio-item',
-          layoutMode: isotope_mode,
-          filter: "*"
-        });
-      });
-
-      //isotope filter
-      $(document.body).on('click', portfolio_filter, function(e) {
-        $(portfolio_filter).removeClass("active");
-        $(this).addClass("active");
-        var fselector = $(this).data('filter');
-
-        $portfolio_gallery.isotope({
-          itemSelector: '.portfolio-item',
-          layoutMode: isotope_mode,
-          filter: fselector
-        });
-        return false;
-      });
-
-      THEMEMASCOT.slider.TM_flexslider();
-
-    },
-
     TM_portfolioFlexSliderGalleryPopUpInit: function() {
       var $flexSliders = $portfolio_gallery.find('.slides');
       $flexSliders.each(function () {
@@ -938,22 +846,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
       });
     },
 
-    TM_isotopeGridRearrange: function() {
-      var isotope_mode;
-      if ($portfolio_gallery.hasClass("masonry")){
-        isotope_mode = "masonry";
-      } else{
-        isotope_mode = "fitRows";
-      }
-      $portfolio_gallery.isotope({
-        itemSelector: '.portfolio-item',
-        layoutMode: isotope_mode
-      });
-    },
-
-    TM_isotopeGridShuffle: function() {
-      $portfolio_gallery.isotope('shuffle');
-    },
 
     /* ---------------------------------------------------------------------- */
     /* ----------------------------- CountDown ------------------------------ */
@@ -973,56 +865,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
       });
     },
 
-
-    /* ---------------------------------------------------------------------- */
-    /* ----------------------- pie chart / circle skill bar ----------------- */
-    /* ---------------------------------------------------------------------- */
-    TM_pieChart: function() {
-      var $piechart = $('.piechart');
-      $piechart.appear();
-      $(document.body).on('appear', '.piechart', function() {
-        var current_item = $(this);
-        if (!current_item.hasClass('appeared')) {
-          var barcolor = current_item.data('barcolor');
-          var trackcolor = current_item.data('trackcolor');
-          var linewidth = current_item.data('linewidth');
-          var boxwidth = current_item.data('boxwidth');
-          current_item.css("width", boxwidth);
-          current_item.easyPieChart({
-            animate: 3000,
-            barColor: barcolor,
-            trackColor: trackcolor,
-            easing: 'easeOutBounce',
-            lineWidth: linewidth,
-            size: boxwidth,
-            lineCap: 'square',
-            scaleColor: false,
-            onStep: function(from, to, percent) {
-              $(this.el).find('span').text(Math.round(percent));
-            }
-          });
-          current_item.addClass('appeared');
-        }
-      });
-    },
-
-    /* ---------------------------------------------------------------------- */
-    /* ------------------- progress bar / horizontal skill bar -------------- */
-    /* ---------------------------------------------------------------------- */
-    TM_progressBar: function() {
-      var $progress_bar = $('.progress-bar');
-      $progress_bar.appear();
-      $(document.body).on('appear', '.progress-bar', function() {
-        var current_item = $(this);
-        if (!current_item.hasClass('appeared')) {
-          var percent = current_item.data('percent');
-          var barcolor = current_item.data('barcolor');
-          current_item.append('<span class="percent">' + percent + '%' + '</span>').css('background-color', barcolor).css('width', percent + '%').addClass('appeared');
-        }
-
-      });
-    },
-
     /* ---------------------------------------------------------------------- */
     /* ------------------------ Funfact Number Counter ---------------------- */
     /* ---------------------------------------------------------------------- */
@@ -1036,76 +878,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
             current_item.animateNumbers(current_item.attr("data-value"), true, parseInt(current_item.attr("data-animation-duration"), 10)).addClass('appeared');
           }
         });
-      });
-    },
-
-    /* ---------------------------------------------------------------------- */
-    /* ----------------------------- Flickr Feed ---------------------------- */
-    /* ---------------------------------------------------------------------- */
-    TM_instagramFeed: function() {
-      $('.instagram-feed-carousel').each(function() {
-        var current_div = $(this);
-        var instagramFeed = new Instafeed({
-          target: current_div.attr('id'),
-          get: 'user',
-          userId: current_div.data('userid'),
-          accessToken: '1215763826.467ede5.aa54392aa9eb46f0b9e7191f7211ec3a',
-          resolution: 'low_resolution',
-          limit: 9,
-          template: '<div class="item"><figure><img src="{{image}}" /><a href="{{link}}" class="link-out" target="_blank"><i class="fa fa-link"></i></a></figure></div>',
-          after: function() {
-            current_div.owlCarousel({
-              rtl: THEMEMASCOT.isRTL.check(),
-              autoplay: false,
-              autoplayTimeout: 4000,
-              loop: true,
-              margin: 15,
-              dots: true,
-              nav: false,
-              responsive: {
-                0: {
-                  items: 2
-                },
-                768: {
-                  items: 4
-                },
-                1000: {
-                  items: 5
-                }
-              }
-            });
-          }
-        });
-        instagramFeed.run();
-      });
-
-      $('.instagram-feed').each(function() {
-        var current_div = $(this);
-        var instagramFeed = new Instafeed({
-          target: current_div.attr('id'),
-          get: 'user',
-          userId: current_div.data('userid'),
-          accessToken: '1215763826.467ede5.aa54392aa9eb46f0b9e7191f7211ec3a',
-          resolution: 'low_resolution',
-          limit: 9,
-          template: '<div class="item"><figure><img src="{{image}}" /><a href="{{link}}" class="link-out" target="_blank"><i class="fa fa-link"></i></a></figure></div>',
-          after: function() {
-          }
-        });
-        instagramFeed.run();
-      });
-    },
-
-    /* ---------------------------------------------------------------------- */
-    /* ---------------------------- Flickr Feed ----------------------------- */
-    /* ---------------------------------------------------------------------- */
-    TM_jflickrfeed: function() {
-      $(".flickr-widget .flickr-feed").jflickrfeed({
-        limit: 9,
-        qstrings: {
-          id: "64742456@N00"
-        },
-        itemTemplate: '<a href="{{link}}" title="{{title}}" target="_blank"><img src="{{image_m}}" alt="{{title}}">  </a>'
       });
     },
 
@@ -1232,7 +1004,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
                   $portfolio_filter_first_child.trigger("click");
                 },500);
               });
-              //var t = setTimeout( function(){ $('#portfolio.portfolio-masonry,#portfolio.portfolio-full,#posts.post-masonry').isotope('layout'); }, 1200 );
               THEMEMASCOT.initialize.TM_magnificPopup_lightbox();
             },
             after: function(){
@@ -1473,8 +1244,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
           }
         });
       });
-
-
 
       $(".team-carousel-1col").owlCarousel({
         rtl: THEMEMASCOT.isRTL.check(),

@@ -760,17 +760,6 @@
   }, o.makeJQueryPlugin(), o
 });
 
-/*
- *  jQuery Isotope
- * -----------------------------------------------
-*/
-/*!
- * Isotope PACKAGED v2.2.2
- *
- * http://isotope.metafizzy.co
- * Copyright 2015 Metafizzy
- */
-
 !function (a) {
   function b() {
   }
