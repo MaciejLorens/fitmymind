@@ -1172,7 +1172,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
         THEMEMASCOT.slider.TM_typedAnimation();
         THEMEMASCOT.slider.TM_flexslider();
         THEMEMASCOT.slider.TM_owlCarousel();
-        THEMEMASCOT.slider.TM_maximageSlider();
       }, 0);
 
     },
