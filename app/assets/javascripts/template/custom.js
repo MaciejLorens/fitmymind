@@ -139,8 +139,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
       THEMEMASCOT.initialize.TM_customDataAttributes();
       THEMEMASCOT.initialize.TM_parallaxBgInit();
       THEMEMASCOT.initialize.TM_magnificPopup_lightbox();
-      THEMEMASCOT.initialize.TM_wow();
-      THEMEMASCOT.initialize.TM_equalHeightDivs();
     },
 
     /* ---------------------------------------------------------------------- */
@@ -563,45 +561,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
           fixedContentPos: true
         });
       }
-    },
-
-    /* ---------------------------------------------------------------------- */
-    /* ---------------------------- Wow initialize  ------------------------- */
-    /* ---------------------------------------------------------------------- */
-    TM_wow: function() {
-      var wow = new WOW({
-        mobile: false // trigger animations on mobile devices (default is true)
-      });
-      wow.init();
-    },
-
-    /* ---------------------------------------------------------------------- */
-    /* ---------------------------- equalHeights ---------------------------- */
-    /* ---------------------------------------------------------------------- */
-    TM_equalHeightDivs: function() {
-      /* equal heigh */
-      var $equal_height = $('.equal-height');
-      $equal_height.children('div').css('min-height', 'auto');
-      $equal_height.equalHeights();
-
-      /* equal heigh inner div */
-      var $equal_height_inner = $('.equal-height-inner');
-      $equal_height_inner.children('div').css('min-height', 'auto');
-      $equal_height_inner.children('div').children('div').css('min-height', 'auto');
-      $equal_height_inner.equalHeights();
-      $equal_height_inner.children('div').each(function() {
-        $(this).children('div').css('min-height', $(this).css('min-height'));
-      });
-
-      /* pricing-table equal heigh*/
-      var $equal_height_pricing_table = $('.equal-height-pricing-table');
-      $equal_height_pricing_table.children('div').css('min-height', 'auto');
-      $equal_height_pricing_table.children('div').children('div').css('min-height', 'auto');
-      $equal_height_pricing_table.equalHeights();
-      $equal_height_pricing_table.children('div').each(function() {
-        $(this).children('div').css('min-height', $(this).css('min-height'));
-      });
-
     }
 
   };
@@ -618,7 +577,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
         THEMEMASCOT.header.TM_topnavAnimate();
         THEMEMASCOT.header.TM_scrolltoTarget();
         THEMEMASCOT.header.TM_menuzord();
-        THEMEMASCOT.header.TM_navLocalScorll();
         THEMEMASCOT.header.TM_menuCollapseOnClick();
         THEMEMASCOT.header.TM_homeParallaxFadeEffect();
         THEMEMASCOT.header.TM_topsearch_toggle();
@@ -729,26 +687,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
           scrollTop: top
         }, 1500, 'easeInOutExpo');
 
-      });
-    },
-
-    /* ---------------------------------------------------------------------- */
-    /* -------------------------- Scroll navigation ------------------------- */
-    /* ---------------------------------------------------------------------- */
-    TM_navLocalScorll: function() {
-      var data_offset = -60;
-      $("#menuzord .menuzord-menu, #menuzord-right .menuzord-menu").localScroll({
-        target: "body",
-        duration: 800,
-        offset: data_offset,
-        easing: "easeInOutExpo"
-      });
-
-      $("#menuzord-side-panel .menuzord-menu, #menuzord-verticalnav .menuzord-menu, #fullpage-nav").localScroll({
-        target: "body",
-        duration: 800,
-        offset: 0,
-        easing: "easeInOutExpo"
       });
     },
 
