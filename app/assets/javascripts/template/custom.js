@@ -138,11 +138,8 @@ var THEMEMASCOT = THEMEMASCOT || {};
       THEMEMASCOT.initialize.TM_platformDetect();
       THEMEMASCOT.initialize.TM_customDataAttributes();
       THEMEMASCOT.initialize.TM_parallaxBgInit();
-      THEMEMASCOT.initialize.TM_resizeFullscreen();
       THEMEMASCOT.initialize.TM_magnificPopup_lightbox();
       THEMEMASCOT.initialize.TM_wow();
-      THEMEMASCOT.initialize.TM_fitVids();
-      THEMEMASCOT.initialize.TM_YTPlayer();
       THEMEMASCOT.initialize.TM_equalHeightDivs();
     },
 
@@ -321,14 +318,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
       } else {
         $('.parallax').addClass("mobile-parallax");
       }
-    },
-
-    /* ---------------------------------------------------------------------- */
-    /* --------------------------- Home Resize Fullscreen ------------------- */
-    /* ---------------------------------------------------------------------- */
-    TM_resizeFullscreen: function() {
-      var windowHeight = $window.height();
-      $('.fullscreen, .revslider-fullscreen').height(windowHeight);
     },
 
     /* ---------------------------------------------------------------------- */
@@ -587,20 +576,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
     },
 
     /* ---------------------------------------------------------------------- */
-    /* ----------------------------- Fit Vids ------------------------------- */
-    /* ---------------------------------------------------------------------- */
-    TM_fitVids: function() {
-      $body.fitVids();
-    },
-
-    /* ---------------------------------------------------------------------- */
-    /* ----------------------------- YT Player for Video -------------------- */
-    /* ---------------------------------------------------------------------- */
-    TM_YTPlayer: function() {
-      $(".player").mb_YTPlayer();
-    },
-
-    /* ---------------------------------------------------------------------- */
     /* ---------------------------- equalHeights ---------------------------- */
     /* ---------------------------------------------------------------------- */
     TM_equalHeightDivs: function() {
@@ -637,7 +612,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
     init: function() {
 
       var t = setTimeout(function() {
-        THEMEMASCOT.header.TM_fullscreenMenu();
         THEMEMASCOT.header.TM_sidePanelReveal();
         THEMEMASCOT.header.TM_scroolToTopOnClick();
         THEMEMASCOT.header.TM_scrollToFixed();
@@ -651,16 +625,6 @@ var THEMEMASCOT = THEMEMASCOT || {};
       }, 0);
 
     },
-
-
-    /* ---------------------------------------------------------------------- */
-    /* ------------------------- menufullpage ---------------------------- */
-    /* ---------------------------------------------------------------------- */
-    TM_fullscreenMenu: function() {
-      var $menufullpage = $('.menu-full-page .fullpage-nav-toggle');
-      $menufullpage.menufullpage();
-    },
-
 
     /* ---------------------------------------------------------------------- */
     /* ------------------------- Side Push Panel ---------------------------- */
@@ -2242,26 +2206,11 @@ var THEMEMASCOT = THEMEMASCOT || {};
     }
   };
 
-  THEMEMASCOT.documentOnResize = {
-
-    init: function() {
-
-      var t = setTimeout(function() {
-        THEMEMASCOT.initialize.TM_equalHeightDivs();
-        THEMEMASCOT.initialize.TM_resizeFullscreen();
-      }, 0);
-
-    }
-
-  };
-
-
   THEMEMASCOT.documentOnLoad = {
 
     init: function() {
 
       $window.trigger("scroll");
-      $window.trigger("resize");
 
       var t = setTimeout(function() {
         THEMEMASCOT.initialize.TM_hashForwarding();
@@ -2301,21 +2250,16 @@ var THEMEMASCOT = THEMEMASCOT || {};
   var $window = $(window),
     $html = $('html'),
     $body = $('body'),
-    $wrapper = $('#wrapper'),
-    $header = $('#header'),
-    $footer = $('#footer'),
     $sections = $('section'),
     $portfolio_gallery = $(".portfolio-gallery"),
     portfolio_filter = ".portfolio-filter a",
-    $portfolio_filter_first_child = $(".portfolio-filter a:eq(0)"),
-    $portfolio_flex_slider = $(".portfolio-slider");
+    $portfolio_filter_first_child = $(".portfolio-filter a:eq(0)");
 
   /* ---------------------------------------------------------------------- */
   /* ---------------------------- Call Functions -------------------------- */
   /* ---------------------------------------------------------------------- */
   $(document).ready(THEMEMASCOT.documentOnReady.init);
   $window.load(THEMEMASCOT.documentOnLoad.init);
-  $window.on('resize', THEMEMASCOT.documentOnResize.init);
 
 })(jQuery);
 
