@@ -12,7 +12,6 @@
 //
 //= require turbolinks
 //= require template/jquery-2.1.4.min
-//= require template/jquery-ui.min
 //= require template/bootstrap.min
 //= require template/jquery-plugin-collection
 
