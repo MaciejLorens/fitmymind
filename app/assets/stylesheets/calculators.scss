@@ -4,30 +4,19 @@
   }
 }
 
-.calculators-tags {
-  background-color: #292B33;
-  color: #E8E8E8;
-  font-size: 16px;
-  border: 1px solid #ABD62E;
+.menu-tag {
+  border: 2px solid #ABD62E;
+  color: #ABD62E;
   display: inline-block;
-  margin: 5px 4px 5px -2px;
+  float: left;
   padding: 5px 10px;
+  margin: 5px;
+  min-width: 120px;
+  text-align: center;
+  font-weight: 800;
 
-  &:visited {
-    color: #E8E8E8;
-    border: 1px solid #ABD62E;
-    background-color: #292B33;
-  }
-
-  &.active {
-    color: #E8E8E8;
-    border: 1px solid #292B33;
+  &.active, &:hover {
     background-color: #ABD62E;
-  }
-
-  &:hover {
-    color: #E8E8E8;
-    border: 1px solid #292B33;
-    background-color: #ABD62E;
+    color: white;
   }
 }

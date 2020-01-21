@@ -1,6 +1,6 @@
 <%= render partial: 'title' %>
 
-<section id="gallery" class="bg-grey">
+<section class="bg-grey">
   <div class="container-fluid pb-0">
 
     <div class="section-title text-center">
@@ -13,16 +13,29 @@
           <p class="text-uppercase letter-space-4">
             Więcej zdjęć z naszego gabinetu znajdziesz na facebooku i instagramie
           </p>
-
-          <ul class="gallery-filter-btns">
-            <li><%= link_to 'Wszystkie', '#', class: 'gallery-filter-btn active', 'data-filter' => 'all' %></li>
-            <li><%= link_to 'Gabinet', '#', class: 'gallery-filter-btn', 'data-filter' => 'office' %></li>
-            <li><%= link_to 'Ciekawostki', '#', class: 'gallery-filter-btn', 'data-filter' => 'curiosities' %></li>
-            <li><%= link_to 'Wydarzenia', '#', class: 'gallery-filter-btn', 'data-filter' => 'events' %></li>
-          </ul>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<section class="bg-grey">
+  <div class="container pt-0 pb-0">
+    <div class="section-content">
+      <div class="col-md-6 col-md-offset-3 col-xs-12">
+
+        <%= link_to 'Wszystkie', '#', class: 'menu-tag gallery-filter-btn active', 'data-filter' => 'all' %>
+        <%= link_to 'Gabinet', '#', class: 'menu-tag gallery-filter-btn', 'data-filter' => 'office' %>
+        <%= link_to 'Ciekawostki', '#', class: 'menu-tag gallery-filter-btn', 'data-filter' => 'curiosities' %>
+        <%= link_to 'Wydarzenia', '#', class: 'menu-tag gallery-filter-btn', 'data-filter' => 'events' %>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery" class="bg-grey">
+  <div class="container-fluid pb-0">
 
     <div class="section-content">
       <div class="row">
