@@ -15,10 +15,12 @@
 //= require template/jquery-ui.min
 //= require template/bootstrap.min
 //= require template/jquery-plugin-collection
+
 //= require template/jquery.themepunch.tools.min
 //= require template/jquery.themepunch.revolution.min
 //= require template/calendar-events-data
 //= require template/google-map-init
+
 //= require home
 //= require services
 //= require team

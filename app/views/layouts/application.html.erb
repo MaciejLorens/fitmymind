@@ -24,14 +24,7 @@
     </script>
     <!-- End Google Analytics -->
 
-    <!-- Favicon and Touch Icons -->
-    <link href="images/favicon.png" rel="shortcut icon" type="image/png">
-    <link href="images/apple-touch-icon.png" rel="apple-touch-icon">
-    <link href="images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
-    <link href="images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
-    <link href="images/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
-
-<!--    <script src="js/custom-rev-slider.js"></script>-->
+    <%= favicon_link_tag 'favicon_64.png' %>
 
     <link  href="https://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
 
@@ -44,8 +37,6 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
-
-    <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaR_BALevZSQjSdq3fmty7urX2mMWS4Y" data-turbolinks-eval="false"></script>
     <%= javascript_include_tag 'application' %>
   </head>
 
