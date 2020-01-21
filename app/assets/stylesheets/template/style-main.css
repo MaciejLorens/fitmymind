@@ -5821,9 +5821,6 @@ blockquote p {
 .icon-box .icon.icon-white.icon-border-effect::after {
   box-shadow: 0 0 0 3px #fff;
 }
-.icon-box .icon.icon-bordered {
-  border: 1px solid #777777;
-}
 .icon-box .icon.icon-bordered:hover {
   background-color: #777777;
   color: #fff;
