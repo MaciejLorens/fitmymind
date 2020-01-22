@@ -6,3 +6,19 @@ $(document).on 'turbolinks:load', () ->
     $(@).hide()
     $('.read-more-content').addClass('hidden')
     $(@).parent().find('span').removeClass('hidden')
+
+  $("#services-submenu").mouseenter ->
+    unless $(".topnav").hasClass('responsive')
+      $(".submenu").css('display', 'inline-grid')
+
+  $(".submenu").mouseenter ->
+    unless $(".topnav").hasClass('responsive')
+      $(".submenu").css('display', 'inline-grid')
+
+  $("#services-submenu").mouseleave (e) ->
+    unless $(".topnav").hasClass('responsive')
+      $(".submenu").css('display', 'none')
+
+  $(".submenu").mouseleave (e) ->
+    unless $(".topnav").hasClass('responsive')
+      $(".submenu").css('display', 'none')

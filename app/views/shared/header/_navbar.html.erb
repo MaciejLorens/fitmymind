@@ -23,7 +23,12 @@
 
         <div class="my-menu no-bg">
           <%= link_to 'Home', root_path, class: controller_name == 'home' && action_name == 'index' ? 'active' : '' %>
-          <%= link_to 'Usługi', services_path, class: controller_name == 'services' ? 'active' : '' %>
+          <%= link_to 'Usługi <i class="fa fa-angle-down"></i>'.html_safe, services_path, class: controller_name == 'services' ? 'active' : '', id: 'services-submenu' %>
+          <div class="submenu">
+            <%= link_to 'Metabolic Balance', metabolic_balance_path %>
+            <%= link_to 'Bonne Sante', bonne_sante_path %>
+            <%= link_to 'Prelekcje', lectures_path %>
+          </div>
           <%= link_to 'Zespół', team_path, class: controller_name == 'team' ? 'active' : '' %>
           <%= link_to 'Rezultaty', results_path, class: controller_name == 'results' ? 'active' : '' %>
           <%= link_to 'Blog', blog_path, class: controller_name == 'posts' ? 'active' : '' %>
@@ -38,59 +43,6 @@
         </div>
       </nav>
 
-      <nav id="menuzord-right" class="menuzord orange no-bg">
-
-        <%= link_to image_tag('fitmymind_niebieskie.jpg'), root_path, class: 'menuzord-brand pull-left flip' %>
-
-        <ul class="menuzord-menu">
-          <li class="<%= controller_name == 'home' && action_name == 'index' ? 'active' : '' %>">
-            <%= link_to 'Home', root_path %>
-          </li>
-          <li class="<%= controller_name == 'services' ? 'active' : '' %>">
-            <%= link_to 'Usługi', services_path %>
-
-            <ul class="dropdown">
-              <li>
-                <%= link_to 'Metabolic Balance', metabolic_balance_path %>
-              </li>
-              <li>
-                <%= link_to 'Bonne Sante', bonne_sante_path %>
-              </li>
-              <!--              <li>-->
-              <%#= link_to 'Metamorfoza', metamorphosis_path %>
-              <!--              </li>-->
-              <!--              <li>-->
-              <%#= link_to 'Ars Medica', ars_medica_path %>
-              <!--              </li>-->
-              <li>
-                <%= link_to 'Prelekcje', lectures_path %>
-              </li>
-            </ul>
-          </li>
-
-          <li class="<%= controller_name == 'team' ? 'active' : '' %>">
-            <%= link_to 'Zespół', team_path %>
-          </li>
-          <li class="<%= controller_name == 'results' ? 'active' : '' %>">
-            <%= link_to 'Rezultaty', results_path %>
-          </li>
-          <li class="<%= controller_name == 'posts' ? 'active' : '' %>">
-            <%= link_to 'Blog', blog_path %>
-          </li>
-          <li class="<%= controller_name == 'gallery' ? 'active' : '' %>">
-            <%= link_to 'Galeria', gallery_path %>
-          </li>
-          <li class="<%= controller_name == 'calculators' ? 'active' : '' %>">
-            <%= link_to 'Kalkulatory', calculators_path %>
-          </li>
-          <li class="<%= controller_name == 'corporations' ? 'active' : '' %>">
-            <%= link_to 'Dla Firm', corporations_path %>
-          </li>
-          <li class="<%= controller_name == 'contact' ? 'active' : '' %>">
-            <%= link_to 'Kontakt', contact_path %>
-          </li>
-        </ul>
-      </nav>
     </div>
   </div>
 </div>
