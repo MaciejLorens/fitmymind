@@ -22,3 +22,7 @@ $(document).on 'turbolinks:load', () ->
   $(".submenu").mouseleave (e) ->
     unless $(".topnav").hasClass('responsive')
       $(".submenu").css('display', 'none')
+
+  $(".icon").click (e) ->
+    e.preventDefault()
+    $("#myTopnav").toggleClass("responsive")
