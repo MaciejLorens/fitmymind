@@ -24,10 +24,12 @@
     <div class="section-content">
       <div class="col-md-6 col-md-offset-3 col-xs-12">
 
-        <%= link_to 'Wszystkie', '#', class: 'menu-tag gallery-filter-btn active', 'data-filter' => 'all' %>
-        <%= link_to 'Gabinet', '#', class: 'menu-tag gallery-filter-btn', 'data-filter' => 'office' %>
-        <%= link_to 'Ciekawostki', '#', class: 'menu-tag gallery-filter-btn', 'data-filter' => 'curiosities' %>
-        <%= link_to 'Wydarzenia', '#', class: 'menu-tag gallery-filter-btn', 'data-filter' => 'events' %>
+        <div class="gallery-filter-btns">
+          <%= link_to 'Wszystkie', '#', class: 'menu-tag gallery-filter-btn active', 'data-filter' => 'all' %>
+          <%= link_to 'Gabinet', '#', class: 'menu-tag gallery-filter-btn', 'data-filter' => 'office' %>
+          <%= link_to 'Ciekawostki', '#', class: 'menu-tag gallery-filter-btn', 'data-filter' => 'curiosities' %>
+          <%= link_to 'Wydarzenia', '#', class: 'menu-tag gallery-filter-btn', 'data-filter' => 'events' %>
+        </div>
 
       </div>
     </div>
@@ -46,77 +48,64 @@
           <!-- Portfolio Item Start -->
           <div class="portfolio-item office">
             <div class="thumb">
+              <%= image_tag 'galeria/biurko.jpg', alt: 'galeria bonne sante dlugopisy' %>
+              <div class="overlay-shade"></div>
+              <div class="text-holder text-center">
+                <h4 class="title">Prezent od naszego pacjenta :)</h4>
+              </div>
+              <a class="hover-link" data-lightbox="image" href="assets/galeria/biurko_big.jpg">View more</a>
+            </div>
+          </div>
+          <!-- Portfolio Item End -->
+
+          <!-- Portfolio Item Start -->
+          <div class="portfolio-item office">
+            <div class="thumb">
+              <%= image_tag 'galeria/bon_podarunkowy.jpg', alt: 'galeria bonne sante dlugopisy' %>
+              <div class="overlay-shade"></div>
+              <div class="text-holder text-center">
+                <h4 class="title">Prezent od naszego pacjenta :)</h4>
+              </div>
+              <a class="hover-link" data-lightbox="image" href="assets/galeria/bon_podarunkowy_big.jpg">View more</a>
+            </div>
+          </div>
+          <!-- Portfolio Item End -->
+
+          <!-- Portfolio Item Start -->
+          <div class="portfolio-item office">
+            <div class="thumb">
+              <%= image_tag 'galeria/poczekalnia_bonne_sante.jpg', alt: 'galeria bonne sante dlugopisy' %>
+              <div class="overlay-shade"></div>
+              <div class="text-holder text-center">
+                <h4 class="title">Prezent od naszego pacjenta :)</h4>
+              </div>
+              <a class="hover-link" data-lightbox="image" href="assets/galeria/poczekalnia_bonne_sante_big.jpg">View more</a>
+            </div>
+          </div>
+          <!-- Portfolio Item End -->
+
+          <!-- Portfolio Item Start -->
+          <div class="portfolio-item office">
+            <div class="thumb">
+              <%= image_tag 'galeria/krzesla.jpg', alt: 'galeria bonne sante dlugopisy' %>
+              <div class="overlay-shade"></div>
+              <div class="text-holder text-center">
+                <h4 class="title">Prezent od naszego pacjenta :)</h4>
+              </div>
+              <a class="hover-link" data-lightbox="image" href="assets/galeria/krzesla_big.jpg">View more</a>
+            </div>
+          </div>
+          <!-- Portfolio Item End -->
+
+          <!-- Portfolio Item Start -->
+          <div class="portfolio-item office">
+            <div class="thumb">
               <%= image_tag 'galeria/dlugopisy.jpg', alt: 'galeria bonne sante dlugopisy' %>
               <div class="overlay-shade"></div>
               <div class="text-holder text-center">
                 <h4 class="title">Prezent od naszego pacjenta :)</h4>
               </div>
               <a class="hover-link" data-lightbox="image" href="assets/galeria/dlugopisy.jpg">View more</a>
-            </div>
-          </div>
-          <!-- Portfolio Item End -->
-
-          <!-- Portfolio Item Start -->
-          <div class="portfolio-item office">
-            <div class="thumb">
-              <%= image_tag 'galeria/gabinet.jpg', alt: 'galeria bonne sante gabinet' %>
-              <div class="overlay-shade"></div>
-              <div class="text-holder text-center">
-                <h4 class="title">Wejście do naszego gabinetu przy ul. Dobrego Pasterza 120 :)</h4>
-              </div>
-              <a class="hover-link" data-lightbox="image" href="assets/galeria/gabinet.jpg">View more</a>
-            </div>
-          </div>
-          <!-- Portfolio Item End -->
-
-          <!-- Portfolio Item Start -->
-          <div class="portfolio-item curiosities">
-            <div class="thumb">
-              <%= image_tag 'galeria/ocet_na_zylaki.jpg', alt: 'galeria bonne sante ocet na zylaki' %>
-              <div class="overlay-shade"></div>
-              <div class="text-holder text-center">
-                <h4 class="title">Kosmetyczne triki :)</h4>
-              </div>
-              <a class="hover-link" data-lightbox="image" href="assets/galeria/ocet_na_zylaki.jpg">View more</a>
-            </div>
-          </div>
-          <!-- Portfolio Item End -->
-
-          <!-- Portfolio Item Start -->
-          <div class="portfolio-item office">
-            <div class="thumb">
-              <%= image_tag 'galeria/orzechy.jpg', alt: 'galeria bonne sante orzechy' %>
-              <div class="overlay-shade"></div>
-              <div class="text-holder text-center">
-                <h4 class="title">Orzechy od cudownej pacjentki :)</h4>
-              </div>
-              <a class="hover-link" data-lightbox="image" href="assets/galeria/orzechy.jpg">View more</a>
-            </div>
-          </div>
-          <!-- Portfolio Item End -->
-
-          <!-- Portfolio Item Start -->
-          <div class="portfolio-item curiosities">
-            <div class="thumb">
-              <%= image_tag 'galeria/pieczenie_ryby.jpg', alt: 'galeria bonne sante pieczenie ryby' %>
-              <div class="overlay-shade"></div>
-              <div class="text-holder text-center">
-                <h4 class="title">Kreatywna kuchnia :)</h4>
-              </div>
-              <a class="hover-link" data-lightbox="image" href="assets/galeria/pieczenie_ryby.jpg">View more</a>
-            </div>
-          </div>
-          <!-- Portfolio Item End -->
-
-          <!-- Portfolio Item Start -->
-          <div class="portfolio-item office">
-            <div class="thumb">
-              <%= image_tag 'galeria/mozliwosci.jpg', alt: 'galeria bonne sante mozliwosci' %>
-              <div class="overlay-shade"></div>
-              <div class="text-holder text-center">
-                <h4 class="title">Motywacja na dzisiaj :)</h4>
-              </div>
-              <a class="hover-link" data-lightbox="image" href="assets/galeria/mozliwosci.jpg">View more</a>
             </div>
           </div>
           <!-- Portfolio Item End -->
@@ -137,12 +126,77 @@
           <!-- Portfolio Item Start -->
           <div class="portfolio-item office">
             <div class="thumb">
-              <%= image_tag 'galeria/mech.jpg', alt: 'galeria bonne sante mech' %>
+              <%= image_tag 'galeria/food_forum.jpg', alt: 'galeria bonne sante dlugopisy' %>
               <div class="overlay-shade"></div>
               <div class="text-holder text-center">
-                <h4 class="title">Logo Bonne Sante wykonane przez naszego dietetyka :)</h4>
+                <h4 class="title">Prezent od naszego pacjenta :)</h4>
               </div>
-              <a class="hover-link" data-lightbox="image" href="assets/galeria/mech.jpg">View more</a>
+              <a class="hover-link" data-lightbox="image" href="assets/galeria/food_forum_big.jpg">View more</a>
+            </div>
+          </div>
+          <!-- Portfolio Item End -->
+
+          <!-- Portfolio Item Start -->
+          <div class="portfolio-item office">
+            <div class="thumb">
+              <%= image_tag 'galeria/gabinet_wnetrze.jpg', alt: 'galeria bonne sante dlugopisy' %>
+              <div class="overlay-shade"></div>
+              <div class="text-holder text-center">
+                <h4 class="title">Prezent od naszego pacjenta :)</h4>
+              </div>
+              <a class="hover-link" data-lightbox="image" href="assets/galeria/gabinet_wnetrze_big.jpg">View more</a>
+            </div>
+          </div>
+          <!-- Portfolio Item End -->
+
+          <!-- Portfolio Item Start -->
+          <div class="portfolio-item office">
+            <div class="thumb">
+              <%= image_tag 'galeria/gabinet.jpg', alt: 'galeria bonne sante gabinet' %>
+              <div class="overlay-shade"></div>
+              <div class="text-holder text-center">
+                <h4 class="title">Wejście do naszego gabinetu przy ul. Dobrego Pasterza 120 :)</h4>
+              </div>
+              <a class="hover-link" data-lightbox="image" href="assets/galeria/gabinet.jpg">View more</a>
+            </div>
+          </div>
+          <!-- Portfolio Item End -->
+
+          <!-- Portfolio Item Start -->
+          <div class="portfolio-item office">
+            <div class="thumb">
+              <%= image_tag 'galeria/orzechy.jpg', alt: 'galeria bonne sante orzechy' %>
+              <div class="overlay-shade"></div>
+              <div class="text-holder text-center">
+                <h4 class="title">Orzechy od cudownej pacjentki :)</h4>
+              </div>
+              <a class="hover-link" data-lightbox="image" href="assets/galeria/orzechy.jpg">View more</a>
+            </div>
+          </div>
+          <!-- Portfolio Item End -->
+
+          <!-- Portfolio Item Start -->
+          <div class="portfolio-item curiosities">
+            <div class="thumb">
+              <%= image_tag 'galeria/ocet_na_zylaki.jpg', alt: 'galeria bonne sante ocet na zylaki' %>
+              <div class="overlay-shade"></div>
+              <div class="text-holder text-center">
+                <h4 class="title">Kosmetyczne triki :)</h4>
+              </div>
+              <a class="hover-link" data-lightbox="image" href="assets/galeria/ocet_na_zylaki.jpg">View more</a>
+            </div>
+          </div>
+          <!-- Portfolio Item End -->
+
+          <!-- Portfolio Item Start -->
+          <div class="portfolio-item office">
+            <div class="thumb">
+              <%= image_tag 'galeria/mozliwosci.jpg', alt: 'galeria bonne sante mozliwosci' %>
+              <div class="overlay-shade"></div>
+              <div class="text-holder text-center">
+                <h4 class="title">Motywacja na dzisiaj :)</h4>
+              </div>
+              <a class="hover-link" data-lightbox="image" href="assets/galeria/mozliwosci.jpg">View more</a>
             </div>
           </div>
           <!-- Portfolio Item End -->
@@ -161,6 +215,19 @@
           <!-- Portfolio Item End -->
 
           <!-- Portfolio Item Start -->
+          <div class="portfolio-item curiosities">
+            <div class="thumb">
+              <%= image_tag 'galeria/pieczenie_ryby.jpg', alt: 'galeria bonne sante pieczenie ryby' %>
+              <div class="overlay-shade"></div>
+              <div class="text-holder text-center">
+                <h4 class="title">Kreatywna kuchnia :)</h4>
+              </div>
+              <a class="hover-link" data-lightbox="image" href="assets/galeria/pieczenie_ryby.jpg">View more</a>
+            </div>
+          </div>
+          <!-- Portfolio Item End -->
+
+          <!-- Portfolio Item Start -->
           <div class="portfolio-item office">
             <div class="thumb">
               <%= image_tag 'galeria/poczekalnia.jpg', alt: 'galeria poczekalnia' %>
@@ -169,6 +236,19 @@
                 <h4 class="title">Poczekalnia dla naszych pacjentów :)</h4>
               </div>
               <a class="hover-link" data-lightbox="image" href="assets/galeria/poczekalnia.jpg">View more</a>
+            </div>
+          </div>
+          <!-- Portfolio Item End -->
+
+          <!-- Portfolio Item Start -->
+          <div class="portfolio-item office">
+            <div class="thumb">
+              <%= image_tag 'galeria/mech.jpg', alt: 'galeria bonne sante mech' %>
+              <div class="overlay-shade"></div>
+              <div class="text-holder text-center">
+                <h4 class="title">Logo Bonne Sante wykonane przez naszego dietetyka :)</h4>
+              </div>
+              <a class="hover-link" data-lightbox="image" href="assets/galeria/mech.jpg">View more</a>
             </div>
           </div>
           <!-- Portfolio Item End -->
