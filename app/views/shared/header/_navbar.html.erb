@@ -1,6 +1,43 @@
+<style>
+
+</style>
+
+<script>
+  function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }
+</script>
+
+
 <div class="header-nav">
   <div class="header-nav-wrapper navbar-scrolltofixed bg-blue">
     <div class="container">
+
+      <nav id="myTopnav" class="topnav no-bg">
+        <%= link_to image_tag('fitmymind_niebieskie.jpg', size: '168x38'), root_path, class: controller_name == 'home' && action_name == 'index' ? 'logo active' : 'logo' %>
+
+        <div class="my-menu no-bg">
+          <%= link_to 'Home', root_path, class: controller_name == 'home' && action_name == 'index' ? 'active' : '' %>
+          <%= link_to 'Usługi', services_path, class: controller_name == 'services' ? 'active' : '' %>
+          <%= link_to 'Zespół', team_path, class: controller_name == 'team' ? 'active' : '' %>
+          <%= link_to 'Rezultaty', results_path, class: controller_name == 'results' ? 'active' : '' %>
+          <%= link_to 'Blog', blog_path, class: controller_name == 'posts' ? 'active' : '' %>
+          <%= link_to 'Galeria', gallery_path, class: controller_name == 'gallery' ? 'active' : '' %>
+          <%= link_to 'Kalkulatory', calculators_path, class: controller_name == 'calculators' ? 'active' : '' %>
+          <%= link_to 'Dla Firm', corporations_path, class: controller_name == 'corporations' ? 'active' : '' %>
+          <%= link_to 'Kontakt', contact_path, class: controller_name == 'contact' ? 'active' : '' %>
+
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a>
+        </div>
+      </nav>
+
       <nav id="menuzord-right" class="menuzord orange no-bg">
 
         <%= link_to image_tag('fitmymind_niebieskie.jpg'), root_path, class: 'menuzord-brand pull-left flip' %>
@@ -19,12 +56,12 @@
               <li>
                 <%= link_to 'Bonne Sante', bonne_sante_path %>
               </li>
-<!--              <li>-->
-                <%#= link_to 'Metamorfoza', metamorphosis_path %>
-<!--              </li>-->
-<!--              <li>-->
-                <%#= link_to 'Ars Medica', ars_medica_path %>
-<!--              </li>-->
+              <!--              <li>-->
+              <%#= link_to 'Metamorfoza', metamorphosis_path %>
+              <!--              </li>-->
+              <!--              <li>-->
+              <%#= link_to 'Ars Medica', ars_medica_path %>
+              <!--              </li>-->
               <li>
                 <%= link_to 'Prelekcje', lectures_path %>
               </li>
