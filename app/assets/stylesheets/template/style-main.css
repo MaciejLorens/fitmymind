@@ -2065,9 +2065,6 @@ section > .container-fluid {
   }
 }
 /* -------- Scrolltofixed ---------- */
-.header-nav .header-nav-wrapper.scroll-to-fixed-fixed.scroll-to-fixed-fixed {
-  border-bottom: 1px solid #eeeeee;
-}
 .header-nav .header-nav-absolute-wrapper.scroll-to-fixed-fixed.scroll-to-fixed-fixed .menuzord {
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
