@@ -599,10 +599,6 @@ fieldset[disabled] .btn-theme-colored.focus {
 .icon-box.iconbox-theme-colored .icon.icon-bordered {
   border-color: #ABD62E;
 }
-.icon-box.iconbox-theme-colored .icon.icon-bordered:hover {
-  background-color: #ABD62E;
-  color: #fff;
-}
 .icon-box.iconbox-theme-colored .icon.icon-gray:hover {
   background-color: #ABD62E;
   color: #fff;
