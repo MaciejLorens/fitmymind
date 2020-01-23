@@ -167,42 +167,6 @@
   left: 0px;
 }
 
-.tp-tab, .tp-thumb {
-  cursor: pointer;
-  position: absolute;
-  opacity: 0.5;
-  box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-}
-
-.tp-arr-imgholder, .tp-videoposter, .tp-thumb-image, .tp-tab-image {
-  background-position: center center;
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-  display: block;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-
-.tp-tab:hover, .tp-tab.selected, .tp-thumb:hover, .tp-thumb.selected {
-  opacity: 1;
-}
-
-.tp-tab-mask, .tp-thumb-mask {
-  box-sizing: border-box !important;
-  -webkit-box-sizing: border-box !important;
-  -moz-box-sizing: border-box !important
-}
-
-.tp-tabs, .tp-thumbs {
-  box-sizing: content-box !important;
-  -webkit-box-sizing: content-box !important;
-  -moz-box-sizing: content-box !important
-}
-
 .tp-bullet {
   width: 15px;
   height: 15px;
