@@ -1,72 +1,108 @@
-<section id="lifestyle">
-  <div class="container pb-0 pt-sm-50">
-    <div class="bg-lighter bg-img-right-top sm-no-bg mt-sm-0" data-margin-top="-350px" data-bg-img="assets/home/dzialanie.jpg">
+<section id="classes" class="bg-theme-colored-white">
+  <div class="container">
+    <div class="section-title text-center">
       <div class="row">
-        <div class="col-md-6 col-md-offset-1 p-sm-40 pt-sm-0 pb-sm-10 pt-50">
-          <h2 class="title text-uppercase"> FitMyMind <span class="text-white font-weight-300">Działanie</span></h2>
-          <p>
-            "Po kuracji pacjent ma nas nigdy więcej nie potrzebować" - to nasze motto. Naszym celem jest poprawa
-            zdrowia, zwiększenie świadomości żywieniowej, przekazanie wiedzy jak w różnych sytuacjach dbać o swój
-            organizm, redukcja stresu, lepszy sen i więcej energii. Zależy nam aby pacjenci odkryli nowego siebie i już
-            nie wracali do złych nawyków.
+        <div class="col-md-8 col-md-offset-2">
+
+          <p class="text-uppercase letter-space-4">
+            Odpowiadamy na wszystkie potrzeby naszych pacjentów poprzez dobór odpowiedniej usługi i planu żywieniowego
           </p>
 
-          <div class="icon-box text-left flip sm-text-center p-0 mt-50 mb-45 mt-sm-30">
-            <a href="#" class="icon mt-20 mb-30 mr-30 ml-30 pull-left flip sm-pull-none bg-theme-colored rotate">
-              <i class="flaticon-spa-flowers-on-human-feet text-white font-36 no-rotate"></i>
-            </a>
-            <div>
-              <h5 class="icon-box-title mt-15 mb-10"><strong>Dobór odpowiedniego planu</strong></h5>
-              <p>
-                Nie istnieje jeden doskonały plan żywieniowy ponieważ każdy z nas jest inny. W zależności od trybu
-                życia, jednostek chorobowych, aktywności fizycznej, poziomu stresu, preferencji żywieniowych należy
-                dobrać odpowieni i indywidualny plan.
-              </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container pt-0">
+      <div class="row mtli-row-clearfix">
+        <div class="col-md-3 mb-30">
+          <div class="item">
+            <div class="class-item box-hover-effect effect1 mb-md-30 bg-lighter">
+              <div class="thumb mb-20">
+                <%= image_tag 'home/metabolic_balance.jpg', alt: 'metabolic balance logo' %>
+              </div>
+              <div class="content text-center flip p-20 pt-0">
+                <h4 class="text-uppercase text-theme-colored letter-space-2">
+                  Metabolic Balance
+                </h4>
+
+                <div class="date">
+                  <em>
+                    Najbardziej zaawansowany technologicznie plan żywieniowy, tworzony na podstawie 37 parametrów krwi w
+                    instytucie Metabolic Balance GmbH Isen.
+                  </em>
+                </div>
+                <%= link_to 'Szczegóły', metabolic_balance_path, class: 'btn btn-flat btn-sm border-theme-colored mt-30' %>
+              </div>
             </div>
           </div>
+        </div>
 
-          <div class="icon-box text-left flip sm-text-center p-0 mb-45">
-            <a href="#" class="icon mt-20 mb-30 mr-30 ml-30 pull-left flip sm-pull-none bg-theme-colored rotate">
-              <i class="flaticon-spa-spa-facial-treatment-with-mask-and-massages text-white no-rotate font-48"></i>
-            </a>
-            <div>
-              <h5 class="icon-box-title mt-15 mb-10"><strong>Skuteczność</strong></h5>
-              <p>
-                Mamy setki zadowolonych pacjentów, jedni zmieścili się w garnitur ze ślubu, inni zaczeli uprawiać sport
-                ze swoimi dziećmi, jeszcze inni odstawili leki. Gdyby tylko dało się mierzyć poziom szczęścia
-                i samooceny pacjentów po kuracji przebiłoby to skalę.
-              </p>
+        <div class="col-md-3 mb-30">
+          <div class="item">
+            <div class="class-item box-hover-effect effect1 mb-md-30 bg-lighter">
+              <div class="thumb mb-20">
+                <%= image_tag 'home/bonne_sante.jpg', alt: 'bonne sante logo' %>
+              </div>
+              <div class="content text-center flip p-20 pt-0">
+                <h4 class="text-uppercase text-theme-colored letter-space-2">
+                  Bonne-Sante
+                </h4>
+
+                <div class="date">
+                  <em>
+                    Indywidualna kuracja miesięczna z cotygodniowymi konsultacjami, analizą składu ciała i zastrzykami
+                    motywacyjnymi.
+                  </em>
+                </div>
+                <%= link_to 'Szczegóły', bonne_sante_path, class: 'btn btn-flat btn-sm border-theme-colored mt-30' %>
+              </div>
             </div>
           </div>
+        </div>
 
-          <div class="icon-box text-left flip sm-text-center p-0 mb-45">
-            <a href="#" class="icon mt-20 mb-30 mr-30 ml-30 pull-left flip sm-pull-none bg-theme-colored rotate">
-              <i class="flaticon-spa-massage-and-spa text-white no-rotate"></i>
-            </a>
-            <div>
-              <h5 class="icon-box-title mt-15 mb-10"><strong>Wiedza</strong></h5>
-              <p>
-                Organizm człowieka można przyrównać do samochodu któremu nie wszystko jedno na jakim paliwie jedzie.
-                Podczas kuracji dowiesz się jak twoja maszyna działa i czemu czasem szwankuje, jak ją ulepszyć, jak jej
-                pomóc, i jak włączyć szósty bieg.
-              </p>
+        <div class="col-md-3 mb-30">
+          <div class="item">
+            <div class="class-item box-hover-effect effect1 mb-md-30 bg-lighter">
+              <div class="thumb mb-20">
+                <%= image_tag 'home/korporacje.jpg', alt: 'korporacje logo' %>
+              </div>
+              <div class="content text-center flip p-20 pt-0">
+                <h4 class="text-uppercase text-theme-colored letter-space-2">
+                  Dla Firm
+                </h4>
+                <div class="date">
+                  <em>
+                    Benefit dla pracowników. Program wprowadzający work-life balance do życia
+                    firmy. Nowatorskie zajęcia pod opieką dietetyka klinicznego.
+                  </em>
+                </div>
+                <%= link_to 'Szczegóły', corporations_path, class: 'btn btn-flat btn-sm border-theme-colored mt-30' %>
+              </div>
             </div>
           </div>
+        </div>
 
-          <div class="icon-box text-left flip sm-text-center p-0 mb-45">
-            <a href="#" class="icon mt-20 mb-30 mr-30 ml-30 pull-left flip sm-pull-none bg-theme-colored rotate">
-              <i class="flaticon-spa-man-lying-on-a-deck-chair-of-a-spa text-white no-rotate font-42"></i>
-            </a>
-            <div>
-              <h5 class="icon-box-title mt-15 mb-10"><strong>Empatia</strong></h5>
-              <p>
-                Co by się było gdybyś zamiast chodzić latami do różnych specjalistów w końcu trafił na kogoś kto cię
-                wysłucha na spokojnie. Bez 15 minutowego limitu czasu. Chcemy abyś się
-                otworzył bo często nasze potrzeby i problemy są nieco ukryte.
-              </p>
+        <div class="col-md-3 mb-30">
+          <div class="item">
+            <div class="class-item box-hover-effect effect1 mb-md-30 bg-lighter">
+              <div class="thumb mb-20">
+                <%= image_tag 'home/prelekcje.jpg', alt: 'prelekcje logo' %>
+              </div>
+              <div class="content text-center flip p-20 pt-0">
+                <h4 class="text-uppercase text-theme-colored letter-space-2">
+                  Prelekcje
+                </h4>
+
+                <div class="date">
+                  <em>
+                    Wykłady na temat zdrowego stylu życia dotyczące roli zbilansowanej diety, motywacji, redukcji
+                    stresu oraz pomiary uczestników.
+                  </em>
+                </div>
+                <%= link_to 'Szczegóły', lectures_path, class: 'btn btn-flat btn-sm border-theme-colored mt-30' %>
+              </div>
             </div>
           </div>
-
         </div>
       </div>
     </div>
