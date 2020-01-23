@@ -198,6 +198,7 @@
  * 1.8 -> Padding right
  * -----------------------------------------------
 */
+.pr-10 {padding-right: 10px !important}
 .pr-50 {padding-right: 50px !important}
 /*
  * 1.9 -> Padding bottom
@@ -232,9 +233,17 @@
 */
 .ml-md-0 {margin-left: 0!important;}
 
-.mt-sm-30 {margin-top: 30px !important}
-/*
- * 4.6 -> Margin left
- * -----------------------------------------------
-*/
-.ml-sm-0 {margin-left: 0!important;}
+@media (max-width: 991px) {
+
+  .mt-sm-30 {
+    margin-top: 30px !important
+  }
+
+  /*
+   * 4.6 -> Margin left
+   * -----------------------------------------------
+  */
+  .ml-sm-0 {
+    margin-left: 0 !important;
+  }
+}
