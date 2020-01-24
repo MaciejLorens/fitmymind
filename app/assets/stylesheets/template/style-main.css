@@ -280,7 +280,7 @@ iframe {
   color: #292B33 !important;
 }
 .bg-lighter {
-  background-color: #f7f7f7 !important;
+  background-color: #E8E8E8 !important;
 }
 .bg-lightest {
   background-color: #fcfcfc !important;
@@ -642,11 +642,6 @@ ul.list.list-white li a {
 .list-features {
   -moz-column-count: 3;
   column-count: 3;
-}
-.list-dashed > article {
-  border-bottom: 1px dashed #d3d3d3 !important;
-  margin-bottom: 7px;
-  padding-bottom: 7px;
 }
 .list-dashed > div {
   border-bottom: 1px dashed #d3d3d3 !important;
@@ -1371,7 +1366,7 @@ form textarea:focus {
   margin-top: 0;
 }
 .post .entry-content {
-  background: #f8f8f8;
+  background: #E8E8E8;
   padding: 15px;
 }
 .post .entry-date {

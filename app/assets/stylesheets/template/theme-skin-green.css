@@ -21,7 +21,7 @@ COLOR CODE: #ABD62E
   background-color: #ABD62E !important;
 }
 .bg-theme-colored-white {
-  background-color: #E8E8E8 !important;
+  background-color: #ffffff !important;
 }
 .bg-theme-colored-green {
   background-color: #ABD62E !important;
@@ -29,6 +29,11 @@ COLOR CODE: #ABD62E
 .bg-theme-colored-blue {
   background-color: #292B33 !important;
 }
+
+section {
+  background-color: #ffffff !important;
+}
+
 /* bg-hover-theme-color */
 .bg-hover-theme-colored:hover {
   background: #ABD62E !important;
