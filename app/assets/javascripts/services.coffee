@@ -27,6 +27,11 @@ $(document).on 'turbolinks:load', () ->
     $(".read-more-mb-who").show()
     $("#mb-who").hide()
 
+  $(".read-more-mb-how").click (e) ->
+    e.preventDefault()
+    $(@).hide()
+    $(".mb-how").show()
+
   $(".mb-menu-tags").click (e) ->
     e.preventDefault()
     target = $(@).data('target')
