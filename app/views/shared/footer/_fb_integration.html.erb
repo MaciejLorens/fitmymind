@@ -1,14 +1,13 @@
-<!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root" data-turbolinks-permanent></div>
 
-<% greeting = Time.now.hour >= 18 ? 'Dzień dobry' : 'Dobry wieczór' %>
+<% greeting = Time.now.hour < 18 ? 'Dzień dobry' : 'Dobry wieczór' %>
 <div data-turbolinks-no-cache
      class="fb-customerchat"
      greeting_dialog_display="show"
      greeting_dialog_delay="30"
      attribution=setup_tool
      page_id="2839618429385669"
-     theme_color="#67b868"
-     logged_in_greeting="<%= greeting %> :) Czy jest coś co mogę dla ciebie zrobić?"
-     logged_out_greeting="<%= greeting %> :) Czy jest coś co mogę dla ciebie zrobić?">
+     theme_color="#ABD62E"
+     logged_in_greeting="<%= greeting %> :) Czy jest coś co mogę dla Ciebie zrobić?"
+     logged_out_greeting="<%= greeting %> :) Czy jest coś co mogę dla Ciebie zrobić?">
 </div>
