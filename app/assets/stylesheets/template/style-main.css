@@ -280,7 +280,7 @@ iframe {
   color: #292B33 !important;
 }
 .bg-lighter {
-  background-color: #E8E8E8 !important;
+  background-color: #F0F0F0 !important;
 }
 .bg-lightest {
   background-color: #fcfcfc !important;
@@ -1366,7 +1366,7 @@ form textarea:focus {
   margin-top: 0;
 }
 .post .entry-content {
-  background: #E8E8E8;
+  background: #F0F0F0;
   padding: 15px;
 }
 .post .entry-date {

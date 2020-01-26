@@ -1,6 +1,6 @@
 <div class="col-md-6 mb-30 calculator znw">
   <div class="item">
-    <div class="class-item box-hover-effect effect1 mb-md-30 bg-lighter">
+    <div class="class-item box-hover-effect effect1 bg-lighter">
       <div class="thumb mb-20">
         <%= image_tag 'kalkulatory/znw.jpg', alt: 'kalkulator zapotrzebowanie na wode' %>
       </div>
@@ -13,26 +13,24 @@
 
         <p class="text-justify">
           Odpowiednie nawodnienie jest niezwykle istotne, ale przyjmowanie wody wymaga pewnej równowagi i wbrew
-          pozorom istnieje możliwość  wypicia zbyt dużej ilości płynu. Sprawdź czy występujące rzadko nadmierne
+          pozorom istnieje możliwość wypicia zbyt dużej ilości płynu. Sprawdź czy występujące rzadko nadmierne
           nawodnienie może dotyczyć ciebie? Sprawdź ile wody powinnaś wypijać aby móc cieszyć się zdrowiem.
         </p>
 
-        <div class="tab-content border-gray-lightgray p-10 font-14">
-          <div id="bmi-calculator">
-            <div class="p-0">
-              <label>Waga w kg</label>
-              <input required type="text" class="form-control" id="znw_mass" name="znw_mass" placeholder="np. 92.5">
-            </div>
-            <div class="p-0 pt-10">
-              <input id="submit-button-znw" type="submit" class="btn btn-sm btn-theme-colored text-uppercase" value="Oblicz">
-            </div>
-            <div class="clearfix"></div>
+        <div id="bmi-calculator" class="font-14">
+          <div class="p-0">
+            <label>Waga w kg</label>
+            <input required type="text" class="form-control" id="znw_mass" name="znw_mass" placeholder="np. 92.5">
           </div>
+          <div class="p-0 pt-10">
+            <input id="submit-button-znw" type="submit" class="btn btn-sm btn-theme-colored text-uppercase" value="Oblicz">
+          </div>
+          <div class="clearfix"></div>
+        </div>
 
-          <div id="znw-result">
-            <hr>
-            <h3>Wynik: <span id="znw-result-number"></span> l</h3>
-          </div>
+        <div id="znw-result">
+          <hr>
+          <h3>Wynik: <span id="znw-result-number"></span> l</h3>
         </div>
 
       </div>
