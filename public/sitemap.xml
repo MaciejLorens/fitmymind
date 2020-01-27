@@ -11,54 +11,9 @@
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.fitmymind.pl/uslugi</loc>
-  <lastmod>2020-01-13T09:51:20+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
   <loc>https://www.fitmymind.pl/metabolic_balance</loc>
   <lastmod>2020-01-13T09:51:20+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.fitmymind.pl/bonne_sante</loc>
-  <lastmod>2020-01-13T09:51:20+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.fitmymind.pl/prelekcje</loc>
-  <lastmod>2020-01-13T09:51:20+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.fitmymind.pl/zespol</loc>
-  <lastmod>2020-01-13T09:51:20+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.fitmymind.pl/rezultaty</loc>
-  <lastmod>2020-01-13T09:51:20+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.fitmymind.pl/blog</loc>
-  <lastmod>2020-01-13T09:51:20+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.fitmymind.pl/posts</loc>
-  <lastmod>2020-01-13T09:51:20+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://www.fitmymind.pl/galeria</loc>
-  <lastmod>2020-01-13T09:51:20+00:00</lastmod>
-  <priority>0.60</priority>
-</url>
-<url>
-  <loc>https://www.fitmymind.pl/kalkulatory</loc>
-  <lastmod>2020-01-13T09:51:20+00:00</lastmod>
-  <priority>0.80</priority>
+  <priority>0.90</priority>
 </url>
 <url>
   <loc>https://www.fitmymind.pl/dla_firm</loc>
@@ -66,9 +21,54 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.fitmymind.pl/kontakt</loc>
+  <loc>https://www.fitmymind.pl/kalkulatory</loc>
+  <lastmod>2020-01-13T09:51:20+00:00</lastmod>
+  <priority>0.75</priority>
+</url>
+<url>
+  <loc>https://www.fitmymind.pl/rezultaty</loc>
+  <lastmod>2020-01-13T09:51:20+00:00</lastmod>
+  <priority>0.70</priority>
+</url>
+<url>
+  <loc>https://www.fitmymind.pl/zespol</loc>
   <lastmod>2020-01-13T09:51:20+00:00</lastmod>
   <priority>0.60</priority>
+</url>
+<url>
+  <loc>https://www.fitmymind.pl/uslugi</loc>
+  <lastmod>2020-01-13T09:51:20+00:00</lastmod>
+  <priority>0.55</priority>
+</url>
+<url>
+  <loc>https://www.fitmymind.pl/blog</loc>
+  <lastmod>2020-01-13T09:51:20+00:00</lastmod>
+  <priority>0.50</priority>
+</url>
+<url>
+  <loc>https://www.fitmymind.pl/posts</loc>
+  <lastmod>2020-01-13T09:51:20+00:00</lastmod>
+  <priority>0.45</priority>
+</url>
+<url>
+  <loc>https://www.fitmymind.pl/bonne_sante</loc>
+  <lastmod>2020-01-13T09:51:20+00:00</lastmod>
+  <priority>0.40</priority>
+</url>
+<url>
+  <loc>https://www.fitmymind.pl/galeria</loc>
+  <lastmod>2020-01-13T09:51:20+00:00</lastmod>
+  <priority>0.30</priority>
+</url>
+<url>
+  <loc>https://www.fitmymind.pl/kontakt</loc>
+  <lastmod>2020-01-13T09:51:20+00:00</lastmod>
+  <priority>0.25</priority>
+</url>
+<url>
+  <loc>https://www.fitmymind.pl/prelekcje</loc>
+  <lastmod>2020-01-13T09:51:20+00:00</lastmod>
+  <priority>0.20</priority>
 </url>
 <url>
   <loc>https://www.fitmymind.pl/polityka_prywatnosci</loc>
