@@ -74,3 +74,6 @@ Result.create(name: 'Ryszard', result: -8.7, created_at: 24.days.ago)
 Result.create(name: 'Basia', result: -5.8, created_at: 26.days.ago)
 Result.create(name: 'Jacek', result: -11.4, created_at: 28.days.ago)
 Result.create(name: 'Magda', result: -6.2, created_at: 29.days.ago)
+
+meskie = %w(Adam Adrian Artur Bartłomiej Dawid Dominik Filip Franciszek Ignacy Jakub Jan Julian Kacper Karol Krzysztof Maciej Mateusz Michał Mikołaj Oskar Patryk Paweł Piotr Stanisław Szymon Tomasz Wiktor Wojciech)
+zenskie = %w(Agata Aleksandra Aneta Anna Barbara Dominika Edyta Ewa Hanna Helena Joanna Julia Justyna Karolina Katarzyna Kinga Liliana Magdalena Maja Maria Martyna Małgorzata Michalina Monika Natalia Oliwia Róża Teresa Weronika Zofia Zuzanna)
