@@ -2079,3 +2079,7 @@ form textarea:focus {
 .rev_slider_wrapper .btn {
   padding: 10px 20px !important;
 }
+
+.width-100 {
+  width: 100%;
+}
