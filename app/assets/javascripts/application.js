@@ -23,6 +23,7 @@
 //= require home
 //= require services
 //= require team
+//= require results
 //= require gallery
 //= require calculators
 //= require corporations

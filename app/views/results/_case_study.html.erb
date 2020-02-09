@@ -1,88 +1,159 @@
-<section id="case_study" class="bg-theme-colored-white">
+<section id="case_study">
   <div class="container">
 
-    <h1 class="text-uppercase letter-space-4 mb-20 text-theme-colored">
-      Case study
-    </h1>
+    <div class="col-md-12">
 
-    <p class="mb-30">
-      Poniżej prezentujemy indywidualne przypadki pacjentów którzy podzielili się z nami swoimi osiągnięciami.
-    </p>
+      <h1 class="text-uppercase letter-space-4 mb-20 text-theme-colored">
+        Case study
+      </h1>
 
-    <div class="row services">
+      <p class="mb-30">
+        Poniżej prezentujemy indywidualne przypadki pacjentów którzy podzielili się z nami swoimi osiągnięciami.
+      </p>
 
-      <div class="col-md-4 mb-20">
-        <div class="class-item bg-lighter box-hover-effect effect1 item">
-          <div class="thumb mb-20">
-            <%= image_tag 'home/metabolic_balance.jpg', alt: 'metabolic balance logo' %>
-          </div>
-          <div class="content text-center flip p-25 pt-0">
-            <h4 class="text-uppercase text-theme-colored letter-space-2">
-              Marek
-            </h4>
+      <div class="row services">
 
-            <div class="date">
-              <em>
-                Marek ma 34 lata, waga z jaką się do nas zgłosił to 94,3 kg, nie występowały żadne dolegliwości. Obecnie
-                Marek waży 81,6 kg. Stracił 12,7 kg z masy ciała, ważne jest to aby utrata wagi była przemyślana i
-                działała na korzyść organizmu, co to znaczy? Marek stracił 11,5 kg z tkanki tłuszczowej, jest to
-                kluczowy element indywidualnie opracowanego planu żywieniowego, ma oddziaływać tylko na tkankę
-                tłuszczową. Poziom wody wzrósł o 6 %. Wielkie gratulacje!
-              </em>
+        <div class="row">
+          <div class="col-md-6 mb-20 patient patient1">
+            <div class="class-item bg-lighter box-hover-effect effect1 item">
+              <div class="thumb mb-20">
+                <%= image_tag 'rezultaty/pacjent1/metamorfoza_thumb.jpg', alt: 'metabolic balance logo', class: 'width-100' %>
+              </div>
+              <div class="content text-center flip p-25 pt-0">
+                <h3 class="text-uppercase text-theme-colored letter-space-2">
+                  Rafael - 29 lat
+                </h3>
+
+                <div class="date">
+                  <em>
+                    Prośba o pomoc w przywróceniu zdrowia i zredukowaniu tkanki tłuszczowej. Waga startowa 98 kg.
+                  </em>
+                  <br>
+                  <br>
+                  <em>
+                    Rafael jest świetnym programistą, który większość dnia spędza przed komputerem. Podczas pierwszej
+                    wizyty dowiedziałam się o złym dotychczasowym odżywianiu, podjadaniu, małej aktywności fizycznej,
+                    bólach stawów . . .
+                  </em>
+                </div>
+
+                <%= link_to 'Szczegóły', '#', class: 'btn border-theme-colored mt-30 bg-theme-colored-white patient-details', 'data-target' => 'patient1' %>
+
+              </div>
             </div>
-            <%= link_to 'Szczegóły', '#
-', class: 'btn btn-flat btn-sm border-theme-colored mt-30 bg-theme-colored-white' %>
+          </div>
+
+          <div class="col-md-6 mb-20 patient patient2">
+            <div class="class-item bg-lighter box-hover-effect effect1 item">
+              <div class="thumb mb-20">
+                <%= image_tag 'rezultaty/pacjent2/metamorfoza_thumb.jpg', alt: 'metabolic balance logo', class: 'width-100' %>
+              </div>
+              <div class="content text-center flip p-25 pt-0">
+                <h3 class="text-uppercase text-theme-colored letter-space-2">
+                  Paweł - 33 lata
+                </h3>
+
+                <div class="date">
+                  <em>
+                    Prośba o pomoc w zredukowaniu masy ciała, po licznych już próbach w przeszłości. Poprawa
+                    zdrowia. Waga
+                    startowa 130 kg.
+                  </em>
+                  <br>
+                  <br>
+                  <em>
+                    Paweł to fantastyczny mężczyzna, pogodny i optymistycznie nastawiony do świata. Podczas
+                    pierwszej
+                    wizyty
+                    dowiedziałam się o wcześniejszych próbach z dietami, które przyczyniły się do rozregulowania
+                    przemiany
+                    materii, senności, zmęczenia . . .
+                  </em>
+                </div>
+
+                <%= link_to 'Szczegóły', '#', class: 'btn border-theme-colored mt-30 bg-theme-colored-white patient-details', 'data-target' => 'patient2' %>
+
+              </div>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-4 mb-20">
-        <div class="class-item bg-lighter box-hover-effect effect1 item">
-          <div class="thumb mb-20">
-            <%= image_tag 'home/metabolic_balance.jpg', alt: 'metabolic balance logo' %>
-          </div>
-          <div class="content text-center flip p-25 pt-0">
-            <h4 class="text-uppercase text-theme-colored letter-space-2">
-              P. Paulina
-            </h4>
-
-            <div class="date">
-              <em>
-                Z dumą mówię o naszej 36 letniej podopiecznej, która mimo insulinooporności i całej gamy objawów
-                towarzyszących straciła 11 kg. Obecnie wyniki badań Pani Pauliny wróciły do normy, insulina jest
-                książkowa. Jak sama endokrynolog powiedziała: “Już mnie Pani nie potrzebuje”. Bardzo dużo pracy, wiele
-                wyrzeczeń, walka z samą sobą, aby trzymać się tego co zaplanowaliśmy. Dobra robota! Świetne efekty!
-                Podjęłaś wyzwanie i dałaś radę!
-              </em>
+        <div class="patient-description patient1 mt-20" style="display: none">
+          <div class="row">
+            <div class="col-md-5 mt-80">
+              <p class="text-justify">
+                Rafael jest świetnym programistą, który większość dnia spędza przed komputerem. Podczas pierwszej
+                wizyty dowiedziałam się o złym dotychczasowym odżywianiu, podjadaniu, małej aktywności fizycznej, bólach
+                stawów i problemach z układem pokarmowym. Zdecydowaliśmy się na najlepsze rozwiązanie jakim było
+                przejście na plan żywieniowy Metabolic Balance. Rafael schudł 18 kg, z czego 15 kg z tkanki tłuszczowej
+                a
+                wiek metaboliczny obniżył się z 41 do 24 lat.
+              </p>
             </div>
-            <%#= link_to 'Szczegóły', bonne_sante_path, class: 'btn btn-flat btn-sm border-theme-colored mt-30' %>
+
+            <div class="col-md-7">
+              <%= image_tag 'rezultaty/pacjent1/przed.jpg', alt: 'rafael metamorfoza', class: 'width-100' %>
+            </div>
+          </div>
+
+          <div class="row mt-30">
+            <div class="col-md-6">
+              <%= image_tag 'rezultaty/pacjent1/po.jpg', alt: 'rafael metamorfoza', class: 'width-100' %>
+            </div>
+
+            <div class="col-md-6 mt-80">
+              <p class="text-justify">
+                Było trochę pracy, ponieważ nawyki zmienione zostały całkowicie i utrzymywane są do dziś. Co
+                zyskał Rafael? Z tego co mówi: lepszy sen, więcej energii w ciągu dnia, chęć do aktywności
+                fizycznej, ból stawów ustąpił (włączyliśmy w odpowiednim czasie fizjoterapeutę), ustąpiły problemy z
+                układem pokarmowym, uregulowaliśmy żywienie, więc wie co robić podczas świąt, wyjazdów, imprez. Wyniki
+                badań kwasu moczowego i cholesterolu poprawiły się i wróciły do norm. Gratulacje!
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-md-4 mb-20">
-        <div class="class-item bg-lighter box-hover-effect effect1 item">
-          <div class="thumb mb-20">
-            <%= image_tag 'home/bonne_sante.jpg', alt: 'bonne sante logo' %>
-          </div>
-          <div class="content text-center p-25 pt-0">
-            <h4 class="text-uppercase text-theme-colored letter-space-2">
-              P. Jolanta
-            </h4>
-            <div class="date">
-              <em>
-                Pani Jolanta ma 59 lat, pojawiła się u nas w gabinecie z już określonym celem, mianowicie do maja 2020r
-                chciała schudną z wagi 87kg do 75kg. W maju ma komunie wnuczka, a do osiągnięcia pożądanej wagi zostało
-                jeszcze tylko 2kg! Świetna robota! Pani Jolanta poradziła sobie z utratą wagi bardzo szybko, ponieważ
-                dokładnie przestrzega ustalonych zaleceń, dodatkowo zaczęła chodzić na basen z koleżankami. Walczymy o
-                2kg, które nam zostały! Gratulacje!
-              </em>
+        <div class="patient-description patient2 mt-20" style="display: none">
+          <div class="row">
+            <div class="col-md-5 mt-80">
+              <p class="text-justify">
+                Paweł to fantastyczny mężczyzna, pogodny i optymistycznie nastawiony do świata. Podczas pierwszej wizyty
+                dowiedziałam się o wcześniejszych próbach z dietami, które przyczyniły się do rozregulowania przemiany
+                materii, senności, zmęczenia, bólach stawów. Pawła od razu skierowaliśmy na badania, potrzebne do
+                stworzenia planu Metabolic Balance oraz badania dodatkowe, ponieważ podczas wywiadu zdrowotnego Paweł
+                zgłaszał niepokojące objawy. W badaniach wyszła insulinooporność, problemy z wątrobą, wysoki kwas
+                moczowy oraz stan zapalny wysoki jak na 33 latka. Paweł zredukował masę ciała o ponad 36 kg, z czego 28
+                to była tkanka tłuszczowa. Obwody ciała: w pasie było 130 cm, obecnie jest 105 cm, w biodrach było 121
+                cm, obecnie jest 103 cm.
+              </p>
             </div>
-            <%#= link_to 'Szczegóły', corporations_path, class: 'btn btn-flat btn-sm border-theme-colored mt-30' %>
+
+            <div class="col-md-7">
+              <%= image_tag 'rezultaty/pacjent2/przed.jpg', alt: 'rafael metamorfoza', class: 'width-100' %>
+            </div>
+          </div>
+
+          <div class="row mt-30">
+            <div class="col-md-5">
+              <%= image_tag 'rezultaty/pacjent2/po.jpg', alt: 'rafael metamorfoza', class: 'width-100' %>
+            </div>
+
+            <div class="col-md-7 mt-80">
+              <p class="text-justify">
+                Paweł trzymał się wszystkich naszych ustaleń, na co dzień zarówno wyjazdach jak
+                i imprezach czy świętach, dlatego też waga spada książkowo. Paweł jest pacjentem u którego należało w
+                pewnym momencie zastopować utratę wagi. Zbyt szybka utrata tkanki tłuszczowej jest szkodliwa dla
+                organizmu a zmiany mają być na stałe, więc organizm musi nauczyć się żyć z nową wagą. Obecnie zostało
+                nam do ustalonego celu 7 kg :D. Z takim podejściem na pewno się uda! Paweł traktuje żywienie jako coś co
+                weszło na stałe do domu, nie ma mowy o diecie czy ograniczeniach, ze wszystkim sobie świetnie radzi,
+                stan zdrowia znacznie się poprawił, samopoczucie oczywiście na plus. Jeśli chodzi o obecne wyniki badań
+                - sami zobaczcie. Da się! Jestem dumna mając takich pacjentów, sama przyjemność!
+              </p>
+            </div>
           </div>
         </div>
-      </div>
 
+      </div>
     </div>
   </div>
 </section>
