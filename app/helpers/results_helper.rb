@@ -6,6 +6,6 @@ module ResultsHelper
     months = %w(Stycznia Lutego Marca Kwietnia Maja Czerwca Lipca Sierpnia Września Października Listopada Grudnia)
     current_month = months[result_time.month - 1]
 
-    "#{current_month} #{result_time.year}r."
+    "#{current_month} #{result_time.year}"
   end
 end
