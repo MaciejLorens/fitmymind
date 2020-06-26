@@ -5,6 +5,14 @@
         <div class="col-md-12 mt-20 mb-20">
           <div class="testimonial-carousel fullwidth">
 
+            <% content = 'Jestem pod opieką Pani Aleksandry od roku. Ma wspaniałe podejście do pacjenta. Za każdym razem
+             indywidualne podejście, nie ma masówki, Pani Aleksandra skupia się na potrzebach pacjenta. Ułożona dieta
+             jest zróżnicowana i bardzo skuteczna w każdym tygodniu nowy plan a w nim same pyszne rzeczy Pani Aleksandra
+             niesamowicie motywuje do działania, zmienia podejście do jedzenia. Dzięki Niej łatwiej wprowadzić w życie
+             zdrowe żywienie, bo jest ciekawe i smaczne. Nigdy więcej innych dietetyków!' %>
+
+            <%= render partial: 'home/partials/testimonial', locals: {content: content, author: 'Ewelina Z.'} %>
+
             <% content = 'Pani Aleksandra zawsze służyła mi pomocą, wsparciem zarówno telefonicznym jak i w trakcie
             konsultacji. Zarówno telefony, jak i wizyty kontrolne były chyba zawsze inspirowane przez Panią Olę.
             Zmniejszenie wagi o około 10 kg dodało mi energii, umożliwiło uprawiania sportu na poziomie który wcześniej był
@@ -19,7 +27,6 @@
 
             <%= render partial: 'home/partials/testimonial', locals: {content: content, author: 'Monika M.'} %>
 
-
             <% content = 'Cudowna, ciepła i przede wszystkim normalna - a taka relacja w długim kontakcie z dietetykiem jest
                 bardzo ważna, bo wzbrania przed oszukiwaniem nawet samego siebie ;). Pani Ola potrafi zadzwonić ze
                 wsparciem nawet w sobotni wieczór, konkretna, rzeczowa, każdy aspekt planu potrafi sprawnie i
@@ -27,14 +34,12 @@
 
             <%= render partial: 'home/partials/testimonial', locals: {content: content, author: 'Ewelina S.'} %>
 
-
             <% content = 'Z przyjemnością polecam! Mój wynik to blisko 10 kg w dół :) :) Na planie żywieniowym Oli jestem od
                 połowy lutego. Nawet nie wiem kiedy to zleciało. Jak napiszę, że bezboleśnie to skłamię - faktycznie
                 wymaga to samodyscypliny. Cudów nie ma. Jak to mówią - z pustego to i Salomon nie naleje ;) Niemniej
                 jednak muszę uczciwie przyznać, że Ola dobiera plan i ustala go w taki sposób, by nie był męczarnią.' %>
 
             <%= render partial: 'home/partials/testimonial', locals: {content: content, author: 'Beata D.'} %>
-
 
             <% content = 'Bardzo profesjonalna pomoc, życzliwe i miłe podejście do pacjenta. Już po miesiącu stosowania się do
                 zaleceń zauważyłam pierwsze pozytywne efekty m.in. mniejsze zmęczenie.' %>
@@ -47,7 +52,6 @@
                 teraz wyglądam i nie zamierzam już nigdy wracać do poprzedniego stylu życia i odżywiania.' %>
 
             <%= render partial: 'home/partials/testimonial', locals: {content: content, author: 'Natalia O.'} %>
-
 
             <% content = 'Dzięki współpracy z Panią Olą udało mi się nareszcię ustabilizować wagę. Wcześniejsze diety, jakkolwiek
                 skuteczne, dawały mniej lub bardziej długotrwały efekt, ale niestety zajadanie stresu zazwyczaj
