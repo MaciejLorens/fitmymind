@@ -1,4 +1,4 @@
-var myLatLng = {lat: 50.08920, lng: 19.97805};
+var myLatLng = {lat: 50.08920, lng: 19.97795};
 
 var map;
 
