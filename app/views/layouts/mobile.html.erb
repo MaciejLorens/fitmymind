@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="pl">
+<head>
+  <!-- Meta Tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <link rel="alternate" hreflang="pl-PL" href="https://fitmymind.pl/">
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+  <meta name="description" content="Najbardziej zaawansowane plany żywieniowe tworzone na podstawie badań krwi. Aleksandra Kucharczyk, Dietetyk Kliniczny, Metabolic Balance"/>
+
+  <meta name="keywords" content="dieta,dietetyk,kliniczny,plan,żywieniowy,kraków"/>
+  <meta name="author" content="Aleksandra Kucharczyk"/>
+  <link rel="canonical" href="https://fitmymind.pl/">
+
+  <meta property="og:locale" content="pl_PL">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FitMyMind - Aleksandra Kucharczyk, Dietetyk Kliniczny, Kraków">
+  <meta property="og:description" content="Najbardziej zaawansowane plany żywieniowe tworzone na podstawie badań krwi. Aleksandra Kucharczyk, Dietetyk Kliniczny, Metabolic Balance">
+  <meta property="og:url" content="https://fitmymind.pl/">
+  <meta property="og:site_name" content="FitMyMind - conscious head & healthy body">
+
+  <!-- Page Title -->
+  <title>FitMyMind - Aleksandra Kucharczyk, Dietetyk Kliniczny, Kraków</title>
+
+  <%= favicon_link_tag 'favicon_64.png' %>
+
+  <link href="https://fonts.googleapis.com/css?family=Reenie+Beanie:regular" rel="stylesheet" type="text/css">
+
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+
+  <%= stylesheet_link_tag 'mobile', media: 'all' %>
+  <%= javascript_include_tag 'mobile' %>
+  <script src="https://kit.fontawesome.com/b0d13782f4.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+<div id="wrapper">
+
+  <header id="header" class="header">
+    <%= render partial: 'shared/mobile/navbar' %>
+    <%= render partial: 'shared/mobile/menu' %>
+  </header>
+
+  <div class="mobile">
+    <%= yield %>
+  </div>
+
+</div>
+
+<%= javascript_include_tag 'template/custom' %>
+
+</body>
+</html>

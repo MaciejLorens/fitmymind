@@ -21,8 +21,9 @@ Rails.application.routes.draw do
   get 'kontakt', as: 'contact', to: 'contact#index'
   get 'dla_firm', as: 'corporations', to: 'corporations#index'
 
-  get 'polityka_prywatnosci', as: 'private_policy', to: 'private_policy#index'
+  get 'mobile', as: 'mobile', to: 'mobile#index'
 
+  get 'polityka_prywatnosci', as: 'private_policy', to: 'private_policy#index'
 
   resources :posts
   resources :news
