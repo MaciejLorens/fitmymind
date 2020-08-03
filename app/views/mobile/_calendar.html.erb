@@ -5,36 +5,24 @@
       Kalendarz
     </h1>
 
-    <table class="table table-striped">
-      <thead>
-      <tr>
-        <th scope="col">#</th>
-        <th scope="col">First</th>
-        <th scope="col">Last</th>
-        <th scope="col">Handle</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <th scope="row">1</th>
-        <td>Mark</td>
-        <td>Otto</td>
-        <td>@mdo</td>
-      </tr>
-      <tr>
-        <th scope="row">2</th>
-        <td>Jacob</td>
-        <td>Thornton</td>
-        <td>@fat</td>
-      </tr>
-      <tr>
-        <th scope="row">3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>@twitter</td>
-      </tr>
-      </tbody>
-    </table>
+    <% @company.reservations.group_by(&:day).each do |day, reservations| %>
+      <div class="container p-0">
+        <h3><%= day %></h3>
+
+        <% reservations.each do |reservation| %>
+          <div class="col-xs-6 p-0">
+            <div class="calendar icon <%= reservation.available ? 'free' : 'taken' %>"
+                 data-day="<%= day %>" data-time="<%= reservation.time %>" >
+
+              <div class="caption">
+                <i class="fa fa-calendar-day"></i> &nbsp; <%= reservation.time %>
+              </div>
+
+            </div>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
 
   </div>
 </section>

@@ -4,6 +4,7 @@ class MobileController < ApplicationController
   layout 'mobile'
 
   def index
+    @company = Company.first
   end
 
 end

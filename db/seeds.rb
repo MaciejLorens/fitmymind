@@ -78,3 +78,10 @@ Result.create(name: 'Marysia', result: -3.1, created_at: '28-07-2020'.to_datetim
 
 meskie = %w(Adam Adrian Artur Bartłomiej Dawid Dominik Filip Franciszek Ignacy Jakub Jan Julian Kacper Karol Krzysztof Maciej Mateusz Michał Mikołaj Oskar Patryk Paweł Piotr Stanisław Szymon Tomasz Wiktor Wojciech)
 zenskie = %w(Agata Aleksandra Aneta Anna Barbara Dominika Edyta Ewa Hanna Helena Joanna Julia Justyna Karolina Katarzyna Kinga Liliana Magdalena Maja Maria Martyna Małgorzata Michalina Monika Natalia Oliwia Róża Teresa Weronika Zofia Zuzanna)
+
+c1 = Company.create(name: 'CodeLab')
+c2 = Company.create(name: 'Sabre')
+
+Company.first.create_reservations('30.08.2020', '30', '9:30', '18:00', %w[12:30 14:30 16:30 17:30])
+Company.first.create_reservations('03.09.2020', '30', '10:00', '17:30', %w[11:30 14:30 16:30])
+

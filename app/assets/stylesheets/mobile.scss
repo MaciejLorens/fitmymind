@@ -51,11 +51,10 @@ a.menu {
   }
 }
 
-.big-icon {
+
+.icon {
   padding: 10px;
   margin: 10px;
-  height: 130px;
-  background-color: $base-color;
   border-radius: 20px;
   text-align: center;
   font-size: 40px;
@@ -65,4 +64,27 @@ a.menu {
     font-size: 24px;
     font-weight: 800;
   }
+}
+
+
+.water {
+  height: 130px;
+  background-color: $base-color;
+}
+
+.calendar {
+  height: 60px;
+  margin: 5px;
+}
+
+.reservation-day {
+  margin-bottom: 20px;
+}
+
+.free {
+  background-color: $base-color;
+}
+
+.taken {
+  background-color: #FF0000;
 }
