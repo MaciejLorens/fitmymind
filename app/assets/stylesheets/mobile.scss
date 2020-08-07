@@ -51,30 +51,47 @@ a.menu {
   }
 }
 
+h1 {
+  margin-top: 0;
+}
 
 .icon {
-  padding: 10px;
-  margin: 10px;
-  border-radius: 20px;
+  border-radius: 10px;
   text-align: center;
-  font-size: 40px;
+  font-size: 32px;
   color: white;
 
   .caption {
-    font-size: 24px;
+    font-size: 22px;
     font-weight: 800;
   }
 }
 
 
 .water {
-  height: 130px;
+  height: 100px;
   background-color: $base-color;
 }
 
 .calendar {
   height: 60px;
   margin: 5px;
+}
+
+.day {
+  background-color: $base-color;
+  font-size: 12px;
+  margin: 5px;
+  height: 40px;
+  width: 40px;
+  font-weight: 800;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.col-callendar-xs-1 {
+  width: 14.28%;
+  float: left;
 }
 
 .reservation-day {
@@ -87,4 +104,79 @@ a.menu {
 
 .taken {
   background-color: #FF0000;
+}
+
+.bg-success {
+  background-color: $base-color !important;
+}
+
+.bg-info {
+  background-color: #ffc107!important;
+}
+
+.bg-warning {
+  background-color: #ff7b07 !important;
+}
+
+.bg-danger {
+  background-color: #dc3545!important;
+}
+
+.progress {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 4rem;
+  overflow: hidden;
+  font-weight: 800;
+  background-color: #e9ecef;
+  border-radius: 10px;
+}
+
+.progress-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+  background-color: #007bff;
+  transition: width .6s ease;
+}
+
+#profile {
+  .form-control {
+    height: 40px;
+    border-radius: 10px;
+    padding: 6px 10px;
+  }
+
+  label {
+    margin-top: 6px;
+  }
+
+  .calculators label {
+    margin-top: 8px;
+  }
+
+  .btn.update-profile {
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+  }
+}
+
+.calculators {
+  font-size: 14px;
+}
+
+.progress span {
+  position: absolute;
+  width: 100%;
 }

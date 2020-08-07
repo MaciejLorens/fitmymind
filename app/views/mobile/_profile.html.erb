@@ -1,9 +1,99 @@
 <section id="profile" class="mobile-section" style="display: none">
-  <div class="container p-10">
 
-    <h1>
-      Profil urzytkownika
-    </h1>
+  <h1>Profil</h1>
 
+  <%= form_for(@user, url: user_registration_path(@user)) do |f| %>
+    <div class="row p-5">
+      <div class="col-md-3 col-md-offset-3 col-xs-6">
+        <%= f.label 'Wiek' %>
+      </div>
+
+      <div class="col-md-3 col-xs-6">
+        <%= f.text_field :age, class: 'form-control user-data' %>
+      </div>
+    </div>
+
+    <div class="row p-5">
+      <div class="col-md-3 col-md-offset-3 col-xs-6">
+        <%= f.label 'Wzrost [cm]' %>
+      </div>
+
+      <div class="col-md-3 col-xs-6">
+        <%= f.text_field :height, class: 'form-control user-data' %>
+      </div>
+    </div>
+
+    <div class="row p-5">
+      <div class="col-md-3 col-md-offset-3 col-xs-6">
+        <%= f.label 'Waga [kg]' %>
+      </div>
+
+      <div class="col-md-3 col-xs-6">
+        <%= f.text_field :weight, class: 'form-control user-data' %>
+      </div>
+    </div>
+
+    <div class="row p-5">
+      <div class="col-md-3 col-md-offset-3 col-xs-6">
+        <%= f.label 'Płeć' %>
+      </div>
+
+      <div class="col-md-3 col-xs-6">
+        <%= f.select :sex, [['kobieta', 'woman'], ['mężczyzna', 'man']], {}, class: 'form-control user-data' %>
+      </div>
+    </div>
+
+    <div class="row p-5">
+      <div class="col-md-3 col-md-offset-3 col-xs-6">
+      </div>
+      <div class="col-md-3 col-xs-6">
+        <%= f.submit 'Aktualizuj', class: 'btn btn-sm btn-theme-colored text-uppercase update-profile' %>
+      </div>
+    </div>
+  <% end %>
+
+  <br>
+
+  <div class="calculators">
+    <div class="row p-5">
+      <div class="col-md-3 col-md-offset-3 col-xs-8 p-0">
+        <label>Body mass index</label>
+      </div>
+
+      <div class="col-md-3 col-xs-4">
+        <%= text_field_tag :bmi, nil, class: 'form-control', disabled: 'disabled' %>
+      </div>
+    </div>
+
+    <div class="row p-5">
+      <div class="col-md-3 col-md-offset-3 col-xs-8 p-0">
+        <label>Należna masa ciała</label>
+      </div>
+
+      <div class="col-md-3 col-xs-4">
+        <%= text_field_tag :nmc, nil, class: 'form-control', disabled: 'disabled' %>
+      </div>
+    </div>
+
+    <div class="row p-5">
+      <div class="col-md-3 col-md-offset-3 col-xs-8 p-0">
+        <label>Zapotrzebowanie na wodę</label>
+      </div>
+
+      <div class="col-md-3 col-xs-4">
+        <%= text_field_tag :znw, nil, class: 'form-control', disabled: 'disabled' %>
+      </div>
+    </div>
+
+    <div class="row p-5">
+      <div class="col-md-3 col-md-offset-3 col-xs-8 p-0">
+        <label>Całkowita przemiana materii</label>
+      </div>
+
+      <div class="col-md-3 col-xs-4">
+        <%= text_field_tag :cpm, nil, class: 'form-control', disabled: 'disabled' %>
+      </div>
+    </div>
   </div>
+
 </section>

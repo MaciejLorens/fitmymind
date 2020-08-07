@@ -8,4 +8,9 @@ module ResultsHelper
 
     "#{current_month} #{result_time.year}"
   end
+
+  def current_month
+    months = %w(Styczeń Luty Marzec Kwiecień Maj Czerwiec Lipiec Sierpień Wrzesień Październik Listopad Grudzień)
+    months[Date.today.month]
+  end
 end

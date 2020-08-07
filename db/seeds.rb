@@ -6,7 +6,11 @@ User.create(
   email: 'maciej.lorens@gmail.com',
   password: 'uhqr374grq2',
   password_confirmation: 'uhqr374grq2',
-  admin: true
+  admin: true,
+  age: 35,
+  height: 181,
+  weight: 74.3,
+  sex: 'mężczyzna'
 )
 
 c1 = Category.create(name: 'Choroby')

@@ -1,9 +1,6 @@
 <section id="calendar" class="mobile-section" style="display: none">
-  <div class="container p-10">
 
-    <h1>
-      Kalendarz
-    </h1>
+    <h1>Kalendarz</h1>
 
     <% @company.reservations.group_by(&:day).each do |day, reservations| %>
       <div class="container p-0">
@@ -23,6 +20,4 @@
         <% end %>
       </div>
     <% end %>
-
-  </div>
 </section>

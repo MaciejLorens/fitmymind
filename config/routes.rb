@@ -4,7 +4,10 @@ Rails.application.routes.draw do
 
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
-  devise_for :users
+  devise_for :users, controllers: {
+    registrations: 'users/registrations',
+    sessions: 'users/sessions',
+  }
 
   get 'uslugi', as: 'services', to: 'services#index'
   get 'metabolic_balance', as: 'metabolic_balance', to: 'services#metabolic_balance'
