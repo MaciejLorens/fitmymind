@@ -2,7 +2,7 @@ short_lorem = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem ac
 
 lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
-User.create(
+user = User.create(
   email: 'maciej.lorens@gmail.com',
   password: 'uhqr374grq2',
   password_confirmation: 'uhqr374grq2',
@@ -89,3 +89,12 @@ c2 = Company.create(name: 'Sabre')
 Company.first.create_reservations('30.08.2020', '30', '9:30', '18:00', %w[12:30 14:30 16:30 17:30])
 Company.first.create_reservations('03.09.2020', '30', '10:00', '17:30', %w[11:30 14:30 16:30])
 
+8.times do |i|
+  user.statistics.create(
+    key: 'water',
+    value: rand(1000) + 1000,
+    status: %w[danger warning info success].sample,
+    updated_at: i.days.ago - 1.day,
+    created_at: i.days.ago - 1.day
+  )
+end

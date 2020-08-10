@@ -26,6 +26,11 @@
 $base-color: #ABD62E;
 $dark-base-color: #799720;
 
+$success: $base-color;
+$info: #ffc107;
+$warning: #ff7b07;
+$danger: #dc3545;
+$inactive: #d0d0d0;
 
 .mobile-section {
   text-align: center;
@@ -79,7 +84,7 @@ h1 {
 }
 
 .day {
-  background-color: $base-color;
+  background-color: $inactive;
   font-size: 12px;
   margin: 5px;
   height: 40px;
@@ -87,6 +92,26 @@ h1 {
   font-weight: 800;
   padding: 10px;
   border-radius: 20px;
+
+  &.inactive {
+    background-color: $inactive;
+  }
+
+  &.danger {
+    background-color: $danger;
+  }
+
+  &.warning {
+    background-color: $warning;
+  }
+
+  &.info {
+    background-color: $info;
+  }
+
+  &.success {
+    background-color: $success;
+  }
 }
 
 .col-callendar-xs-1 {
@@ -129,7 +154,7 @@ h1 {
   height: 4rem;
   overflow: hidden;
   font-weight: 800;
-  background-color: #e9ecef;
+  background-color: $inactive;
   border-radius: 10px;
 }
 
@@ -144,7 +169,7 @@ h1 {
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
-  color: #fff;
+  color: white;
   text-align: center;
   background-color: #007bff;
   transition: width .6s ease;

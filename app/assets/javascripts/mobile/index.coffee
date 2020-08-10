@@ -14,30 +14,21 @@ $ ->
 #  ===== WATER
 
   $(".water").click ->
-    weight = parseFloat($("#user_weight").val())
-    znw = Math.round((1500 + (weight - 20) * 20) / 100) * 100
     _this = this
     $(_this).css('background-color', '#7fa021')
-    setTimeout ->
-      $(_this).css('background-color', '#ABD62E')
-    , 100
-    current_amount = parseFloat($("#current_amount").val())
-    amount = parseFloat($(_this).data('amount'))
-    sum = current_amount + amount
-    percentage = (sum * 100 / znw)
-    $("#current_amount").val(sum)
-    $(".progress-bar").width(percentage + '%')
-    $(".progress-bar").html('<span>' + sum + ' / ' + znw + ' ml' + '</span>')
-    console.log('  ----- percentage: %j', percentage);
-    if percentage > 85
-      $(".progress-bar").removeClass('bg-success bg-info bg-warning bg-danger').addClass('bg-success')
-    else if percentage > 70
-      $(".progress-bar").removeClass('bg-success bg-info bg-warning bg-danger').addClass('bg-info')
-    else if percentage > 50
-      $(".progress-bar").removeClass('bg-success bg-info bg-warning bg-danger').addClass('bg-warning')
-    else
-      $(".progress-bar").removeClass('bg-success bg-info bg-warning bg-danger').addClass('bg-danger')
 
+    value = parseFloat($(_this).data('amount'))
+
+    $.ajax
+      url: '/mobile/upsert_water_statistic'
+      type: 'PUT'
+      data: 'value=' + value
+      success: (data) ->
+        $(".progress-bar").html('<span>' + data.value + ' ml / ' + data.znw + ' ml' + '</span>')
+        $(".progress-bar").width(data.percentage + '%')
+        $(".progress-bar").removeClass('bg-success bg-info bg-warning bg-danger').addClass('bg-' + data.status)
+        $(".current-day").removeClass('bg-success bg-info bg-warning bg-danger').addClass('bg-' + data.status)
+        $(_this).css('background-color', '#ABD62E')
 
 
 #  ===== CALENDAR

@@ -41,23 +41,23 @@
 
   <div class="col-xs-12 p-0 m-0 mb-10">
     <div class="progress">
-      <div class="progress-bar bg-danger" role="progressbar" style="width: 1%">
-        <span>0 ml</span>
+      <div class="progress-bar bg-<%= @current_statistic&.status %>" role="progressbar" style="width: <%= @current_statistic&.value.to_f * 100.0 / current_user.znw %>%">
+        <span><%= @current_statistic&.value.to_i %> ml / <%= current_user.znw.to_i %> ml</span>
       </div>
     </div>
   </div>
 
   <div class="col-xs-12 p-0 m-0">
     <h2 class="text-theme-colored mt-10"><%= current_month %></h2>
-
   </div>
 
   <% (Date.today.beginning_of_month.day..Date.today.end_of_month.day).to_a.in_groups_of(7).each do |group| %>
     <div class="row m-0">
-      <% group.each do |day| %>
+      <% group.each_with_index do |day| %>
         <% if day.present? %>
+          <% stat = @statistics.find { |stat| stat.created_at.day == day } %>
           <div class="col-callendar-xs-1">
-            <div class="day icon">
+            <div class="day icon <%= stat&.status %> <%= 'current-day' if Date.today.day == day %>">
               <%= day %>
             </div>
           </div>
