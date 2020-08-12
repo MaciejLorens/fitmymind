@@ -73,8 +73,8 @@ update_calculators = () ->
   $("#nmc").val(nmc + ' kg')
 
   # ZNW
-  znw = Math.round((1500 + (weight - 20) * 20) / 100) / 10
-  $("#znw").val(znw + ' l')
+  znw = Math.round(1500 + (weight - 20) * 20)
+  $("#znw").val(znw + ' ml')
 
   # CPM
   pal = 1.6

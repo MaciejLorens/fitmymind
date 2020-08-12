@@ -81,6 +81,12 @@ h1 {
 .calendar {
   height: 60px;
   margin: 5px;
+
+  &.icon {
+    .caption {
+      padding: 10px;
+    }
+  }
 }
 
 .day {
