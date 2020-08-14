@@ -1,5 +1,6 @@
 class Company < ApplicationRecord
 
+  has_many :users
   has_many :reservations
 
   # company.create_reservations('24.08.2020', '30', '8:00', '17:00')

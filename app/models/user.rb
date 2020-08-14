@@ -4,6 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :validatable
 
   has_many :statistics
+  has_many :reservations
+
+  belongs_to :company
+
 
   def upsert_water_statistic(value)
     stat = statistics.water.for_day(Time.now).first || statistics.create(key: 'water', value: 0)

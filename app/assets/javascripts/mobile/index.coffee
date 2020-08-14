@@ -35,17 +35,26 @@ $ ->
 
   $(".calendar").click ->
     _this = this
+
+    day = $(_this).data("day")
+    time = $(_this).data("time")
+    reservation = day + " " + time
+
     if $(_this).hasClass('free')
-      $(_this).css('background-color', '#7fa021')
-      setTimeout ->
-        $(_this).css('background-color', '#ABD62E')
-        reservation = $(_this).data("day") + " " + $($(_this)).data("time")
-        response = confirm("Czy chcesz zarezerwować termin " + reservation + "? :)")
-        if response == true
-          console.log('AJAX')
-        else
-          console.log('cancel')
-      , 100
+      response = confirm("Czy chcesz zarezerwować termin " + reservation + "? :)")
+      if response == true
+        $.ajax
+          url: '/mobile/reservation'
+          type: 'PUT'
+          data: 'day=' + day + '&time=' + time
+          success: (data) ->
+            $(_this).removeClass('free').addClass('own')
+            alert("Rezerwacja przebiegła pomyślnie :)")
+          error: (data) ->
+            alert("Przykro nam ale ten termin jest już zajęty :(")
+            $(_this).removeClass('free').addClass('taken')
+    else if $(_this).hasClass('own')
+      alert("Tak, to Państwa termin, widzimy się " + day + " o " + time + " :)")
     else
       alert("Przykro nam ale ten termin jest już zajęty :(")
 

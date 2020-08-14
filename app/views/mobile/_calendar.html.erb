@@ -1,18 +1,19 @@
-<section id="calendar" class="mobile-section" style="display: none">
+<section id="calendar" class="mobile-section">
 
     <h1>Kalendarz</h1>
 
-    <% @company.reservations.group_by(&:day).each do |day, reservations| %>
+    <% @reservations.group_by(&:day).each do |day, reservations| %>
       <div class="container p-0">
         <h3><%= day %></h3>
 
         <% reservations.each do |reservation| %>
           <div class="col-xs-6 p-0">
-            <div class="calendar icon <%= reservation.available ? 'free' : 'taken' %>"
+            <div class="calendar icon <%= class_for(reservation) %>"
                  data-day="<%= day %>" data-time="<%= reservation.time %>" >
 
               <div class="caption">
-                <i class="fa fa-calendar-day"></i> &nbsp; <%= reservation.time %>
+                <i class="fa <%= icon_for(reservation) %>"></i>
+                <%= reservation.time %>
               </div>
 
             </div>

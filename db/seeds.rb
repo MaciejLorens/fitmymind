@@ -2,6 +2,9 @@ short_lorem = "Sed ut perspiciatis unde omnis iste natus error sit voluptatem ac
 
 lorem = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
 
+c1 = Company.create(name: 'CodeLab')
+c2 = Company.create(name: 'Sabre')
+
 user = User.create(
   email: 'maciej.lorens@gmail.com',
   password: 'uhqr374grq2',
@@ -10,7 +13,8 @@ user = User.create(
   age: 35,
   height: 181,
   weight: 74.3,
-  sex: 'mężczyzna'
+  sex: 'mężczyzna',
+  company_id: Company.all.map(&:id).sample
 )
 
 c1 = Category.create(name: 'Choroby')
@@ -83,8 +87,6 @@ Result.create(name: 'Marysia', result: -3.1, created_at: '28-07-2020'.to_datetim
 meskie = %w(Adam Adrian Artur Bartłomiej Dawid Dominik Filip Franciszek Ignacy Jakub Jan Julian Kacper Karol Krzysztof Maciej Mateusz Michał Mikołaj Oskar Patryk Paweł Piotr Stanisław Szymon Tomasz Wiktor Wojciech)
 zenskie = %w(Agata Aleksandra Aneta Anna Barbara Dominika Edyta Ewa Hanna Helena Joanna Julia Justyna Karolina Katarzyna Kinga Liliana Magdalena Maja Maria Martyna Małgorzata Michalina Monika Natalia Oliwia Róża Teresa Weronika Zofia Zuzanna)
 
-c1 = Company.create(name: 'CodeLab')
-c2 = Company.create(name: 'Sabre')
 
 Company.first.create_reservations('30.08.2020', '30', '9:30', '18:00', %w[12:30 14:30 16:30 17:30])
 Company.first.create_reservations('03.09.2020', '30', '10:00', '17:30', %w[11:30 14:30 16:30])

@@ -28,6 +28,7 @@ Rails.application.routes.draw do
 
   namespace :mobile do
     put :upsert_water_statistic, to: 'upsert_water_statistic'
+    put :reservation, to: 'reservation'
   end
 
   get 'polityka_prywatnosci', as: 'private_policy', to: 'private_policy#index'
