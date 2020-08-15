@@ -26,6 +26,8 @@
 $base-color: #ABD62E;
 $dark-base-color: #799720;
 
+$base-black-color: #404040;
+
 $success: $base-color;
 $info: #ffc107;
 $warning: #ff7b07;
@@ -45,6 +47,7 @@ $inactive: #d0d0d0;
 
 .header-top {
   text-align: center;
+  border-bottom: 2px solid $base-black-color;
 }
 
 a.menu {
