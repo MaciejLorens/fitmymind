@@ -3,7 +3,7 @@
     <h1>Kalendarz</h1>
 
     <% @reservations.group_by(&:day).each do |day, reservations| %>
-      <div class="container p-0">
+      <div class="container p-0 reservation-day">
         <h3><%= day %></h3>
 
         <% reservations.each do |reservation| %>

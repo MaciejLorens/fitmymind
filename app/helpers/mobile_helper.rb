@@ -9,5 +9,4 @@ module MobileHelper
   def icon_for(reservation)
     reservation.user_id == current_user.id ? 'fa-user' : 'fa-calendar-day'
   end
-
 end

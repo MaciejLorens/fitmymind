@@ -19,6 +19,8 @@ class MobileController < ApplicationController
     reservation = current_user.company.reservations.for_day_time(params[:day], params[:time]).first
 
     if reservation.available?
+      existing_reservation = current_user.company.reservations.for_user_day(current_user, params[:day])
+      existing_reservation.each { |existing| existing.update(available: true, user_id: nil) }
       reservation.update(available: false, user_id: current_user.id)
       render json: {}, status: 200
     else
