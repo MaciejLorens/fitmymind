@@ -18,5 +18,5 @@
 //= require mobile/menu
 //= require mobile/water
 //= require mobile/calendar
-//= require mobile/notes
+//= require mobile/achievements
 //= require mobile/profile
