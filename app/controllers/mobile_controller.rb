@@ -5,7 +5,7 @@ class MobileController < ApplicationController
   layout 'mobile'
 
   def index
-    @reservations = current_user.company.reservations.sort_by { |a, b| a.day.to_date <=> b.day.to_date if b.present? }
+    @reservations = current_user.company.reservations.sort{|a, b| a.day.to_date <=> b.day.to_date if b.present?}
     @statistics = current_user.statistics.this_month.to_a
     @current_statistic = current_user.statistics.for_today.first
   end

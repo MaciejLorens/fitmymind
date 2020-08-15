@@ -5,8 +5,7 @@
     <% @reservations.group_by(&:day).each do |day, reservations| %>
       <div class="row p-10 reservation-day">
         <h3><%= weeks_day(day) %>, <%= day %></h3>
-
-        <% reservations.each do |reservation| %>
+        <% reservations.sort.each do |reservation| %>
           <div class="col-xs-6 p-0">
             <div class="calendar icon <%= class_for(reservation) %>"
                  data-day="<%= day %>" data-time="<%= reservation.time %>" >
