@@ -14,4 +14,9 @@
 //= require template/jquery-2.1.4.min
 //= require template/bootstrap.min
 //= require template/jquery-plugin-collection
-//= require mobile/index
+
+//= require mobile/menu
+//= require mobile/water
+//= require mobile/calendar
+//= require mobile/notes
+//= require mobile/profile
