@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   get 'mobile', as: 'mobile', to: 'mobile#index'
 
   namespace :mobile do
+    put :update_profile, to: 'update_profile'
     put :upsert_water_statistic, to: 'upsert_water_statistic'
     put :reservation, to: 'reservation'
   end

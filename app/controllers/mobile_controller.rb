@@ -10,6 +10,14 @@ class MobileController < ApplicationController
     @current_statistic = current_user.statistics.for_today.first
   end
 
+  def update_profile
+    if current_user.update(users_params)
+      render json: {}, status: 200
+    else
+      render json: {}, status: 400
+    end
+  end
+
   def upsert_water_statistic
     result = current_user.upsert_water_statistic(params[:value])
     render json: result, status: 200
@@ -28,4 +36,9 @@ class MobileController < ApplicationController
     end
   end
 
+  private
+
+  def users_params
+    params.permit(:age, :height, :weight, :sex)
+  end
 end

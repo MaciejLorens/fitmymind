@@ -44,7 +44,6 @@ RailsAdmin.config do |config|
 
   config.model Post do
     edit do
-
       field :title, :ck_editor
       field :introduction, :ck_editor
       field :content, :ck_editor
@@ -54,7 +53,6 @@ RailsAdmin.config do |config|
       field :tags
       field :photo
       field :created_at
-
     end
   end
 end

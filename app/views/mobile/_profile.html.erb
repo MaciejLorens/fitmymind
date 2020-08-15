@@ -2,7 +2,7 @@
 
   <h1>Profil</h1>
 
-  <%= form_for(current_user, url: user_registration_path(current_user)) do |f| %>
+  <%= form_for(current_user, as: current_user, url: mobile_update_profile_path, html: { method: :put, id: 'edit-user-form' }) do |f| %>
     <div class="row p-5">
       <div class="col-xs-6">
         <%= f.label 'Wiek' %>
@@ -39,17 +39,10 @@
       </div>
 
       <div class="col-xs-6">
-        <%= f.select :sex, [['kobieta', 'woman'], ['mężczyzna', 'man']], {}, class: 'form-control user-data' %>
+        <%= f.select :sex, [['kobieta', 'woman'], ['mężczyzna', 'man']], {}, class: 'form-control' %>
       </div>
     </div>
 
-    <div class="row p-5">
-      <div class="col-xs-6">
-      </div>
-      <div class="col-xs-6">
-        <%= f.submit 'Aktualizuj', class: 'btn btn-sm btn-theme-colored text-uppercase update-profile' %>
-      </div>
-    </div>
   <% end %>
 
   <br>

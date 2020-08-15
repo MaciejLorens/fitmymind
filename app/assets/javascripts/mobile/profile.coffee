@@ -1,11 +1,30 @@
 $ ->
 
   update_calculators()
-  $(".user-data").change ->
-    update_calculators()
+  $(".user-data").keyup ->
+    upsert_profile()
+
+  $("#user_sex").change ->
+    upsert_profile()
 
 
 # ====== PRIVATE =======================================================================================================
+
+upsert_profile = () ->
+  age = $("#user_age").val()
+  height = $("#user_height").val()
+  weight = $("#user_weight").val()
+  sex = $("#user_sex").val()
+  if age.length >= 2 && height.length >= 3 && weight.length >= 2
+    $.ajax
+      url: '/mobile/update_profile'
+      type: 'PUT'
+      data: 'age=' + age + '&height=' + height + '&weight=' + weight + '&sex=' + sex
+      success: (data) ->
+        update_calculators()
+      error: (data) ->
+        update_calculators()
+
 
 update_calculators = () ->
   age = parseFloat($("#user_age").val())
