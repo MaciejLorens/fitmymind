@@ -1,9 +1,9 @@
-<section id="water" class="mobile-section" style="display: none">
+<section id="water" class="mobile-section">
 
   <%= hidden_field_tag :current_amount, 0 %>
   <h1>Woda</h1>
 
-  <div class="col-md-3 col-xs-6 p-0 pr-10 pb-20">
+  <div class="col-xs-6 p-0 pr-10 pb-20">
     <div class="water icon" data-amount="100">
       <i class="fa fa-glass-whiskey"></i>
       <div class="caption">
@@ -12,7 +12,7 @@
     </div>
   </div>
 
-  <div class="col-md-3 col-xs-6 p-0 pl-10 pb-20">
+  <div class="col-xs-6 p-0 pl-10 pb-20">
     <div class="water icon" data-amount="200">
       <i class="fa fa-glass-whiskey"></i>
       <div class="caption">
@@ -21,7 +21,7 @@
     </div>
   </div>
 
-  <div class="col-md-3 col-xs-6 p-0 pr-10 pb-20">
+  <div class="col-xs-6 p-0 pr-10 pb-20">
     <div class="water icon" data-amount="500">
       <i class="fa fa-glass-whiskey"></i>
       <div class="caption">
@@ -30,7 +30,7 @@
     </div>
   </div>
 
-  <div class="col-md-3 col-xs-6 p-0 pl-10 pb-20">
+  <div class="col-xs-6 p-0 pl-10 pb-20">
     <div class="water icon" data-amount="1000">
       <i class="fa fa-glass-whiskey"></i>
       <div class="caption">
@@ -51,19 +51,20 @@
     <h2 class="text-theme-colored mt-10"><%= current_month %></h2>
   </div>
 
-  <% (Date.today.beginning_of_month.day..Date.today.end_of_month.day).to_a.in_groups_of(7).each do |group| %>
-    <div class="row m-0">
-      <% group.each_with_index do |day| %>
-        <% if day.present? %>
-          <% stat = @statistics.find { |stat| stat.created_at.day == day } %>
-          <div class="col-callendar-xs-1">
-            <div class="day icon <%= stat&.status %> <%= 'current-day' if Date.today.day == day %>">
-              <%= day %>
+  <div class="water-calendar">
+    <% (Date.today.beginning_of_month.day..Date.today.end_of_month.day).to_a.in_groups_of(7).each do |group| %>
+      <div class="row m-0">
+        <% group.each_with_index do |day| %>
+          <% if day.present? %>
+            <% stat = @statistics.find { |stat| stat.created_at.day == day } %>
+            <div class="col-callendar-xs-1">
+              <div class="day icon <%= stat&.status %> <%= 'current-day' if Date.today.day == day %>">
+                <%= day %>
+              </div>
             </div>
-          </div>
+          <% end %>
         <% end %>
-      <% end %>
-    </div>
-  <% end %>
-
+      </div>
+    <% end %>
+  </div>
 </section>

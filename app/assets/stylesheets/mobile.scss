@@ -43,6 +43,10 @@ $inactive: #d0d0d0;
   }
 }
 
+.header-top {
+  text-align: center;
+}
+
 a.menu {
   font-size: 28px;
   color: white;
@@ -125,10 +129,6 @@ h1 {
   float: left;
 }
 
-.reservation-day {
-  margin-bottom: 20px;
-}
-
 .free {
   background-color: $base-color;
 }
@@ -161,7 +161,7 @@ h1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 4rem;
+  height: 40px;
   overflow: hidden;
   font-weight: 800;
   background-color: $inactive;

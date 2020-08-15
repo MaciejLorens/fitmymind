@@ -1,10 +1,10 @@
-<section id="calendar" class="mobile-section">
+<section id="calendar" class="mobile-section" style="display: none">
 
     <h1>Kalendarz</h1>
 
     <% @reservations.group_by(&:day).each do |day, reservations| %>
-      <div class="container p-0 reservation-day">
-        <h3><%= day %></h3>
+      <div class="row p-10 reservation-day">
+        <h3><%= weeks_day(day) %>, <%= day %></h3>
 
         <% reservations.each do |reservation| %>
           <div class="col-xs-6 p-0">
