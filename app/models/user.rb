@@ -8,6 +8,29 @@ class User < ApplicationRecord
 
   belongs_to :company
 
+  def upsert_weight_statistic
+    stat = statistics.weight.for_day(Time.now).first || statistics.create(key: 'weight', value: weight)
+    stat.update(value: weight, status: nil)
+  end
+
+  def weight_graph_data
+    result = {labels: [], data: []}
+    prev_stat = nil
+
+    (0..30).to_a.reverse.each do |index|
+      date = index.days.ago
+      result[:labels] << date.to_date.to_s
+      stat = statistics.weight.for_day(date).first
+      if stat.present?
+        prev_stat = stat
+        result[:data] << stat.value
+      else
+        result[:data] << prev_stat&.value || 0
+      end
+    end
+
+    result
+  end
 
   def upsert_water_statistic(value)
     stat = statistics.water.for_day(Time.now).first || statistics.create(key: 'water', value: 0)

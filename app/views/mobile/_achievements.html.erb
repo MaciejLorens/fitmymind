@@ -1,6 +1,11 @@
-<section id="achievements" class="mobile-section" style="display: none">
+<section id="achievements" class="mobile-section">
+<!--<section id="achievements" class="mobile-section" style="display: none">-->
 
   <h1>Osiągnięcia</h1>
+
+  <%= hidden_field_tag :graph_data, @graph_data %>
+
+  <canvas id="weight_graph" width="400" height="300"></canvas>
 
   <div class="calculators">
     <br>

@@ -8,14 +8,25 @@ class MobileController < ApplicationController
     @reservations = current_user.company.reservations.sort{|a, b| a.day.to_date <=> b.day.to_date if b.present?}
     @statistics = current_user.statistics.this_month.to_a
     @current_statistic = current_user.statistics.for_today.first
+    @graph_data = current_user.weight_graph_data.to_json
+      # {
+      # labels: ['01-01-2020', '02-01-2020', '03-01-2020'],
+      # data: [73.2, 87.4, 76.9],
+    # }.to_json
   end
 
   def update_profile
     if current_user.update(users_params)
+      current_user.upsert_weight_statistic
       render json: {}, status: 200
     else
       render json: {}, status: 400
     end
+  end
+
+  def upsert_weight_statistic
+    result = current_user.upsert_weight_statistic(params[:value])
+    render json: result, status: 200
   end
 
   def upsert_water_statistic
