@@ -976,8 +976,8 @@ section > .container-fluid {
     min-height: auto !important;
   }
 }
-/*  
- * Extra.less 
+/*
+ * Extra.less
  * -----------------------------------------------
 */
 /* -------- Heading Style ---------- */
@@ -1017,7 +1017,7 @@ section > .container-fluid {
 .form-control {
   height: 45px;
   border-radius: 0;
-  color: #404040 !important;
+  color: #404040;
 }
 .input-group-addon {
   border-radius: 0;
@@ -1040,7 +1040,7 @@ form input[type="date"]:focus,
 form input[type="color"]:focus,
 form select:focus,
 form textarea:focus {
-  color: white;
+  color: #404040;
   border-color: #c0c0c0;
   -webkit-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
@@ -1355,7 +1355,7 @@ form textarea:focus {
 }
 
 /*
- * Blog 
+ * Blog
  * -----------------------------------------------
 */
 .post .entry-header {

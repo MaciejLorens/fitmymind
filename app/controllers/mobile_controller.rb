@@ -9,10 +9,6 @@ class MobileController < ApplicationController
     @statistics = current_user.statistics.this_month.to_a
     @current_statistic = current_user.statistics.for_today.first
     @graph_data = current_user.weight_graph_data.to_json
-      # {
-      # labels: ['01-01-2020', '02-01-2020', '03-01-2020'],
-      # data: [73.2, 87.4, 76.9],
-    # }.to_json
   end
 
   def update_profile
