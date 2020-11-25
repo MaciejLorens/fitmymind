@@ -17,7 +17,7 @@ class User < ApplicationRecord
     result = {labels: [], data: []}
     prev_stat = nil
 
-    (0..statistics.count).to_a.reverse.each do |index|
+    (0..statistics.weight.count).to_a.reverse.each do |index|
       date = index.days.ago
       result[:labels] << date.to_date.strftime('%d-%m')
       stat = statistics.weight.for_day(date).first
