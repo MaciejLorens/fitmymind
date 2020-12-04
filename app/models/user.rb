@@ -14,19 +14,17 @@ class User < ApplicationRecord
   end
 
   def weight_graph_data
-    result = {labels: [], data: []}
-    prev_stat = nil
+    result = { labels: [], data: [] }
 
-    (0..statistics.weight.count).to_a.reverse.each do |index|
-      date = index.days.ago
-      result[:labels] << date.to_date.strftime('%d-%m')
-      stat = statistics.weight.for_day(date).first
-      if stat.present?
-        prev_stat = stat
-        result[:data] << stat.value
-      else
-        result[:data] << prev_stat&.value || 0
-      end
+    stats = statistics.weight.order(created_at: :asc).to_a
+    return result if stats.empty?
+
+    prev_stat = stats.first
+    (prev_stat.created_at.to_date..Date.today).each do |date|
+      stat = stats.find { |s| s.created_at.to_date == date } || prev_stat
+      result[:labels] << date.strftime('%d-%m')
+      result[:data] << stat.value
+      prev_stat = stat
     end
 
     result
