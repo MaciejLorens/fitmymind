@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| 'https://github.com/#{repo}.git' }
 
-ruby '2.7.7'
+ruby '3.1.3'
 
-gem 'rails', '~> 5.2.3'
+gem 'rails', '~> 6.0'
 
 gem 'aws-sdk-s3'
 gem 'bootsnap', '>= 1.1.0', require: false
@@ -21,6 +21,7 @@ gem 'rails_admin', '~> 2.0.0.beta'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
 gem 'turbolinks', '~> 5.2.0'
+gem 'psych', '< 4'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
